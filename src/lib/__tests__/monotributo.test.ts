@@ -60,6 +60,6 @@ describe("datosMonotributo", () => {
     expect(d.categorias.map((c) => c.categoria)).toEqual([
       "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
     ]);
-    expect(d.vigenciaDesde).toBe("2026-08-01");
+    expect(d.vigenciaDesde).toBe("2026-09-01"); // actualizado por el vigilante ARCA (cuota K ,02→,04)
   });
 });
