@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { diasVacaciones, pagoVacaciones } from "@/lib/laboral";
 import { formatARS, formatARS2 } from "@/lib/format";
 
@@ -10,6 +11,7 @@ export default function VacacionesPage() {
   const [res, setRes] = useState<{ dias: number; pago: number; porDia: number } | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Calculadora de Vacaciones</h1>
@@ -101,5 +103,8 @@ export default function VacacionesPage() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="vacaciones" />
+    </>
   );
 }

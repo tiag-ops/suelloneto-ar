@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { indemnizacionDespido, vacacionesNoGozadas } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -12,6 +13,7 @@ export default function IndemnizacionPage() {
   const [vac, setVac] = useState<ReturnType<typeof vacacionesNoGozadas> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">💼 Calculadora de Indemnización por despido</h1>
@@ -115,5 +117,8 @@ export default function IndemnizacionPage() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="indemnizacion" />
+    </>
   );
 }

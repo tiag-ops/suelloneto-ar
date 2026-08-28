@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { tablaMono } from "./_datos";
 
@@ -68,6 +69,8 @@ export default function Articulo() {
         inLanguage: "es-AR",
         author: { "@type": "Organization", name: "SueldoNeto.ar" },
       }) }} />
+    
+      <BloqueArticulos slugActual="monotributo-cuanto-pago" />
     </article>
   );
 }

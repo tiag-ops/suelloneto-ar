@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { calcularCredito } from "@/lib/finanzas";
 import { formatARS2 } from "@/lib/format";
 
@@ -11,6 +12,7 @@ export default function CreditoCliente() {
   const [res, setRes] = useState<ReturnType<typeof calcularCredito> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <form
         className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end"
@@ -97,5 +99,8 @@ export default function CreditoCliente() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="credito" />
+    </>
   );
 }

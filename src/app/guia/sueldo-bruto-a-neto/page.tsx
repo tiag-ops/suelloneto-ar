@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { tablaBrutoNeto, formatARS } from "./_datos";
 
@@ -66,6 +67,8 @@ export default function Articulo() {
         inLanguage: "es-AR",
         author: { "@type": "Organization", name: "SueldoNeto.ar" },
       }) }} />
+    
+      <BloqueArticulos slugActual="sueldo-bruto-a-neto" />
     </article>
   );
 }

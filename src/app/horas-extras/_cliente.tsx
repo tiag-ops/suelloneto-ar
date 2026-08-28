@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { calcularHorasExtras } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -11,6 +12,7 @@ export default function HorasExtrasPage() {
   const [res, setRes] = useState<ReturnType<typeof calcularHorasExtras> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⏰ Calculadora de Horas Extras</h1>
@@ -106,5 +108,8 @@ export default function HorasExtrasPage() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="horas-extras" />
+    </>
   );
 }

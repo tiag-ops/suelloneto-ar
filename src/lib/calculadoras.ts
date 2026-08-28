@@ -28,10 +28,56 @@ export const CALCULADORAS: CalculadoraMeta[] = [
   { slug: "cuil", titulo: "Calculadora de CUIL por DNI", descripcion: "Tu CUIL según DNI y género con el algoritmo oficial AFIP (módulo 11), caso especial 23 incluido.", keyword: "calculadora cuil", categoria: "utilidades", icono: "🆔" },
 ];
 
+/** Artículos de la sección /guia — para enlazado interno automático */
+export interface GuiaMeta {
+  slug: string;
+  titulo: string; // título corto para chips/enlaces
+  descripcion: string; // 1 línea
+  /** slugs de calculadoras relacionadas (link juice hacia las tools) */
+  calculadoras: string[];
+}
+
+export const GUIAS: GuiaMeta[] = [
+  { slug: "ganancias-desde-cuanto", titulo: "¿Desde cuánto se paga Ganancias?", descripcion: "Piso por situación familiar y tabla calculada con valores vigentes.", calculadoras: ["", "monotributo"] },
+  { slug: "aguinaldo-junio-2026", titulo: "Aguinaldo junio 2026: fechas", descripcion: "Cuándo cobran y cómo se calcula el SAC, con tabla.", calculadoras: ["aguinaldo"] },
+  { slug: "monotributo-cuanto-pago", titulo: "¿Cuánto se paga de monotributo?", descripcion: "Cuota de cada categoría, desglosada en impuesto, SIPA y obra social.", calculadoras: ["monotributo"] },
+  { slug: "escala-ganancias-2026", titulo: "Escala del art. 94 (2026)", descripcion: "Tabla completa de tramos con ejemplos liquidados.", calculadoras: ["", "monotributo"] },
+  { slug: "vacaciones-dias-pago", titulo: "Vacaciones: días y pago", descripcion: "Cuántos días según antigüedad y cuánto se cobra por día corrido.", calculadoras: ["vacaciones", "vacaciones-no-gozadas"] },
+  { slug: "dolar-tarjeta-como-se-calcula", titulo: "Dólar tarjeta paso a paso", descripcion: "Qué percepciones se aplican y cómo estimar el costo real.", calculadoras: ["dolar-tarjeta"] },
+  { slug: "indemnizacion-despido-2026", titulo: "Indemnización por despido", descripcion: "Componentes de la liquidación final y tabla por antigüedad.", calculadoras: ["indemnizacion", "vacaciones-no-gozadas", "aguinaldo"] },
+  { slug: "aguinaldo-despido", titulo: "Liquidación final: qué te deben", descripcion: "Aguinaldo proporcional, vacaciones y checklist completo.", calculadoras: ["indemnizacion", "aguinaldo", "vacaciones-no-gozadas"] },
+  { slug: "sueldo-bruto-a-neto", titulo: "De bruto a neto", descripcion: "La conversión exacta en dos pasos, con tabla por sueldo.", calculadoras: ["", "sueldo-por-dia"] },
+  { slug: "horas-extras-cuanto-cobran", titulo: "Horas extras: cuánto se cobra", descripcion: "Recargos del 50% y 100% con ejemplos calculados.", calculadoras: ["horas-extras", "sueldo-por-dia"] },
+];
+
 export function porCategoria(): Record<string, CalculadoraMeta[]> {
   const map: Record<string, CalculadoraMeta[]> = {};
   for (const c of CALCULADORAS) {
     (map[c.categoria] ??= []).push(c);
   }
   return map;
+}
+
+/** URL de una calculadora por slug ("" = home) */
+export function urlDe(slug: string): string {
+  return slug === "" ? "/" : `/${slug}/`;
+}
+
+/** Calculadoras relacionadas: mismas categorías, excluyéndose a sí misma */
+export function relacionadas(slug: string, limite = 4): CalculadoraMeta[] {
+  const actual = CALCULADORAS.find((c) => c.slug === slug);
+  if (!actual) return CALCULADORAS.filter((c) => c.slug !== slug).slice(0, limite);
+  const mismaCat = CALCULADORAS.filter((c) => c.slug !== slug && c.categoria === actual.categoria);
+  const otras = CALCULADORAS.filter((c) => c.slug !== slug && c.categoria !== actual.categoria);
+  return [...mismaCat, ...otras].slice(0, limite);
+}
+
+/** Guías relacionadas con una calculadora (las que la mencionan) */
+export function guiasDeCalculadora(slug: string, limite = 3): GuiaMeta[] {
+  return GUIAS.filter((g) => g.calculadoras.includes(slug)).slice(0, limite);
+}
+
+/** Otras guías (excluyendo una) para el bloque "Seguí leyendo" */
+export function otrasGuias(slug: string, limite = 4): GuiaMeta[] {
+  return GUIAS.filter((g) => g.slug !== slug).slice(0, limite);
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { datosEscala } from "./_datos";
 
@@ -88,6 +89,8 @@ export default function Articulo() {
         inLanguage: "es-AR",
         author: { "@type": "Organization", name: "SueldoNeto.ar" },
       }) }} />
+    
+      <BloqueArticulos slugActual="escala-ganancias-2026" />
     </article>
   );
 }

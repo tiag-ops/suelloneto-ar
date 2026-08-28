@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { descomponerSueldo } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -9,6 +10,7 @@ export default function SueldoPorDiaPage() {
   const [res, setRes] = useState<ReturnType<typeof descomponerSueldo> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📅 Sueldo por día y por hora</h1>
@@ -64,5 +66,8 @@ export default function SueldoPorDiaPage() {
         </div>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="sueldo-por-dia" />
+    </>
   );
 }

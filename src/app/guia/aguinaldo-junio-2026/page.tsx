@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { tablaAguinaldo, formatARS2 } from "./_datos";
 
@@ -75,6 +76,8 @@ export default function Articulo() {
         inLanguage: "es-AR",
         author: { "@type": "Organization", name: "SueldoNeto.ar" },
       }) }} />
+    
+      <BloqueArticulos slugActual="aguinaldo-junio-2026" />
     </article>
   );
 }

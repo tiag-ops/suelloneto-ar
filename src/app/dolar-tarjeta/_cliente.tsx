@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { dolarTarjeta } from "@/lib/finanzas";
 import { formatARS2 } from "@/lib/format";
 
@@ -11,6 +12,7 @@ export default function DolarTarjetaCliente() {
   const [res, setRes] = useState<ReturnType<typeof dolarTarjeta> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula?</h2>
@@ -95,5 +97,8 @@ export default function DolarTarjetaCliente() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="dolar-tarjeta" />
+    </>
   );
 }

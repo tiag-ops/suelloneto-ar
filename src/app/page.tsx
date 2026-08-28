@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { porCategoria } from "@/lib/calculadoras";
+import { porCategoria, GUIAS, urlDe } from "@/lib/calculadoras";
 import CalculadoraSueldoClient from "./calculadora-sueldo";
 
 export const metadata: Metadata = {
@@ -64,6 +64,24 @@ export default function Home() {
             </ul>
           </div>
         ))}
+      </section>
+
+      {/* Guías */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold">Guías y explicaciones</h2>
+        <ul className="grid sm:grid-cols-2 gap-2">
+          {GUIAS.map((g) => (
+            <li key={g.slug}>
+              <Link
+                href={`/guia/${g.slug}/`}
+                className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 block hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+              >
+                <span className="block text-sm font-medium">📖 {g.titulo}</span>
+                <span className="block text-xs text-zinc-500 dark:text-zinc-400">{g.descripcion}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <script

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { calcularPlazoFijo, calcularPlazoFijoDias } from "@/lib/finanzas";
 import { formatARS2 } from "@/lib/format";
 
@@ -14,6 +15,7 @@ export default function PlazoFijoCliente() {
   const [res, setRes] = useState<ReturnType<typeof calcularPlazoFijo> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <form
         className="grid gap-4 sm:grid-cols-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
@@ -137,5 +139,8 @@ export default function PlazoFijoCliente() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="plazo-fijo" />
+    </>
   );
 }

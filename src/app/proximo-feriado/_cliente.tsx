@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { proximoFeriado } from "@/lib/laboral";
 import { FERIADOS_2026 } from "@/lib/feriados";
 
@@ -13,6 +14,7 @@ export default function ProximoFeriadoPage() {
   );
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🇦🇷 Próximo feriado en Argentina</h1>
@@ -64,5 +66,8 @@ export default function ProximoFeriadoPage() {
         </ul>
       </section>
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="proximo-feriado" />
+    </>
   );
 }

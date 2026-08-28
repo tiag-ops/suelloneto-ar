@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { datosArticuloGanancias, formatARS } from "@/lib/articulos/ganancias-datos";
 
@@ -150,6 +151,8 @@ export default function ArticuloGanancias() {
           }),
         }}
       />
+    
+      <BloqueArticulos slugActual="ganancias-desde-cuanto" />
     </article>
   );
 }

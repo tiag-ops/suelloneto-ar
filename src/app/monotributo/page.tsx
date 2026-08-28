@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import TablaMonotributo from "./tabla";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function MonotributoPage() {
       </section>
 
       <TablaMonotributo />
+
+      <BloqueCalculadorasRelacionadas slug="monotributo" />
 
       <section className="text-sm text-zinc-600 dark:text-zinc-300 space-y-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
         <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">

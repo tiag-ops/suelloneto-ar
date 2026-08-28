@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { calcularAguinaldo } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -10,6 +11,7 @@ export default function AguinaldoPage() {
   const [res, setRes] = useState<ReturnType<typeof calcularAguinaldo> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🎁 Calculadora de Aguinaldo (SAC) 2026</h1>
@@ -75,5 +77,8 @@ export default function AguinaldoPage() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="aguinaldo" />
+    </>
   );
 }

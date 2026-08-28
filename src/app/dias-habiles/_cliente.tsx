@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { diasHabiles } from "@/lib/laboral";
 import { FERIADOS_2026 } from "@/lib/feriados";
 
@@ -12,6 +13,7 @@ export default function DiasHabilesPage() {
   const feriadosSet = new Set(FERIADOS_2026.map((f) => f.fecha));
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📆 Calculadora de días hábiles</h1>
@@ -85,5 +87,8 @@ export default function DiasHabilesPage() {
         </div>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="dias-habiles" />
+    </>
   );
 }

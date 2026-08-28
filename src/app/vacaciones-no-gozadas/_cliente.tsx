@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { vacacionesNoGozadas } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -11,6 +12,7 @@ export default function VacacionesNoGozadasPage() {
   const [res, setRes] = useState<ReturnType<typeof vacacionesNoGozadas> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⚖️ Vacaciones no gozadas</h1>
@@ -95,5 +97,8 @@ export default function VacacionesNoGozadasPage() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="vacaciones-no-gozadas" />
+    </>
   );
 }

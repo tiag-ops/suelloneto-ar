@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { calcularCuilCompleto } from "@/lib/finanzas";
 
 export default function CuilCliente() {
@@ -9,6 +10,7 @@ export default function CuilCliente() {
   const [res, setRes] = useState<ReturnType<typeof calcularCuilCompleto> | null>(null);
 
   return (
+    <>
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula el CUIL?</h2>
@@ -75,5 +77,8 @@ export default function CuilCliente() {
         </section>
       )}
     </div>
+
+    <BloqueCalculadorasRelacionadas slug="cuil" />
+    </>
   );
 }
