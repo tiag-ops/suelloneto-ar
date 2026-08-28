@@ -1,0 +1,79 @@
+name: Vigilar ARCA
+
+# Corre el 1 de cada mes + manualmente desde la pestaña Actions.
+# Si ARCA cambió valores: actualiza los JSON y abre un PR con el diff.
+# Si no cambió nada: no hace nada (salida silenciosa).
+
+on:
+  schedule:
+    - cron: "0 13 1 * *" # día 1 de cada mes, 13:00 UTC (10:00 Argentina)
+  workflow_dispatch: {} # botón manual
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Ejecutar vigilante ARCA
+        id: vigilar
+        run: |
+          SALIDA=$(node scripts/vigilar-arca.cjs)
+          echo "$SALIDA"
+          echo "salida<<EOF" >> $GITHUB_OUTPUT
+          echo "$SALIDA" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: ¿Hubo cambios?
+        id: check
+        run: |
+          if git diff --quiet src/data/; then
+            echo "cambios=no" >> $GITHUB_OUTPUT
+            echo "Sin cambios en los datos: terminando."
+          else
+            echo "cambios=si" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Abrir PR con la actualización
+        if: steps.check.outputs.cambios == 'si'
+        run: |
+          BRANCH="arca-update-$(date +%Y%m%d)"
+          git config user.name "sueldoneto-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add src/data/
+          git commit -m "Datos ARCA actualizados automáticamente
+
+          Salida del vigilante:
+          ${{ steps.vigilar.outputs.salida }}
+
+          Fuente: https://www.arca.gob.ar/monotributo/categorias.asp
+          Revisar el diff antes de hacer merge." 
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "🏛️ ARCA actualizó valores fiscales — revisar y merge" \
+            --body "El vigilante automático detectó cambios en los valores de ARCA.
+
+          **Detalle:**
+          \`\`\`
+          ${{ steps.vigilar.outputs.salida }}
+          \`\`\`
+
+          **Qué hacer:**
+          1. Revisar el diff de \`src/data/\`
+          2. Verificar contra la fuente oficial: https://www.arca.gob.ar/monotributo/categorias.asp
+          3. Si es correcto → Merge. El deploy a producción sale solo (Cloudflare Pages).
+
+          ⚠️ Este PR también actualiza las tablas de los artículos (se generan del JSON en build-time)." \
+            --head "$BRANCH" \
+            --base main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
