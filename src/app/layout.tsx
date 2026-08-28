@@ -74,8 +74,20 @@ export default function RootLayout({
         <footer className="border-t border-zinc-200 dark:border-zinc-800">
           <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
             <p>{DISCLAIMER}</p>
-            <p>
-              SueldoNeto.ar · {new Date().getFullYear()} · Sin cookies · Sin registro
+            <p className="flex flex-wrap gap-x-3 gap-y-1">
+              <Link href="/privacidad/" className="underline hover:text-emerald-600">
+                Privacidad
+              </Link>
+              <Link href="/terminos/" className="underline hover:text-emerald-600">
+                Términos
+              </Link>
+              <Link href="/contacto/" className="underline hover:text-emerald-600">
+                Contacto
+              </Link>
+              <span aria-hidden>·</span>
+              <span>
+                SueldoNeto.ar · {new Date().getFullYear()} · Sin cookies · Sin registro
+              </span>
             </p>
           </div>
         </footer>
