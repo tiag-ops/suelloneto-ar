@@ -12,6 +12,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/monotributo/`, lastModified, changeFrequency: "weekly", priority: 0.9 },
   ];
 
+  const guias = [
+    "ganancias-desde-cuanto",
+    "aguinaldo-junio-2026",
+    "monotributo-cuanto-pago",
+    "escala-ganancias-2026",
+    "vacaciones-dias-pago",
+    "dolar-tarjeta-como-se-calcula",
+    "indemnizacion-despido-2026",
+    "aguinaldo-despido",
+    "sueldo-bruto-a-neto",
+    "horas-extras-cuanto-cobran",
+  ].map((slug) => ({
+    url: `${base}/guia/${slug}/`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
   const calculadoras: MetadataRoute.Sitemap = CALCULADORAS.filter((c) => c.slug).map((c) => ({
     url: `${base}/${c.slug}/`,
     lastModified,
@@ -19,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...paginas, ...calculadoras];
+  return [...paginas, ...calculadoras, ...guias];
 }
