@@ -61,10 +61,10 @@ export default function CalculadoraSueldoClient() {
           />
           Casado/a (cónyuge a cargo)
         </label>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="sm:col-span-2 grid grid-cols-2 gap-3">
           <div>
             <label htmlFor="hijos" className="block text-xs font-medium mb-1">
-              Hijos
+              Hijos (sin discapacidad)
             </label>
             <input
               id="hijos"
@@ -78,7 +78,7 @@ export default function CalculadoraSueldoClient() {
           </div>
           <div>
             <label htmlFor="hijosDisc" className="block text-xs font-medium mb-1">
-              Con discapacidad
+              Hijos con discapacidad
             </label>
             <input
               id="hijosDisc"
@@ -89,6 +89,10 @@ export default function CalculadoraSueldoClient() {
               onChange={(e) => setHijosDisc(e.target.value)}
               className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
             />
+            <p className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
+              Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
+              discapacidad es el doble).
+            </p>
           </div>
         </div>
       </form>
