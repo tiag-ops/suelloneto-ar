@@ -1,190 +1,87 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { porCategoria } from "@/lib/calculadoras";
+import CalculadoraSueldoClient from "./calculadora-sueldo";
 
-import { useState } from "react";
-import { calcularSueldo } from "@/lib/ganancias";
-import { formatARS } from "@/lib/format";
-import type { DesgloseSueldo, EntradaSueldo } from "@/lib/types";
+export const metadata: Metadata = {
+  title: "SueldoNeto.ar — Calculadoras de sueldo, monotributo y trabajo 2026",
+  description:
+    "Calculadoras gratuitas para Argentina: sueldo neto, Ganancias, monotributo, aguinaldo, vacaciones, horas extras, indemnización y más. Valores oficiales ARCA con fecha de vigencia.",
+  alternates: { canonical: "/" },
+};
+
+const NOMBRES_CATEGORIA: Record<string, string> = {
+  laboral: "Trabajo y liquidación de sueldos",
+  impuestos: "Impuestos",
+  monetarias: "Dólar y monedas",
+  inversiones: "Inversiones",
+  utilidades: "Utilidades",
+};
 
 export default function Home() {
-  const [bruto, setBruto] = useState("");
-  const [conyuge, setConyuge] = useState(false);
-  const [hijos, setHijos] = useState("0");
-  const [hijosDisc, setHijosDisc] = useState("0");
-  const [resultado, setResultado] = useState<DesgloseSueldo | null>(null);
-
-  function calcular(e: React.FormEvent) {
-    e.preventDefault();
-    const entrada: EntradaSueldo = {
-      sueldoBruto: Number(bruto.replace(/[^\d.,]/g, "").replace(/\./g, "").replace(",", ".")) || 0,
-      conyuge,
-      hijos: Number(hijos) || 0,
-      hijosDiscapacidad: Number(hijosDisc) || 0,
-    };
-    setResultado(calcularSueldo(entrada));
-  }
+  const categorias = porCategoria();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <section className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">
-          Calculadora de sueldo neto 2026
+          Calculadoras de sueldo e impuestos de Argentina
         </h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          Aportes (11% + 3% + 3%) e Impuesto a las Ganancias con los valores oficiales de ARCA
-          vigentes desde julio 2026 (método doceava, RG 4003).
+          Gratis, sin registro y con valores oficiales de ARCA con fecha de vigencia. Todas
+          calculan en tu navegador: tus datos nunca salen de tu equipo.
         </p>
       </section>
 
-      <form
-        onSubmit={calcular}
-        className="grid gap-4 sm:grid-cols-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
-      >
-        <div className="sm:col-span-2">
-          <label htmlFor="bruto" className="block text-sm font-medium mb-1">
-            Sueldo bruto mensual ($)
-          </label>
-          <input
-            id="bruto"
-            inputMode="numeric"
-            required
-            value={bruto}
-            onChange={(e) => setBruto(e.target.value)}
-            placeholder="Ej: 4500000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          />
-        </div>
+      {/* Calculadora principal */}
+      <CalculadoraSueldoClient />
 
-        <label className="flex items-center gap-2 text-sm">
-          <input
-            type="checkbox"
-            checked={conyuge}
-            onChange={(e) => setConyuge(e.target.checked)}
-            className="h-4 w-4 accent-emerald-600"
-          />
-          Estoy casado/a (cónyuge a cargo)
-        </label>
-
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label htmlFor="hijos" className="block text-sm font-medium mb-1">
-              Hijos
-            </label>
-            <input
-              id="hijos"
-              type="number"
-              min={0}
-              max={15}
-              value={hijos}
-              onChange={(e) => setHijos(e.target.value)}
-              className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
+      {/* Directorio de calculadoras */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold">Todas las calculadoras</h2>
+        {Object.entries(categorias).map(([cat, items]) => (
+          <div key={cat}>
+            <h3 className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-2">
+              {NOMBRES_CATEGORIA[cat] ?? cat}
+            </h3>
+            <ul className="grid sm:grid-cols-2 gap-2">
+              {items.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={c.slug ? `/${c.slug}/` : "/"}
+                    className="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+                  >
+                    <span aria-hidden className="text-xl">{c.icono}</span>
+                    <span>
+                      <span className="block text-sm font-medium">{c.titulo}</span>
+                      <span className="block text-xs text-zinc-500 dark:text-zinc-400 line-clamp-1">
+                        {c.descripcion}
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div>
-            <label htmlFor="hijosDisc" className="block text-sm font-medium mb-1">
-              Con discapacidad
-            </label>
-            <input
-              id="hijosDisc"
-              type="number"
-              min={0}
-              max={15}
-              value={hijosDisc}
-              onChange={(e) => setHijosDisc(e.target.value)}
-              className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            />
-          </div>
-        </div>
-
-        <button
-          type="submit"
-          className="sm:col-span-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 transition-colors"
-        >
-          Calcular mi sueldo neto
-        </button>
-      </form>
-
-      {resultado && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 space-y-3">
-          <h2 className="font-semibold">Desglose mensual</h2>
-          <dl className="text-sm divide-y divide-zinc-100 dark:divide-zinc-800">
-            <Row label="Sueldo bruto" value={resultado.bruto} />
-            <Row label="− Aporte jubilación (11%)" value={-resultado.aporteJubilacion} />
-            <Row label="− Obra social (3%)" value={-resultado.obraSocial} />
-            <Row label="− PAMI (3%)" value={-resultado.pami} />
-            <Row label="= Neto antes de Ganancias" value={resultado.netoPreGanancias} strong />
-            {resultado.alcanzaGanancias ? (
-              <>
-                <Row
-                  label="− Impuesto a las Ganancias (prom. mensual)"
-                  value={-resultado.impuestoGananciasMensual}
-                />
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 pt-2">
-                  Ganancia neta imponible anual proyectada:{" "}
-                  {formatARS(resultado.gniAcumuladaDiciembre)} · Impuesto del período:{" "}
-                  {formatARS(resultado.impuestoGananciasAnual)}
-                </p>
-              </>
-            ) : (
-              <p className="text-sm rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-3 py-2">
-                ✅ No alcanzado por el Impuesto a las Ganancias
-              </p>
-            )}
-          </dl>
-
-          <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
-            <span className="font-semibold">Tu sueldo neto</span>
-            <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
-              {formatARS(resultado.neto)}
-            </span>
-          </div>
-
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            Valores vigentes desde {resultado.vigenciaDesde} · Fuente:{" "}
-            <a
-              href={resultado.urlFuente}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-emerald-600"
-            >
-              {resultado.fuente}
-            </a>
-          </p>
-        </section>
-      )}
+        ))}
+      </section>
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "Calculadora de Sueldo Neto — SueldoNeto.ar",
-            applicationCategory: "FinanceApplication",
-            operatingSystem: "Web",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "ARS" },
+            "@type": "WebSite",
+            name: "SueldoNeto.ar",
             inLanguage: "es-AR",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://sueldoneto.ar/?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
           }),
         }}
       />
-    </div>
-  );
-}
-
-function Row({
-  label,
-  value,
-  strong,
-}: {
-  label: string;
-  value: number;
-  strong?: boolean;
-}) {
-  return (
-    <div className={`flex justify-between py-1.5 ${strong ? "font-semibold" : ""}`}>
-      <dt className={value < 0 ? "text-zinc-500 dark:text-zinc-400" : ""}>{label}</dt>
-      <dd className={value < 0 ? "text-zinc-500 dark:text-zinc-400" : ""}>
-        {formatARS(value)}
-      </dd>
     </div>
   );
 }
