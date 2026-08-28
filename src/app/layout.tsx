@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import { themeScript } from "./theme-script";
+import ThemeToggle from "./theme-toggle";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sueldoneto.com.ar"),
@@ -33,24 +35,30 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-AR" className="h-full antialiased">
+    <html lang="es-AR" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
         <header className="border-b border-zinc-200 dark:border-zinc-800">
           <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
             <Link href="/" className="font-bold text-lg tracking-tight">
               Sueldo<span className="text-emerald-600 dark:text-emerald-400">Neto</span>.ar
             </Link>
-            <nav className="flex gap-4 text-sm">
-              <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">
-                Sueldo neto
-              </Link>
-              <Link
-                href="/monotributo/"
-                className="hover:text-emerald-600 dark:hover:text-emerald-400"
-              >
-                Monotributo
-              </Link>
-            </nav>
+            <div className="flex items-center gap-3">
+              <nav className="flex gap-4 text-sm">
+                <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">
+                  Inicio
+                </Link>
+                <Link
+                  href="/monotributo/"
+                  className="hover:text-emerald-600 dark:hover:text-emerald-400"
+                >
+                  Monotributo
+                </Link>
+              </nav>
+              <ThemeToggle />
+            </div>
           </div>
         </header>
 

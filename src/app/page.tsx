@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { porCategoria, GUIAS, urlDe } from "@/lib/calculadoras";
 import CalculadoraSueldoClient from "./calculadora-sueldo";
+import ComoSeCalcula from "./como-se-calcula";
 
 export const metadata: Metadata = {
   title: "SueldoNeto.ar — Calculadoras de sueldo, monotributo y trabajo 2026",
@@ -33,8 +34,9 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Calculadora principal */}
       <CalculadoraSueldoClient />
+
+      <ComoSeCalcula />
 
       {/* Directorio de calculadoras */}
       <section className="space-y-4">
