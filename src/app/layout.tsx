@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sueldoneto.com.ar"),
   title: "SueldoNeto.ar — Calculadora de sueldo neto y monotributo 2026",
   description:
     "Calculá tu sueldo neto con aportes e Impuesto a las Ganancias, y encontrá tu categoría de monotributo. Valores oficiales ARCA con fecha de vigencia. Gratis, sin registro.",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Tu sueldo neto con aportes y Ganancias, y tu categoría de monotributo. Valores ARCA vigentes.",
     locale: "es_AR",
+    url: "https://sueldoneto.com.ar",
     type: "website",
     siteName: "SueldoNeto.ar",
   },

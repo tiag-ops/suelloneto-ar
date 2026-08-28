@@ -4,7 +4,7 @@ import { CALCULADORAS } from "@/lib/calculadoras";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://sueldoneto.ar";
+  const base = "https://sueldoneto.com.ar";
   const lastModified = new Date();
 
   const paginas: MetadataRoute.Sitemap = [

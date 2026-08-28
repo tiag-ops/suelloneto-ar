@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sueldoneto.ar/sitemap.xml
+Sitemap: https://sueldoneto.com.ar/sitemap.xml

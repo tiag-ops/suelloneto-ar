@@ -76,7 +76,7 @@ export default function Home() {
             inLanguage: "es-AR",
             potentialAction: {
               "@type": "SearchAction",
-              target: "https://sueldoneto.ar/?q={search_term_string}",
+              target: "https://sueldoneto.com.ar/?q={search_term_string}",
               "query-input": "required name=search_term_string",
             },
           }),
