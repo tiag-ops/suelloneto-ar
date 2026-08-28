@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     url: "https://sueldoneto.com.ar",
     type: "website",
     siteName: "SueldoNeto.ar",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "SueldoNeto.ar — calculadoras de sueldo neto y monotributo" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SueldoNeto.ar",
+    description: "Calculadoras de sueldo neto, monotributo y trabajo. Valores ARCA vigentes.",
+    images: ["/og-image.png"],
   },
 };
 
