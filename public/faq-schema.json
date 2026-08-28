@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo se calcula el sueldo neto en Argentina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Al sueldo bruto se le descuentan los aportes personales (11% jubilación, 3% obra social y 3% PAMI). Sobre ese neto, si la ganancia neta imponible supera las deducciones de la ley, se retiene el Impuesto a las Ganancias según la escala del artículo 94 vigente por semestre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Desde qué sueldo se paga Ganancias en 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con los valores vigentes del segundo semestre de 2026, un empleado soltero sin hijos comienza a pagar Ganancias con un sueldo bruto de aproximadamente $3,5 millones mensuales. El piso exacto depende de la situación familiar (cónyuge e hijos aumentan las deducciones)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué categoría de monotributo me corresponde?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La categoría depende de tu facturación anual bruta proyectada. Con los valores desde el 01/08/2026, la categoría A abarca hasta $12.009.410 anuales y la categoría K hasta $126.610.839. Usá la calculadora de esta página para saber la tuya según facturación y tipo de actividad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto se paga de monotributo por mes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La cuota mensual del monotributo va desde $49.527,18 en la categoría A hasta $1.614.446,02 en la K para servicios (desde el 01/08/2026). Incluye impuesto integrado, aporte al SIPA y obra social."
+      }
+    }
+  ]
+}
