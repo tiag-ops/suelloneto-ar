@@ -21,6 +21,11 @@ export const CALCULADORAS: CalculadoraMeta[] = [
   // ── Impuestos (ya existentes) ──
   { slug: "", titulo: "Calculadora de Sueldo Neto 2026", descripcion: "Tu sueldo neto con aportes e Impuesto a las Ganancias (método doceava, valores ARCA vigentes).", keyword: "calculadora sueldo neto", categoria: "impuestos", icono: "💵" },
   { slug: "monotributo", titulo: "Monotributo 2026: categorías y cuotas", descripcion: "Tabla completa de categorías y cuotas del monotributo desde el 01/08/2026, con buscador por facturación.", keyword: "monotributo categorias 2026", categoria: "impuestos", icono: "🧾" },
+  // ── Financieras ──
+  { slug: "plazo-fijo", titulo: "Simulador de Plazo Fijo 2026", descripcion: "Interés ganado por días o meses, con o sin renovación, y la TEA equivalente de cualquier TNA.", keyword: "simulador plazo fijo", categoria: "inversiones", icono: "📈" },
+  { slug: "credito", titulo: "Simulador de Crédito: cuota fija", descripcion: "Cuota mensual de tu préstamo con sistema francés, total de intereses y pagado.", keyword: "simulador credito", categoria: "inversiones", icono: "🏦" },
+  { slug: "dolar-tarjeta", titulo: "Dólar tarjeta: calculadora con percepciones", descripcion: "Cuánto pagás realmente el dólar tarjeta: oficial + percepciones vigentes, con ejemplos.", keyword: "dolar tarjeta hoy", categoria: "monetarias", icono: "💳" },
+  { slug: "cuil", titulo: "Calculadora de CUIL por DNI", descripcion: "Tu CUIL según DNI y género con el algoritmo oficial AFIP (módulo 11), caso especial 23 incluido.", keyword: "calculadora cuil", categoria: "utilidades", icono: "🆔" },
 ];
 
 export function porCategoria(): Record<string, CalculadoraMeta[]> {
