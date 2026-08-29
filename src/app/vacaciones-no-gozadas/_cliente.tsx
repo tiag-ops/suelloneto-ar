@@ -89,7 +89,7 @@ export default function VacacionesNoGozadasPage() {
       {res && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Te corresponden {res.diasProporcionales.toFixed(1)} días de vacaciones no gozadas:
+            Te corresponden {Number.isInteger(res.diasProporcionales) ? res.diasProporcionales : res.diasProporcionales.toFixed(1)} días de vacaciones no gozadas:
           </p>
           <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
             {formatARS2(res.pago)}

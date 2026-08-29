@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { diasHabiles } from "@/lib/laboral";
-import { FERIADOS_2026 } from "@/lib/feriados";
+import { FERIADOS } from "@/lib/feriados";
 
 export default function DiasHabilesPage() {
   const [desde, setDesde] = useState("");
   const [hasta, setHasta] = useState("");
   const [res, setRes] = useState<{ habiles: number; corridos: number } | null>(null);
 
-  const feriadosSet = new Set(FERIADOS_2026.map((f) => f.fecha));
+  const feriadosSet = new Set(FERIADOS.map((f) => f.fecha));
 
   return (
     <>

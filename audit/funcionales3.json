@@ -1,0 +1,62 @@
+[
+  {
+    "pagina": "home",
+    "test": "aportes 11% = 495.000",
+    "ok": true,
+    "detalle": ""
+  },
+  {
+    "pagina": "home",
+    "test": "obra social 3% = 135.000",
+    "ok": true,
+    "detalle": ""
+  },
+  {
+    "pagina": "home",
+    "test": "neto presente y numérico",
+    "ok": false,
+    "detalle": "?"
+  },
+  {
+    "pagina": "cuil",
+    "test": "20-12345678-6 (igual a test unitario)",
+    "ok": true,
+    "detalle": "visto en diagnóstico"
+  },
+  {
+    "pagina": "vac-no-gozadas",
+    "test": "monto calculado",
+    "ok": false,
+    "detalle": "montos: []"
+  },
+  {
+    "pagina": "horas-extras",
+    "test": "monto calculado",
+    "ok": false,
+    "detalle": "montos: []"
+  },
+  {
+    "pagina": "horas-extras",
+    "test": "hs 50% de 4M = 30.000 c/u",
+    "ok": false,
+    "detalle": ""
+  },
+  {
+    "pagina": "plazo-fijo",
+    "test": "monto + TEA",
+    "ok": false,
+    "detalle": "montos: []"
+  },
+  {
+    "pagina": "credito",
+    "test": "cuota calculada",
+    "ok": false,
+    "detalle": "montos: []"
+  },
+  {
+    "pagina": "dolar-tarjeta",
+    "test": "total calculado",
+    "ok": false,
+    "detalle": "montos: []"
+  }
+]

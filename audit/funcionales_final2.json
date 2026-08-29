@@ -1,0 +1,26 @@
+[
+  {
+    "pagina": "vacaciones-no-gozadas",
+    "test": "resultado visible",
+    "ok": false,
+    "detalle": "['$\\xa03.360.000,00']"
+  },
+  {
+    "pagina": "plazo-fijo",
+    "test": "resultado",
+    "ok": true,
+    "detalle": "['$\\xa01.000.000,00', '$\\xa024.657,53', '$\\xa01.024.657,53']"
+  },
+  {
+    "pagina": "credito",
+    "test": "cuota",
+    "ok": true,
+    "detalle": "['$\\xa091.094,25', '$\\xa07.287.540,05', '$\\xa02.287.540,05']"
+  },
+  {
+    "pagina": "dolar-tarjeta",
+    "test": "total con percepciones",
+    "ok": false,
+    "detalle": "['$\\xa01.837,50', '$\\xa0183.750,00']"
+  }
+]

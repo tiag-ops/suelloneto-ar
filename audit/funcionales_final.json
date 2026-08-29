@@ -1,0 +1,32 @@
+[
+  {
+    "pagina": "vacaciones-no-gozadas",
+    "test": "calcula",
+    "ok": false,
+    "detalle": "[]"
+  },
+  {
+    "pagina": "horas-extras",
+    "test": "hs extra 50% = 30.000 (4M/200*1.5)",
+    "ok": false,
+    "detalle": "[]"
+  },
+  {
+    "pagina": "plazo-fijo",
+    "test": "calcula interés + TEA",
+    "ok": false,
+    "detalle": "[]"
+  },
+  {
+    "pagina": "credito",
+    "test": "cuota sistema francés",
+    "ok": false,
+    "detalle": "[]"
+  },
+  {
+    "pagina": "dolar-tarjeta",
+    "test": "calcula total con percepciones",
+    "ok": false,
+    "detalle": "[]"
+  }
+]

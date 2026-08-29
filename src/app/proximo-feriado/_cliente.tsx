@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import { proximoFeriado } from "@/lib/laboral";
-import { FERIADOS_2026 } from "@/lib/feriados";
+import { FERIADOS } from "@/lib/feriados";
 
 export default function ProximoFeriadoPage() {
   const hoy = new Date();
-  const proximo = proximoFeriado(hoy, FERIADOS_2026);
+  const proximo = proximoFeriado(hoy, FERIADOS);
 
-  const restantes = FERIADOS_2026.filter(
+  const restantes = FERIADOS.filter(
     (f) => f.fecha > hoy.toISOString().slice(0, 10),
   );
 
@@ -19,7 +19,7 @@ export default function ProximoFeriadoPage() {
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🇦🇷 Próximo feriado en Argentina</h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          Calendario de feriados nacionales 2026 (Ley 27.399).
+          Calendario de feriados nacionales 2026-2027 (Ley 27.399).
         </p>
       </header>
 
