@@ -22,7 +22,7 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Cómo leer la escala</h2>
-        <p>Ganancias es <strong>progresivo</strong>: no se aplica una única alícuota a todo tu ingreso, sino que la ganancia neta se divide en tramos y cada tramo paga su tasa. El "monto fijo" es lo acumulado por los tramos anteriores.</p>
+        <p>Ganancias es <strong>progresivo</strong>: no se aplica una única alícuota a todo tu ingreso, sino que la ganancia neta se divide en tramos y cada tramo paga su tasa. El &laquo;monto fijo&raquo; es lo acumulado por los tramos anteriores.</p>
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
@@ -76,7 +76,7 @@ export default function Articulo() {
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
         <div className="space-y-1"><h3 className="font-medium">¿Cada cuánto se actualiza la escala?</h3><p>Por ley, dos veces por año: en enero y en julio, según la inflación (IPC) del semestre previo. ARCA publica las tablas oficiales y los empleadores deben aplicarlas desde el mes de entrada en vigencia.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Por qué la escala es "anual" si me retienen por mes?</h3><p>Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual.</p></div>
+        <div className="space-y-1"><h3 className="font-medium">¿Por qué la escala es &laquo;anual&raquo; si me retienen por mes?</h3><p>Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual.</p></div>
       </section>
 
       <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">

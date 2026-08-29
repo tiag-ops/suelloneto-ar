@@ -22,7 +22,7 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Los dos pasos de la conversión</h2>
-        <p><strong>Paso 1 — Aportes (17%):</strong> al bruto se le descuentan jubilación (11%), obra social (3%) y PAMI (3%). Eso te da el neto "antes de Ganancias".</p>
+        <p><strong>Paso 1 — Aportes (17%):</strong> al bruto se le descuentan jubilación (11%), obra social (3%) y PAMI (3%). Eso te da el neto &laquo;antes de Ganancias&raquo;.</p>
         <p><strong>Paso 2 — Ganancias:</strong> si tu ganancia neta supera las deducciones de la ley, se retiene el impuesto con la escala del art. 94. Con los valores vigentes, un soltero sin hijos empieza a pagarlo cerca de los $3,5 millones brutos.</p>
       </section>
 

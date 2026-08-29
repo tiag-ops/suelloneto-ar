@@ -64,7 +64,7 @@ export default function Articulo() {
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
         <div className="space-y-1"><h3 className="font-medium">¿Sobre qué sueldo se calcula?</h3><p>Sobre la <strong>mejor remuneración mensual, normal y habitual</strong> del último año (incluye comisiones, horas extras habituales y premios), no necesariamente el último sueldo.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué es el "tope CCT"?</h3><p>La mejor remuneración no puede superar el promedio de las 12 mejores del convenio: si ganás más que el tope de tu convenio, la indemnización se calcula con el tope. Es un punto de reclamo frecuente.</p></div>
+        <div className="space-y-1"><h3 className="font-medium">¿Qué es el &laquo;tope CCT&raquo;?</h3><p>La mejor remuneración no puede superar el promedio de las 12 mejores del convenio: si ganás más que el tope de tu convenio, la indemnización se calcula con el tope. Es un punto de reclamo frecuente.</p></div>
         <div className="space-y-1"><h3 className="font-medium">Si me despiden por causa justificada, ¿cobro algo?</h3><p>Cobrás el salario adeudado, SAC proporcional y vacaciones no gozadas, pero <strong>no</strong> la indemnización por antigüedad ni el preaviso. El despido discriminatorio o incausado tiene protecciones adicionales.</p></div>
       </section>
 
