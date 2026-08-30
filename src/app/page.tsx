@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/link";
 import { porCategoria, GUIAS, urlDe } from "@/lib/calculadoras";
 import CalculadoraSueldoClient from "./calculadora-sueldo";
 import ComoSeCalcula from "./como-se-calcula";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/link";
 import { CALCULADORAS, GUIAS, relacionadas, otrasGuias, guiasDeCalculadora, urlDe, type CalculadoraMeta } from "@/lib/calculadoras";
 
 /** Bloque "Calculadoras relacionadas" — insertar al final de cada calculadora */
