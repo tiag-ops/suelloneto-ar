@@ -49,6 +49,9 @@ export const metadata: Metadata = {
 const DISCLAIMER =
   "Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.";
 
+// Link de donación Mercado Pago (público, no es secreto). Override opcional por env.
+const LINK_DONACION = process.env.NEXT_PUBLIC_MP_LINK ?? "https://link.mercadopago.com.ar/sueldoneto";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -98,16 +101,14 @@ export default function RootLayout({
           <div className="caption mx-auto max-w-3xl space-y-1 px-4 py-6">
             <p>{DISCLAIMER}</p>
             <p className="flex flex-wrap gap-x-3 gap-y-1">
-              {process.env.NEXT_PUBLIC_MP_LINK ? (
-                <a
-                  href={process.env.NEXT_PUBLIC_MP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-emerald-700 dark:hover:text-emerald-300"
-                >
-                  ☕ Invitanos un café
-                </a>
-              ) : null}
+              <a
+                href={LINK_DONACION}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-emerald-700 dark:hover:text-emerald-300"
+              >
+                ☕ Invitanos un café
+              </a>
               <Link href="/privacidad/" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">
                 Privacidad
               </Link>
