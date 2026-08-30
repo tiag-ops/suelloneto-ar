@@ -15,7 +15,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Sueldos</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Sueldos</p>
         <h1 className="text-2xl font-bold tracking-tight">💵 De sueldo bruto a neto: la conversión exacta</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">Lo que figura en tu recibo vs. lo que te depositan. Con la <Link href="/" className="underline hover:text-emerald-700">calculadora completa</Link>.</p>
       </header>
@@ -48,7 +48,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">Con cónyuge e hijos el neto es mayor (más deducciones). Tu caso exacto: <Link href="/" className="underline hover:text-emerald-700">calculadora bruto→neto</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Con cónyuge e hijos el neto es mayor (más deducciones). Tu caso exacto: <Link href="/" className="underline hover:text-emerald-700">calculadora bruto→neto</Link>.</p>
       </section>
 
       <section className="space-y-3">

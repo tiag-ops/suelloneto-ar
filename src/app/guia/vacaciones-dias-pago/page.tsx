@@ -15,7 +15,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Vacaciones</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Vacaciones</p>
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Vacaciones: días según antigüedad y cuánto cobrás</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 150 de la Ley de Contrato de Trabajo. <Link href="/vacaciones/" className="underline hover:text-emerald-700">Calculá tus vacaciones acá</Link>.</p>
       </header>
@@ -48,7 +48,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
       </section>
 
       <section className="space-y-3">

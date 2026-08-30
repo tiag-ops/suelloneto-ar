@@ -17,7 +17,7 @@ export default function ArticuloGanancias() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">
           Guía · Ganancias
         </p>
         <h1 className="text-2xl font-bold tracking-tight">
@@ -88,7 +88,7 @@ export default function ArticuloGanancias() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Casos con cónyuge e hijos usan las deducciones correspondientes. Si tenés hijos con
           discapacidad u otras deducciones (alquiler, empleados domésticos, crédito
           hipotecario), el piso sube: usá la{" "}

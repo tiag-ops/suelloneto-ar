@@ -133,7 +133,7 @@ export default function PlazoFijoCliente() {
               {formatARS2(res.montoFinal)}
             </span>
           </div>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             TNA {tna}% · TEA equivalente {res.tea.toFixed(2)}%
           </p>
         </section>

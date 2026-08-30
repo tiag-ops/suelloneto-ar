@@ -105,12 +105,12 @@ export default function IndemnizacionPage() {
             </span>
           </div>
           {vac && vac.diasProporcionales > 0 && (
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 pt-1">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 pt-1">
               + Vacaciones no gozadas proporcionales: {vac.diasProporcionales.toFixed(1)} días ≈{" "}
               {formatARS2(vac.pago)}
             </p>
           )}
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Montos brutos estimativos. Tu liquidación final puede incluir preaviso, integración
             del mes, horas extras y otras sumas. Consultá con un laboralista.
           </p>

@@ -70,7 +70,7 @@ export default function CuilCliente() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-300 tracking-wider">
             {res.cuil}
           </p>
-          <p className="text-xs text-emerald-800/70 dark:text-emerald-200/70 mt-2">
+          <p className="text-sm text-emerald-800/70 dark:text-emerald-200/70 mt-2">
             Cálculo matemático según algoritmo AFIP. El CUIL real se asigna al inscribirte en
             ARCA/Anses.
           </p>

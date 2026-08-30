@@ -71,7 +71,7 @@ export default function AguinaldoPage() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.sac)}
           </p>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
             Cálculo: 50% de {formatARS2(res.mejorSueldo)} × {res.mesesTrabajados}/6 del semestre
           </p>
         </section>

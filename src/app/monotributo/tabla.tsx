@@ -79,7 +79,7 @@ export default function TablaMonotributo() {
                   /mes
                 </span>
               </p>
-              <p className="text-xs text-emerald-800/80 dark:text-emerald-200/80 mt-2">
+              <p className="text-sm text-emerald-800/80 dark:text-emerald-200/80 mt-2">
                 Impuesto integrado {formatARS2(resultado.desglose.impuestoIntegrado)} · SIPA{" "}
                 {formatARS2(resultado.desglose.aporteSIPA)} · Obra social{" "}
                 {formatARS2(resultado.desglose.aporteObraSocial)} · Tope anual{" "}
@@ -138,7 +138,7 @@ export default function TablaMonotributo() {
         </table>
       </div>
 
-      <p className="text-xs text-zinc-600 dark:text-zinc-400">
+      <p className="text-sm text-zinc-600 dark:text-zinc-400">
         Valores vigentes desde {datos.vigenciaDesde} · Fuente:{" "}
         <a
           href={datos.urlFuente}

@@ -73,7 +73,7 @@ export default function PrivacidadPage() {
           política y cumpliremos con las obligaciones de la ley y del régimen de la dirección
           Nacional de Protección de Datos Personales.
         </p>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           El titular de los datos podrá en todo momento ejercer los derechos de acceso,
           rectificación y supresión de los datos conforme lo establecido en el artículo 14 de la
           Ley N° 25.326.

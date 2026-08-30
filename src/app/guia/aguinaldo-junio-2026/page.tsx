@@ -15,7 +15,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Aguinaldo</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Aguinaldo</p>
         <h1 className="text-2xl font-bold tracking-tight">🎁 Aguinaldo junio 2026: fechas de cobro y cómo se calcula</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">El SAC del primer semestre se paga hasta el 30 de junio. Todos los montos están calculados con nuestra <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
       </header>
@@ -56,7 +56,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">Cálculo: 50% del mejor sueldo × meses/6. Para tu caso exacto usá la <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Cálculo: 50% del mejor sueldo × meses/6. Para tu caso exacto usá la <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
       </section>
 
       <section className="space-y-3">

@@ -89,7 +89,7 @@ export default function CalculadoraSueldoClient() {
               onChange={(e) => setHijosDisc(e.target.value)}
               className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
             />
-            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
               Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
               discapacidad es el doble).
             </p>
@@ -112,7 +112,7 @@ export default function CalculadoraSueldoClient() {
                   label="− Impuesto a las Ganancias (prom. mensual)"
                   value={-resultado.impuestoGananciasMensual}
                 />
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 pt-2">
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 pt-2">
                   Ganancia neta imponible anual proyectada:{" "}
                   {formatARS(resultado.gniAcumuladaDiciembre)} · Impuesto del período:{" "}
                   {formatARS(resultado.impuestoGananciasAnual)}
@@ -130,7 +130,7 @@ export default function CalculadoraSueldoClient() {
               {formatARS(resultado.neto)}
             </span>
           </div>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Valores vigentes desde {resultado.vigenciaDesde} ·{" "}
             <a
               href={resultado.urlFuente}

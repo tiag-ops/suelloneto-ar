@@ -19,7 +19,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">⚖️ Me despidieron: todo lo que te deben pagar</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">La liquidación final tiene más conceptos que la sola indemnización. <Link href="/indemnizacion/" className="underline hover:text-emerald-700">Calculá tu liquidación completa</Link>.</p>
       </header>

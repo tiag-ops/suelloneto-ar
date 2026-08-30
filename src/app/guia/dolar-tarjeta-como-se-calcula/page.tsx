@@ -13,7 +13,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Dólar</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Dólar</p>
         <h1 className="text-2xl font-bold tracking-tight">💳 Dólar tarjeta: cómo se calcula paso a paso</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">Lo que realmente pagás cuando comprás en el exterior o contrataste un servicio en dólares. Con la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora de dólar tarjeta</Link>.</p>
       </header>

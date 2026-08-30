@@ -95,7 +95,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
               >
                 📖 {g.titulo}
               </Link>
-              <span className="text-xs text-zinc-600 dark:text-zinc-400"> — {g.descripcion}</span>
+              <span className="text-sm text-zinc-600 dark:text-zinc-400"> — {g.descripcion}</span>
             </li>
           ))}
         </ul>

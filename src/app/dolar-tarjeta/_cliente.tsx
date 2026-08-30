@@ -91,7 +91,7 @@ export default function DolarTarjetaCliente() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.dolarTarjeta)}
           </p>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
             Una compra de USD 100 te cuesta {formatARS2(res.dolarTarjeta * 100)}
           </p>
         </section>

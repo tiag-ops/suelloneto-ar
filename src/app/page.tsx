@@ -56,7 +56,7 @@ export default function Home() {
                     <span aria-hidden className="text-xl">{c.icono}</span>
                     <span>
                       <span className="block text-sm font-medium">{c.titulo}</span>
-                      <span className="block text-xs text-zinc-600 dark:text-zinc-400 line-clamp-1">
+                      <span className="block text-sm text-zinc-600 dark:text-zinc-400 line-clamp-1">
                         {c.descripcion}
                       </span>
                     </span>
@@ -79,7 +79,7 @@ export default function Home() {
                 className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 block hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
               >
                 <span className="block text-sm font-medium">📖 {g.titulo}</span>
-                <span className="block text-xs text-zinc-600 dark:text-zinc-400">{g.descripcion}</span>
+                <span className="block text-sm text-zinc-600 dark:text-zinc-400">{g.descripcion}</span>
               </Link>
             </li>
           ))}

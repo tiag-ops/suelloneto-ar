@@ -77,14 +77,14 @@ export default function VacacionesPage() {
             key={i}
             className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-center bg-white dark:bg-zinc-900"
           >
-            <p className="text-xs text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
               {i === 0 ? "Hasta 5 años" : i === 1 ? "6 a 10 años" : "11 a 20 años"}
             </p>
             <p className="text-lg font-bold">{t.dias} días</p>
           </div>
         ))}
         <div className="rounded-lg border border-emerald-300 dark:border-emerald-800 p-3 text-center bg-emerald-50 dark:bg-emerald-950">
-          <p className="text-xs text-emerald-700 dark:text-emerald-300">Más de 20 años</p>
+          <p className="text-sm text-emerald-700 dark:text-emerald-300">Más de 20 años</p>
           <p className="text-lg font-bold text-emerald-700 dark:text-emerald-300">30 días</p>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function VacacionesPage() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.pago)}
           </p>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
             {res.dias} días × {formatARS2(res.porDia)}/día (mensual ÷ 25)
           </p>
         </section>

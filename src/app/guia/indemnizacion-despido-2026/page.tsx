@@ -15,7 +15,7 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
+        <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">💼 Indemnización por despido 2026: cómo se calcula</h1>
         <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 245 LCT. Con <Link href="/indemnizacion/" className="underline hover:text-emerald-700">nuestra calculadora de indemnización</Link>.</p>
       </header>
@@ -58,7 +58,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-600 dark:text-zinc-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
       </section>
 
       <section className="space-y-3">
