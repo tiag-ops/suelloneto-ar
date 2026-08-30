@@ -17,7 +17,7 @@ export default function DiasHabilesPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📆 Calculadora de días hábiles</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Días hábiles entre dos fechas en Argentina: descuenta sábados, domingos y feriados
           nacionales 2026.
         </p>

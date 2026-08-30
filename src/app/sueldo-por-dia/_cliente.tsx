@@ -14,7 +14,7 @@ export default function SueldoPorDiaPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📅 Sueldo por día y por hora</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           La convención de liquidación argentina: el día se calcula dividiendo el sueldo mensual
           por 25 (días hábiles promedio) y la hora por 200 (8 horas × 25 días).
         </p>

@@ -16,7 +16,7 @@ export default function DolarTarjetaCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula?</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Al dólar oficial se le suman las percepciones/impostos vigentes sobre gastos en el
           exterior y compras en moneda extranjera. Actualizá los porcentajes según la normativa
           del día.
@@ -85,13 +85,13 @@ export default function DolarTarjetaCliente() {
 
       {res && (
         <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-base text-neutral-600 dark:text-neutral-400">
             Dólar tarjeta (recargo total {res.percepcionesAplicadas}%)
           </p>
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.dolarTarjeta)}
           </p>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+          <p className="text-base text-neutral-600 dark:text-neutral-400 mt-2">
             Una compra de USD 100 te cuesta {formatARS2(res.dolarTarjeta * 100)}
           </p>
         </section>

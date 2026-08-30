@@ -16,7 +16,7 @@ export default function HorasExtrasPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⏰ Calculadora de Horas Extras</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Las horas extras se liquidan sobre el valor hora (sueldo mensual ÷ 200): +50% en días
           hábiles; +100% los sábados desde las 13h, domingos y feriados (art. 201 LCT).
         </p>

@@ -61,7 +61,7 @@ export default function TablaMonotributo() {
               <h2 className="font-semibold text-amber-800 dark:text-amber-200">
                 ⚠️ Superás el tope de la categoría K
               </h2>
-              <p className="text-sm text-amber-800 dark:text-amber-200 mt-1">
+              <p className="text-base text-amber-800 dark:text-amber-200 mt-1">
                 Con {formatARS(resultado.topeIngresosAnual)}+ de facturación anual salís del
                 monotributo: tenés que inscribirte en el Régimen General (Responsable
                 Inscripto).
@@ -79,7 +79,7 @@ export default function TablaMonotributo() {
                   /mes
                 </span>
               </p>
-              <p className="text-sm text-emerald-800/80 dark:text-emerald-200/80 mt-2">
+              <p className="text-base text-emerald-800/80 dark:text-emerald-200/80 mt-2">
                 Impuesto integrado {formatARS2(resultado.desglose.impuestoIntegrado)} · SIPA{" "}
                 {formatARS2(resultado.desglose.aporteSIPA)} · Obra social{" "}
                 {formatARS2(resultado.desglose.aporteObraSocial)} · Tope anual{" "}
@@ -138,7 +138,7 @@ export default function TablaMonotributo() {
         </table>
       </div>
 
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="text-base text-neutral-600 dark:text-neutral-400">
         Valores vigentes desde {datos.vigenciaDesde} · Fuente:{" "}
         <a
           href={datos.urlFuente}

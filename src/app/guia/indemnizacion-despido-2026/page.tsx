@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">💼 Indemnización por despido 2026: cómo se calcula</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Art. 245 LCT. Con <Link href="/indemnizacion/" className="underline hover:text-emerald-700">nuestra calculadora de indemnización</Link>.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Art. 245 LCT. Con <Link href="/indemnizacion/" className="underline hover:text-emerald-700">nuestra calculadora de indemnización</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -33,7 +33,7 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: indemnización según antigüedad</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Con una mejor remuneración de $4.000.000, 4 meses del semestre en curso e incluyendo vacaciones no gozadas proporcionales (6 meses):</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Con una mejor remuneración de $4.000.000, 4 meses del semestre en curso e incluyendo vacaciones no gozadas proporcionales (6 meses):</p>
         <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
           <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
@@ -58,7 +58,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
       </section>
 
       <section className="space-y-3">

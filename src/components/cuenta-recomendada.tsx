@@ -33,7 +33,7 @@ export default function CuentaRecomendada({ titulo }: { titulo?: string }) {
           </li>
         ))}
       </ul>
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="text-base text-neutral-600 dark:text-neutral-400">
         Transparencia: si te registrás desde estos links podemos recibir una comisión del
         proveedor, sin costo extra para vos. Es lo que mantiene las calculadoras gratis.
       </p>

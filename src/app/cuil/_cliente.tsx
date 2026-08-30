@@ -14,7 +14,7 @@ export default function CuilCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula el CUIL?</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Prefijo (20 varón / 27 mujer) + DNI con 8 dígitos + dígito verificador módulo 11
           (algoritmo AFIP). Si el cálculo da resto 1, se usa el prefijo especial 23.
         </p>
@@ -70,7 +70,7 @@ export default function CuilCliente() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-300 tracking-wider">
             {res.cuil}
           </p>
-          <p className="text-sm text-emerald-800/70 dark:text-emerald-200/70 mt-2">
+          <p className="text-base text-emerald-800/70 dark:text-emerald-200/70 mt-2">
             Cálculo matemático según algoritmo AFIP. El CUIL real se asigna al inscribirte en
             ARCA/Anses.
           </p>

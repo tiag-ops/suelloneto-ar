@@ -15,7 +15,7 @@ export default function VacacionesPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Calculadora de Vacaciones</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Días de vacaciones corridas según antigüedad (art. 150 LCT) y cuánto cobrás por ellas:
           se pagan a valor día (sueldo mensual ÷ 25) por día corrido.
         </p>
@@ -77,7 +77,7 @@ export default function VacacionesPage() {
             key={i}
             className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-3 text-center bg-white dark:bg-neutral-900"
           >
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="text-base text-neutral-600 dark:text-neutral-400">
               {i === 0 ? "Hasta 5 años" : i === 1 ? "6 a 10 años" : "11 a 20 años"}
             </p>
             <p className="text-lg font-bold">{t.dias} días</p>
@@ -97,7 +97,7 @@ export default function VacacionesPage() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.pago)}
           </p>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+          <p className="text-base text-neutral-600 dark:text-neutral-400 mt-2">
             {res.dias} días × {formatARS2(res.porDia)}/día (mensual ÷ 25)
           </p>
         </section>

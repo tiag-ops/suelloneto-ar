@@ -28,7 +28,7 @@ export default function ComoSeCalcula() {
         retención de cada mes es la diferencia contra el anterior. Con los valores vigentes, un
         soltero sin hijos empieza a pagarlo cerca de los $3,5 millones brutos.
       </p>
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="text-base text-neutral-600 dark:text-neutral-400">
         Ejemplo con bruto {formatARS(r.bruto)} → neto {formatARS(r.neto)}{" "}
         {r.alcanzaGanancias ? "(incluye Ganancias)" : "(sin Ganancias)"}, calculado
         automáticamente con las tablas vigentes. Más detalle en{" "}

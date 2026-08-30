@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Monotributo</p>
         <h1 className="text-2xl font-bold tracking-tight">🧾 Monotributo 2026: cuánto pagás por mes según tu categoría</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Valores oficiales de ARCA con aplicación desde el 01/08/2026. <Link href="/monotributo/" className="underline hover:text-emerald-700">¿No sabés tu categoría? Calculala acá</Link>.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Valores oficiales de ARCA con aplicación desde el 01/08/2026. <Link href="/monotributo/" className="underline hover:text-emerald-700">¿No sabés tu categoría? Calculala acá</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -49,7 +49,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Desglose completo de cada categoría (SIPA y obra social por separado) en la <Link href="/monotributo/" className="underline hover:text-emerald-700">tabla completa de monotributo</Link>.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Desglose completo de cada categoría (SIPA y obra social por separado) en la <Link href="/monotributo/" className="underline hover:text-emerald-700">tabla completa de monotributo</Link>.</p>
       </section>
 
       <section className="space-y-3">

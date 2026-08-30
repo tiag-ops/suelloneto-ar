@@ -14,7 +14,7 @@ export default function PaginaPlazoFijo() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📈 Simulador de Plazo Fijo</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">El interés del plazo fijo en pesos se liquidan con TNA (tasa nominal anual). Con renovación automática mes a mes ganás interés compuesto. La TEA es lo que realmente aplica tu dinero en un año.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">El interés del plazo fijo en pesos se liquidan con TNA (tasa nominal anual). Con renovación automática mes a mes ganás interés compuesto. La TEA es lo que realmente aplica tu dinero en un año.</p>
       </header>
       <Pagina />
       <CuentaRecomendada titulo="¿Te sobra todos los meses? Hacelo rendir" />

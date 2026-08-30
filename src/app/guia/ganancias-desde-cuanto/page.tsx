@@ -23,7 +23,7 @@ export default function ArticuloGanancias() {
         <h1 className="text-2xl font-bold tracking-tight">
           ¿Desde cuánto se paga Impuesto a las Ganancias en 2026?
         </h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Actualizado con los valores oficiales de ARCA del segundo semestre 2026 (haberes
           percibidos desde julio). Todos los montos de esta página se calculan con nuestra{" "}
           <Link href="/" className="underline hover:text-emerald-700">
@@ -52,7 +52,7 @@ export default function ArticuloGanancias() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: cuánto se descuenta según tu sueldo</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Calculado con las deducciones y la escala vigentes (julio–diciembre 2026). El impuesto
           mostrado es el promedio mensual del período.
         </p>
@@ -88,7 +88,7 @@ export default function ArticuloGanancias() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Casos con cónyuge e hijos usan las deducciones correspondientes. Si tenés hijos con
           discapacidad u otras deducciones (alquiler, empleados domésticos, crédito
           hipotecario), el piso sube: usá la{" "}

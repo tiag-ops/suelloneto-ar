@@ -57,7 +57,7 @@ export default function HubSueldos() {
         </section>
       ))}
 
-      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+      <p className="text-base text-neutral-600 dark:text-neutral-400">
         ¿Tu bruto exacto no está en la lista? Usá la{" "}
         <Link href="/" className="underline hover:text-emerald-700">
           calculadora completa

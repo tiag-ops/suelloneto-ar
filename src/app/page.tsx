@@ -29,7 +29,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold tracking-tight">
           Calculadoras de sueldo e impuestos de Argentina
         </h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Gratis, sin registro y con valores oficiales de ARCA con fecha de vigencia. Todas
           calculan en tu navegador: tus datos nunca salen de tu equipo.
         </p>
@@ -42,7 +42,7 @@ export default function Home() {
       {/* Serie programática: sueldos por monto exacto */}
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Sueldos netos por monto exacto</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Cada bruto tiene su página con el neto, el desglose y la comparativa con montos vecinos.
         </p>
         <ul className="flex flex-wrap gap-2 text-sm">

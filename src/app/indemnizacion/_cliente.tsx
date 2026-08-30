@@ -17,7 +17,7 @@ export default function IndemnizacionPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">💼 Calculadora de Indemnización por despido</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           Despido sin causa (art. 245 LCT): una mejor remuneración mensual por año de servicio o
           fracción mayor a 3 meses, más el SAC proporcional del semestre en curso. No incluye
           preaviso ni integración del mes de despido (se agregan aparte si corresponden).
@@ -105,12 +105,12 @@ export default function IndemnizacionPage() {
             </span>
           </div>
           {vac && vac.diasProporcionales > 0 && (
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 pt-1">
+            <p className="text-base text-neutral-600 dark:text-neutral-400 pt-1">
               + Vacaciones no gozadas proporcionales: {vac.diasProporcionales.toFixed(1)} días ≈{" "}
               {formatARS2(vac.pago)}
             </p>
           )}
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-base text-neutral-600 dark:text-neutral-400">
             Montos brutos estimativos. Tu liquidación final puede incluir preaviso, integración
             del mes, horas extras y otras sumas. Consultá con un laboralista.
           </p>

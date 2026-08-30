@@ -13,7 +13,7 @@ export default function PaginaDolarTarjeta() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">💳 Calculadora de Dólar Tarjeta</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">El dólar tarjeta aplica sobre el oficial las percepciones a compras en el exterior (Bienes Personales + Impuesto a los Gastos). Configurá los porcentajes vigentes del día.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">El dólar tarjeta aplica sobre el oficial las percepciones a compras en el exterior (Bienes Personales + Impuesto a los Gastos). Configurá los porcentajes vigentes del día.</p>
       </header>
       <Pagina />
     </div>

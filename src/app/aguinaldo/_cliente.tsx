@@ -15,7 +15,7 @@ export default function AguinaldoPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🎁 Calculadora de Aguinaldo (SAC) 2026</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-base text-neutral-600 dark:text-neutral-400">
           El Sueldo Anual Complementario es el 50% de tu mejor remuneración mensual del semestre,
           proporcional a los meses trabajados (art. 121 LCT). Se cobra en junio y en diciembre.
         </p>
@@ -71,7 +71,7 @@ export default function AguinaldoPage() {
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.sac)}
           </p>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+          <p className="text-base text-neutral-600 dark:text-neutral-400 mt-2">
             Cálculo: 50% de {formatARS2(res.mejorSueldo)} × {res.mesesTrabajados}/6 del semestre
           </p>
         </section>

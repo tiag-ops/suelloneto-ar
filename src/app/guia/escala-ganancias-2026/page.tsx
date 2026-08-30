@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Ganancias</p>
         <h1 className="text-2xl font-bold tracking-tight">📊 Escala del Impuesto a las Ganancias 2026 (art. 94)</h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Tabla vigente para haberes percibidos de julio a diciembre de 2026 (RG 4003). Fuente: ARCA.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Tabla vigente para haberes percibidos de julio a diciembre de 2026 (RG 4003). Fuente: ARCA.</p>
       </header>
 
       <section className="space-y-3">
@@ -49,7 +49,7 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Ejemplos liquidados con esta escala</h2>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Empleados solteros sin hijos, con el método doceava de la RG 4003:</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Empleados solteros sin hijos, con el método doceava de la RG 4003:</p>
         <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
           <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
@@ -70,7 +70,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">Calculado con nuestra <Link href="/" className="underline hover:text-emerald-700">calculadora de sueldo neto</Link>. Con cónyuge e hijos las deducciones aumentan y el impuesto baja.</p>
+        <p className="text-base text-neutral-600 dark:text-neutral-400">Calculado con nuestra <Link href="/" className="underline hover:text-emerald-700">calculadora de sueldo neto</Link>. Con cónyuge e hijos las deducciones aumentan y el impuesto baja.</p>
       </section>
 
       <section className="space-y-3">

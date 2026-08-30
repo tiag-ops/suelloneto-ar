@@ -89,7 +89,7 @@ export default function CalculadoraSueldoClient() {
               onChange={(e) => setHijosDisc(e.target.value)}
               className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2"
             />
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+            <p className="text-base text-neutral-600 dark:text-neutral-400 mt-1">
               Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
               discapacidad es el doble).
             </p>
@@ -112,14 +112,14 @@ export default function CalculadoraSueldoClient() {
                   label="− Impuesto a las Ganancias (prom. mensual)"
                   value={-resultado.impuestoGananciasMensual}
                 />
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 pt-2">
+                <p className="text-base text-neutral-600 dark:text-neutral-400 pt-2">
                   Ganancia neta imponible anual proyectada:{" "}
                   {formatARS(resultado.gniAcumuladaDiciembre)} · Impuesto del período:{" "}
                   {formatARS(resultado.impuestoGananciasAnual)}
                 </p>
               </>
             ) : (
-              <p className="text-sm rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-3 py-2">
+              <p className="text-base rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-3 py-2">
                 ✅ No alcanzado por el Impuesto a las Ganancias
               </p>
             )}
@@ -130,7 +130,7 @@ export default function CalculadoraSueldoClient() {
               {formatARS(resultado.neto)}
             </span>
           </div>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-base text-neutral-600 dark:text-neutral-400">
             Valores vigentes desde {resultado.vigenciaDesde} ·{" "}
             <a
               href={resultado.urlFuente}

@@ -93,7 +93,7 @@ export default function CreditoCliente() {
             <span>Intereses totales</span>
             <span className="font-medium">{formatARS2(res.totalInteres)}</span>
           </div>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-base text-neutral-600 dark:text-neutral-400">
             No incluye seguros ni cargos administrativos que el banco pueda agregar.
           </p>
         </section>
