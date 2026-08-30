@@ -65,10 +65,10 @@ export default function RootLayout({
           <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
               <Image src={icono} alt="" width={22} height={22} className="rounded-md" />
-              Sueldo<span className="acento">Neto</span>.ar
+              <span>Sueldo<span className="acento">Neto</span>.ar</span>
             </Link>
             <div className="flex items-center gap-3">
-              <nav className="flex gap-4 text-sm">
+              <nav className="hidden gap-4 text-sm sm:flex" aria-label="Navegación principal">
                 <Link href="/" className="hover:text-emerald-700 dark:hover:text-emerald-300">
                   Inicio
                 </Link>
@@ -77,12 +77,6 @@ export default function RootLayout({
                   className="hover:text-emerald-700 dark:hover:text-emerald-300"
                 >
                   Monotributo
-                </Link>
-                <Link
-                  href="/calculadora-sueldo/"
-                  className="hover:text-emerald-700 dark:hover:text-emerald-300"
-                >
-                  Calculadoras
                 </Link>
                 <Link
                   href="/guia/sueldo-bruto-a-neto/"
