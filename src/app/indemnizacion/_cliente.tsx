@@ -17,7 +17,7 @@ export default function IndemnizacionPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">💼 Calculadora de Indemnización por despido</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Despido sin causa (art. 245 LCT): una mejor remuneración mensual por año de servicio o
           fracción mayor a 3 meses, más el SAC proporcional del semestre en curso. No incluye
           preaviso ni integración del mes de despido (se agregan aparte si corresponden).
@@ -25,7 +25,7 @@ export default function IndemnizacionPage() {
       </header>
 
       <form
-        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end"
+        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 items-end"
         onSubmit={(e) => {
           e.preventDefault();
           const s = Number(sueldo.replace(/\D/g, "")) || 0;
@@ -46,7 +46,7 @@ export default function IndemnizacionPage() {
             value={sueldo}
             onChange={(e) => setSueldo(e.target.value)}
             placeholder="Ej: 4500000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function IndemnizacionPage() {
             required
             value={anios}
             onChange={(e) => setAnios(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -75,7 +75,7 @@ export default function IndemnizacionPage() {
             max={11}
             value={meses}
             onChange={(e) => setMeses(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <button
@@ -87,7 +87,7 @@ export default function IndemnizacionPage() {
       </form>
 
       {res && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 space-y-2">
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 space-y-2">
           <div className="flex justify-between text-sm py-1">
             <span>
               Antigüedad reconocida ({res.aniosReconocidos} {res.aniosReconocidos === 1 ? "año" : "años"})
@@ -98,19 +98,19 @@ export default function IndemnizacionPage() {
             <span>SAC proporcional del semestre</span>
             <span className="font-medium">{formatARS2(res.sacProporcional)}</span>
           </div>
-          <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
+          <div className="flex items-baseline justify-between border-t border-neutral-200 dark:border-neutral-800 pt-3">
             <span className="font-semibold">Indemnización total</span>
             <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.total)}
             </span>
           </div>
           {vac && vac.diasProporcionales > 0 && (
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 pt-1">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400 pt-1">
               + Vacaciones no gozadas proporcionales: {vac.diasProporcionales.toFixed(1)} días ≈{" "}
               {formatARS2(vac.pago)}
             </p>
           )}
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             Montos brutos estimativos. Tu liquidación final puede incluir preaviso, integración
             del mes, horas extras y otras sumas. Consultá con un laboralista.
           </p>

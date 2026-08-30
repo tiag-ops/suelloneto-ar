@@ -12,7 +12,7 @@ export default function TerminosPage() {
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">Términos y Condiciones de Uso</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Última actualización: febrero 2026
         </p>
       </header>

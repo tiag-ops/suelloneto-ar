@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Vacaciones</p>
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Vacaciones: días según antigüedad y cuánto cobrás</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 150 de la Ley de Contrato de Trabajo. <Link href="/vacaciones/" className="underline hover:text-emerald-700">Calculá tus vacaciones acá</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Art. 150 de la Ley de Contrato de Trabajo. <Link href="/vacaciones/" className="underline hover:text-emerald-700">Calculá tus vacaciones acá</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -28,16 +28,16 @@ export default function Articulo() {
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Cuánto cobrás: el pago por día corrido</h2>
         <p>Las vacaciones se pagan a <strong>valor día</strong>: tu sueldo mensual dividido 25, por cada día corrido de vacaciones. Ejemplos con un sueldo de $4.000.000:</p>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <table className="w-full text-sm bg-white dark:bg-zinc-900">
+        <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="px-3 py-2">Antigüedad</th>
                 <th className="px-3 py-2">Días corridos</th>
                 <th className="px-3 py-2">Pago total</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {filas.map((f, i) => (
                 <tr key={i}>
                   <td className="px-3 py-2">{f.antiguedad} años</td>
@@ -48,7 +48,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -58,7 +58,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Qué pasa si no las tomé?</h3><p>Se convierten en indemnización: <Link href="/vacaciones-no-gozadas/" className="underline hover:text-emerald-700">vacaciones no gozadas</Link>, proporcional por mes trabajado.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. No constituye asesoramiento laboral; verificá con un profesional.
       </footer>
 

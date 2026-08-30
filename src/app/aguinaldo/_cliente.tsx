@@ -15,14 +15,14 @@ export default function AguinaldoPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🎁 Calculadora de Aguinaldo (SAC) 2026</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           El Sueldo Anual Complementario es el 50% de tu mejor remuneración mensual del semestre,
           proporcional a los meses trabajados (art. 121 LCT). Se cobra en junio y en diciembre.
         </p>
       </header>
 
       <form
-        className="grid gap-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
+        className="grid gap-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5"
         onSubmit={(e) => {
           e.preventDefault();
           setRes(calcularAguinaldo(Number(sueldo.replace(/\D/g, "")) || 0, Number(meses) || 0));
@@ -39,7 +39,7 @@ export default function AguinaldoPage() {
             value={sueldo}
             onChange={(e) => setSueldo(e.target.value)}
             placeholder="Ej: 4500000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -54,7 +54,7 @@ export default function AguinaldoPage() {
             step="0.5"
             value={meses}
             onChange={(e) => setMeses(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <button
@@ -66,12 +66,12 @@ export default function AguinaldoPage() {
       </form>
 
       {res && res.sac > 0 && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">Tu aguinaldo</p>
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">Tu aguinaldo</p>
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.sac)}
           </p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
             Cálculo: 50% de {formatARS2(res.mejorSueldo)} × {res.mesesTrabajados}/6 del semestre
           </p>
         </section>

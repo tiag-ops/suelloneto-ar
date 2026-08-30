@@ -16,7 +16,7 @@ export default function VacacionesNoGozadasPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⚖️ Vacaciones no gozadas</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Cuando la relación termina sin que hayas tomado tus vacaciones, te las deben pagar
           proporcionalmente: 1/12 de los días que te corresponden por cada mes trabajado desde
           tus últimas vacaciones (art. 156 LCT).
@@ -24,7 +24,7 @@ export default function VacacionesNoGozadasPage() {
       </header>
 
       <form
-        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end"
+        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 items-end"
         onSubmit={(e) => {
           e.preventDefault();
           setRes(
@@ -47,7 +47,7 @@ export default function VacacionesNoGozadasPage() {
             value={sueldo}
             onChange={(e) => setSueldo(e.target.value)}
             placeholder="Ej: 4000000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function VacacionesNoGozadasPage() {
             max={50}
             value={antiguedad}
             onChange={(e) => setAntiguedad(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -75,7 +75,7 @@ export default function VacacionesNoGozadasPage() {
             max={12}
             value={meses}
             onChange={(e) => setMeses(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <button
@@ -87,8 +87,8 @@ export default function VacacionesNoGozadasPage() {
       </form>
 
       {res && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             Te corresponden {Number.isInteger(res.diasProporcionales) ? res.diasProporcionales : res.diasProporcionales.toFixed(1)} días de vacaciones no gozadas:
           </p>
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400 mt-1">

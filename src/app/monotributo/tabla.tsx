@@ -18,7 +18,7 @@ export default function TablaMonotributo() {
 
   return (
     <div className="space-y-6">
-      <form className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end">
+      <form className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 items-end">
         <div className="sm:col-span-2">
           <label htmlFor="facturacion" className="block text-sm font-medium mb-1">
             Facturación anual bruta ($)
@@ -29,7 +29,7 @@ export default function TablaMonotributo() {
             value={facturacion}
             onChange={(e) => setFacturacion(e.target.value)}
             placeholder="Ej: 15000000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -40,7 +40,7 @@ export default function TablaMonotributo() {
             id="tipo"
             value={tipo}
             onChange={(e) => setTipo(e.target.value as "servicios" | "bienes")}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           >
             <option value="servicios">Servicios</option>
             <option value="bienes">Venta de cosas muebles</option>
@@ -90,10 +90,10 @@ export default function TablaMonotributo() {
         </section>
       )}
 
-      <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-        <table className="w-full text-sm bg-white dark:bg-zinc-900">
+      <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+        <table className="w-full text-sm bg-white dark:bg-neutral-900">
           <thead>
-            <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+            <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
               <th className="px-3 py-2">Cat.</th>
               <th className="px-3 py-2">Tope anual</th>
               <th className="px-3 py-2">Cuota servicios</th>
@@ -102,7 +102,7 @@ export default function TablaMonotributo() {
               <th className="px-3 py-2">Obra social</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+          <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
             {datos.categorias.map((c) => {
               const esLaMia = resultado && !resultado.excedido && resultado.categoria === c.categoria;
               return (
@@ -117,7 +117,7 @@ export default function TablaMonotributo() {
                   <td className="px-3 py-2 font-bold">
                     {c.categoria}
                     {esLaMia && (
-                      <span className="ml-2 text-xs text-emerald-700 dark:text-emerald-400">
+                      <span className="ml-2 text-[13px] text-emerald-700 dark:text-emerald-400">
                         ← la tuya
                       </span>
                     )}
@@ -125,10 +125,10 @@ export default function TablaMonotributo() {
                   <td className="px-3 py-2">{formatARS(c.topeIngresosAnual)}</td>
                   <td className="px-3 py-2">{formatARS2(c.cuotaServicios)}</td>
                   <td className="px-3 py-2">{formatARS2(c.cuotaBienes)}</td>
-                  <td className="px-3 py-2 text-zinc-600 dark:text-zinc-400">
+                  <td className="px-3 py-2 text-neutral-600 dark:text-neutral-400">
                     {formatARS2(c.aporteSIPA)}
                   </td>
-                  <td className="px-3 py-2 text-zinc-600 dark:text-zinc-400">
+                  <td className="px-3 py-2 text-neutral-600 dark:text-neutral-400">
                     {formatARS2(c.aporteObraSocial)}
                   </td>
                 </tr>
@@ -138,7 +138,7 @@ export default function TablaMonotributo() {
         </table>
       </div>
 
-      <p className="text-sm text-zinc-600 dark:text-zinc-400">
+      <p className="text-sm text-neutral-600 dark:text-neutral-400">
         Valores vigentes desde {datos.vigenciaDesde} · Fuente:{" "}
         <a
           href={datos.urlFuente}

@@ -16,7 +16,7 @@ export default function MonotributoPage() {
         <h1 className="text-2xl font-bold tracking-tight">
           Monotributo 2026: categorías y cuotas
         </h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Valores oficiales de ARCA con aplicación desde el 01/08/2026. Ingresá tu facturación
           anual proyectada y te decimos qué categoría te corresponde.
         </p>
@@ -26,8 +26,8 @@ export default function MonotributoPage() {
 
       <BloqueCalculadorasRelacionadas slug="monotributo" />
 
-      <section className="text-sm text-zinc-600 dark:text-zinc-300 space-y-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-        <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">
+      <section className="text-sm text-neutral-600 dark:text-neutral-300 space-y-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
+        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
           Preguntas frecuentes
         </h2>
         <div>

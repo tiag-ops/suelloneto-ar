@@ -21,21 +21,21 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">⚖️ Me despidieron: todo lo que te deben pagar</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">La liquidación final tiene más conceptos que la sola indemnización. <Link href="/indemnizacion/" className="underline hover:text-emerald-700">Calculá tu liquidación completa</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">La liquidación final tiene más conceptos que la sola indemnización. <Link href="/indemnizacion/" className="underline hover:text-emerald-700">Calculá tu liquidación completa</Link>.</p>
       </header>
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">El aguinaldo proporcional</h2>
         <p>El SAC <strong>no se pierde con el despido</strong>: cobrás la parte proporcional del semestre en curso a razón de 1/12 por mes trabajado (art. 123 LCT). Con un mejor sueldo de $4.000.000:</p>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <table className="w-full text-sm bg-white dark:bg-zinc-900">
+        <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="px-3 py-2">Meses trabajados del semestre</th>
                 <th className="px-3 py-2">SAC proporcional</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {ejemplos.map((e, i) => (
                 <tr key={i}>
                   <td className="px-3 py-2">{e.meses} meses</td>
@@ -66,7 +66,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Qué hago si no me pagan en término?</h3><p>La liquidación final genera intereses desde el despido. Podés enviar un telegrama laboral (Carta Documento) reclamando las sumas y luego hacer el reclamo ante el SECLO o la justicia laboral, con honorarios a cargo del empleador si ganás.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa; consultá con un laboralista tu caso concreto.
       </footer>
 

@@ -14,14 +14,14 @@ export default function CuilCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula el CUIL?</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Prefijo (20 varón / 27 mujer) + DNI con 8 dígitos + dígito verificador módulo 11
           (algoritmo AFIP). Si el cálculo da resto 1, se usa el prefijo especial 23.
         </p>
       </header>
 
       <form
-        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end"
+        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 items-end"
         onSubmit={(e) => {
           e.preventDefault();
           setRes(calcularCuilCompleto(Number(dni.replace(/\D/g, "")) || 0, sexo === "f"));
@@ -39,7 +39,7 @@ export default function CuilCliente() {
             value={dni}
             onChange={(e) => setDni(e.target.value)}
             placeholder="Ej: 30123456"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -50,7 +50,7 @@ export default function CuilCliente() {
             id="sexo"
             value={sexo}
             onChange={(e) => setSexo(e.target.value as "m" | "f")}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           >
             <option value="m">Masculino (prefijo 20)</option>
             <option value="f">Femenino (prefijo 27)</option>

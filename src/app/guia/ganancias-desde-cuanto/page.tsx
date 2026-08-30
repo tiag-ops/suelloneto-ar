@@ -23,7 +23,7 @@ export default function ArticuloGanancias() {
         <h1 className="text-2xl font-bold tracking-tight">
           ¿Desde cuánto se paga Impuesto a las Ganancias en 2026?
         </h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Actualizado con los valores oficiales de ARCA del segundo semestre 2026 (haberes
           percibidos desde julio). Todos los montos de esta página se calculan con nuestra{" "}
           <Link href="/" className="underline hover:text-emerald-700">
@@ -52,14 +52,14 @@ export default function ArticuloGanancias() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: cuánto se descuenta según tu sueldo</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Calculado con las deducciones y la escala vigentes (julio–diciembre 2026). El impuesto
           mostrado es el promedio mensual del período.
         </p>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <table className="w-full text-sm bg-white dark:bg-zinc-900">
+        <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="px-3 py-2">Sueldo bruto</th>
                 <th className="px-3 py-2">Neto sin Ganancias</th>
                 <th className="px-3 py-2">¿Paga Ganancias?</th>
@@ -67,7 +67,7 @@ export default function ArticuloGanancias() {
                 <th className="px-3 py-2">Neto final</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {casos.map((c, i) => (
                 <tr key={i}>
                   <td className="px-3 py-2 font-medium">{formatARS(c.bruto)}</td>
@@ -88,7 +88,7 @@ export default function ArticuloGanancias() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Casos con cónyuge e hijos usan las deducciones correspondientes. Si tenés hijos con
           discapacidad u otras deducciones (alquiler, empleados domésticos, crédito
           hipotecario), el piso sube: usá la{" "}
@@ -133,7 +133,7 @@ export default function ArticuloGanancias() {
         </div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de
         vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>

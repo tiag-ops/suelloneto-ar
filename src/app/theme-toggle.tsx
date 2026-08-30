@@ -36,7 +36,7 @@ export default function ThemeToggle() {
       aria-label={tema === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
       title={tema === "dark" ? "Modo claro" : "Modo oscuro"}
       onClick={toggle}
-      className="rounded-lg border border-zinc-300 dark:border-zinc-700 px-2.5 py-1.5 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+      className="rounded-lg border border-neutral-300 dark:border-neutral-700 px-2.5 py-1.5 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
     >
       {tema === "dark" ? "☀️" : "🌙"}
     </button>

@@ -16,7 +16,7 @@ export default function DolarTarjetaCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula?</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Al dólar oficial se le suman las percepciones/impostos vigentes sobre gastos en el
           exterior y compras en moneda extranjera. Actualizá los porcentajes según la normativa
           del día.
@@ -24,7 +24,7 @@ export default function DolarTarjetaCliente() {
       </header>
 
       <form
-        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 items-end"
+        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 items-end"
         onSubmit={(e) => {
           e.preventDefault();
           setRes(
@@ -46,7 +46,7 @@ export default function DolarTarjetaCliente() {
             value={oficial}
             onChange={(e) => setOficial(e.target.value)}
             placeholder="Ej: 1450"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ export default function DolarTarjetaCliente() {
             min={0}
             value={p1}
             onChange={(e) => setP1(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -72,7 +72,7 @@ export default function DolarTarjetaCliente() {
             min={0}
             value={p2}
             onChange={(e) => setP2(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <button
@@ -84,14 +84,14 @@ export default function DolarTarjetaCliente() {
       </form>
 
       {res && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             Dólar tarjeta (recargo total {res.percepcionesAplicadas}%)
           </p>
           <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.dolarTarjeta)}
           </p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2">
             Una compra de USD 100 te cuesta {formatARS2(res.dolarTarjeta * 100)}
           </p>
         </section>

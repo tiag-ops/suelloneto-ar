@@ -16,14 +16,14 @@ export default function HorasExtrasPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⏰ Calculadora de Horas Extras</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Las horas extras se liquidan sobre el valor hora (sueldo mensual ÷ 200): +50% en días
           hábiles; +100% los sábados desde las 13h, domingos y feriados (art. 201 LCT).
         </p>
       </header>
 
       <form
-        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
+        className="grid gap-4 sm:grid-cols-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5"
         onSubmit={(e) => {
           e.preventDefault();
           setRes(
@@ -46,7 +46,7 @@ export default function HorasExtrasPage() {
             value={sueldo}
             onChange={(e) => setSueldo(e.target.value)}
             placeholder="Ej: 4000000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -59,7 +59,7 @@ export default function HorasExtrasPage() {
             min={0}
             value={h50}
             onChange={(e) => setH50(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -72,7 +72,7 @@ export default function HorasExtrasPage() {
             min={0}
             value={h100}
             onChange={(e) => setH100(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div className="flex items-end">
@@ -86,7 +86,7 @@ export default function HorasExtrasPage() {
       </form>
 
       {res && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 space-y-2">
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 space-y-2">
           <div className="flex justify-between text-sm py-1">
             <span>Valor de tu hora</span>
             <span className="font-medium">{formatARS2(res.valorHora)}</span>
@@ -99,7 +99,7 @@ export default function HorasExtrasPage() {
             <span>Horas al 100%</span>
             <span className="font-medium">{formatARS2(res.pago100)}</span>
           </div>
-          <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
+          <div className="flex items-baseline justify-between border-t border-neutral-200 dark:border-neutral-800 pt-3">
             <span className="font-semibold">Total extras del mes</span>
             <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.total)}

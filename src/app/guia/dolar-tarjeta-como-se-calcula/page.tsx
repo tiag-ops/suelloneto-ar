@@ -15,7 +15,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Dólar</p>
         <h1 className="text-2xl font-bold tracking-tight">💳 Dólar tarjeta: cómo se calcula paso a paso</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Lo que realmente pagás cuando comprás en el exterior o contrataste un servicio en dólares. Con la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora de dólar tarjeta</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Lo que realmente pagás cuando comprás en el exterior o contrataste un servicio en dólares. Con la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora de dólar tarjeta</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -43,7 +43,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Hay un impuesto específico para streaming?</h3><p>Los porcentajes cambiaron varias veces en los últimos años. La estructura vigente al día la ves resumida en la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora</Link>; antes de una compra grande, verificá los porcentajes en la página oficial de ARCA.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Verificá las percepciones vigentes en ARCA antes de operar; no constituye asesoramiento fiscal.
       </footer>
 

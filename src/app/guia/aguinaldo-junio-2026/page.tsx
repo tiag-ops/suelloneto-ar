@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Aguinaldo</p>
         <h1 className="text-2xl font-bold tracking-tight">🎁 Aguinaldo junio 2026: fechas de cobro y cómo se calcula</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">El SAC del primer semestre se paga hasta el 30 de junio. Todos los montos están calculados con nuestra <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">El SAC del primer semestre se paga hasta el 30 de junio. Todos los montos están calculados con nuestra <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -36,16 +36,16 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: cuánto cobrás según tu sueldo</h2>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <table className="w-full text-sm bg-white dark:bg-zinc-900">
+        <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="px-3 py-2">Mejor sueldo del semestre</th>
                 <th className="px-3 py-2">6 meses trabajados</th>
                 <th className="px-3 py-2">3 meses trabajados</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {filas.map((f, i) => (
                 <tr key={i}>
                   <td className="px-3 py-2 font-medium">{formatARS2(f.sueldo)}</td>
@@ -56,7 +56,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Cálculo: 50% del mejor sueldo × meses/6. Para tu caso exacto usá la <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Cálculo: 50% del mejor sueldo × meses/6. Para tu caso exacto usá la <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -66,7 +66,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿El aguinaldo paga Ganancias?</h3><p>Con el método doceava, el SAC queda exento en la mayoría de los casos porque se lo considera comprendido dentro de las deducciones acumuladas. En sueldos muy altos puede haber retención.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal ni laboral; verificá con un contador.
       </footer>
 

@@ -18,7 +18,7 @@ export default function PlazoFijoCliente() {
     <>
     <div className="space-y-6">
       <form
-        className="grid gap-4 sm:grid-cols-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5"
+        className="grid gap-4 sm:grid-cols-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5"
         onSubmit={(e) => {
           e.preventDefault();
           const c = Number(capital.replace(/\D/g, "")) || 0;
@@ -41,7 +41,7 @@ export default function PlazoFijoCliente() {
             value={capital}
             onChange={(e) => setCapital(e.target.value)}
             placeholder="Ej: 1000000"
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -56,7 +56,7 @@ export default function PlazoFijoCliente() {
             required
             value={tna}
             onChange={(e) => setTna(e.target.value)}
-            className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
         </div>
         <div>
@@ -68,7 +68,7 @@ export default function PlazoFijoCliente() {
               id="modo"
               value={modo}
               onChange={(e) => setModo(e.target.value as "dias" | "meses")}
-              className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-2 py-2"
+              className="rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-2 py-2"
             >
               <option value="dias">Días</option>
               <option value="meses">Meses</option>
@@ -81,7 +81,7 @@ export default function PlazoFijoCliente() {
                 required
                 value={dias}
                 onChange={(e) => setDias(e.target.value)}
-                className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
+                className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2"
               />
             ) : (
               <input
@@ -91,7 +91,7 @@ export default function PlazoFijoCliente() {
                 required
                 value={meses}
                 onChange={(e) => setMeses(e.target.value)}
-                className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
+                className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2"
               />
             )}
           </div>
@@ -116,7 +116,7 @@ export default function PlazoFijoCliente() {
       </form>
 
       {res && (
-        <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 space-y-2">
+        <section className="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 space-y-2">
           <div className="flex justify-between text-sm py-1">
             <span>Capital</span>
             <span className="font-medium">{formatARS2(res.capital)}</span>
@@ -127,13 +127,13 @@ export default function PlazoFijoCliente() {
               +{formatARS2(res.interes)}
             </span>
           </div>
-          <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
+          <div className="flex items-baseline justify-between border-t border-neutral-200 dark:border-neutral-800 pt-3">
             <span className="font-semibold">Recibís al vencimiento</span>
             <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.montoFinal)}
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             TNA {tna}% · TEA equivalente {res.tea.toFixed(2)}%
           </p>
         </section>

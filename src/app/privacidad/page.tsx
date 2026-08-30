@@ -13,7 +13,7 @@ export default function PrivacidadPage() {
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">Política de Privacidad</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Última actualización: febrero 2026
         </p>
       </header>
@@ -41,7 +41,7 @@ export default function PrivacidadPage() {
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">2. Cookies y tecnologías similares</h2>
         <p>
-          El sitio funciona sin cookies propias. Usamos <code className="text-xs">localStorage</code>{" "}
+          El sitio funciona sin cookies propias. Usamos <code className="text-[13px]">localStorage</code>{" "}
           únicamente para recordar tu preferencia de modo claro/oscuro — es una preferencia
           estética almacenada en tu dispositivo, no un identificador, y no sale de tu navegador.
         </p>
@@ -73,7 +73,7 @@ export default function PrivacidadPage() {
           política y cumpliremos con las obligaciones de la ley y del régimen de la dirección
           Nacional de Protección de Datos Personales.
         </p>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           El titular de los datos podrá en todo momento ejercer los derechos de acceso,
           rectificación y supresión de los datos conforme lo establecido en el artículo 14 de la
           Ley N° 25.326.

@@ -12,7 +12,7 @@ export default function ContactoPage() {
     <article className="space-y-6 text-[15px] leading-relaxed max-w-2xl">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">Contacto</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Leemos todo, aunque no podemos responder a todos.
         </p>
       </header>
@@ -68,7 +68,7 @@ export default function ContactoPage() {
 
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">Sin formularios con tus datos</h2>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Coherente con nuestra{" "}
           <a href="/privacidad/" className="underline hover:text-emerald-700">
             política de privacidad

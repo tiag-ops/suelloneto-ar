@@ -18,7 +18,7 @@ export default function ProximoFeriadoPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🇦🇷 Próximo feriado en Argentina</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Calendario de feriados nacionales 2026-2027 (Ley 27.399).
         </p>
       </header>
@@ -41,12 +41,12 @@ export default function ProximoFeriadoPage() {
           </p>
         </section>
       ) : (
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">No quedan feriados este año.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">No quedan feriados este año.</p>
       )}
 
       <section>
         <h2 className="font-semibold mb-3">Calendario completo 2026</h2>
-        <ul className="divide-y divide-zinc-100 dark:divide-zinc-800 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
+        <ul className="divide-y divide-neutral-100 dark:divide-neutral-800 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden">
           {restantes.map((f) => (
             <li key={f.fecha} className="flex justify-between items-center px-4 py-2.5 text-sm">
               <span>
@@ -58,7 +58,7 @@ export default function ProximoFeriadoPage() {
                 })}{" "}
                 — {f.nombre}
               </span>
-              <span className="text-xs text-zinc-400">
+              <span className="text-[13px] text-neutral-400">
                 {f.tipo === "puente" ? "puente" : f.tipo}
               </span>
             </li>

@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { themeScript } from "./theme-script";
 import ThemeToggle from "./theme-toggle";
+import icono from "./icon.svg";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const serifEditorial = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif-editorial",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sueldoneto.com.ar"),
@@ -42,26 +52,43 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-AR" className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang="es-AR"
+      className={`h-full antialiased ${inter.variable} ${serifEditorial.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
-        <header className="border-b border-zinc-200 dark:border-zinc-800">
+      <body className="min-h-full flex flex-col">
+        <header className="border-b border-neutral-200 dark:border-neutral-800">
           <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-            <Link href="/" className="font-bold text-lg tracking-tight">
-              Sueldo<span className="text-emerald-700 dark:text-emerald-400">Neto</span>.ar
+            <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
+              <Image src={icono} alt="" width={22} height={22} className="rounded-md" />
+              Sueldo<span className="acento">Neto</span>.ar
             </Link>
             <div className="flex items-center gap-3">
               <nav className="flex gap-4 text-sm">
-                <Link href="/" className="hover:text-emerald-700 dark:hover:text-emerald-400">
+                <Link href="/" className="hover:text-emerald-700 dark:hover:text-emerald-300">
                   Inicio
                 </Link>
                 <Link
                   href="/monotributo/"
-                  className="hover:text-emerald-700 dark:hover:text-emerald-400"
+                  className="hover:text-emerald-700 dark:hover:text-emerald-300"
                 >
                   Monotributo
+                </Link>
+                <Link
+                  href="/calculadora-sueldo/"
+                  className="hover:text-emerald-700 dark:hover:text-emerald-300"
+                >
+                  Calculadoras
+                </Link>
+                <Link
+                  href="/guia/sueldo-bruto-a-neto/"
+                  className="hover:text-emerald-700 dark:hover:text-emerald-300"
+                >
+                  Guías
                 </Link>
               </nav>
               <ThemeToggle />
@@ -69,19 +96,19 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-8">{children}</main>
+        <main className="flex-1 max-w-4xl w-full mx-auto px-4 py-8">{children}</main>
 
-        <footer className="border-t border-zinc-200 dark:border-zinc-800">
-          <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-zinc-600 dark:text-zinc-400 space-y-1">
+        <footer className="border-t border-neutral-200 dark:border-neutral-800">
+          <div className="caption mx-auto max-w-3xl space-y-1 px-4 py-6">
             <p>{DISCLAIMER}</p>
             <p className="flex flex-wrap gap-x-3 gap-y-1">
-              <Link href="/privacidad/" className="underline hover:text-emerald-700">
+              <Link href="/privacidad/" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">
                 Privacidad
               </Link>
-              <Link href="/terminos/" className="underline hover:text-emerald-700">
+              <Link href="/terminos/" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">
                 Términos
               </Link>
-              <Link href="/contacto/" className="underline hover:text-emerald-700">
+              <Link href="/contacto/" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">
                 Contacto
               </Link>
               <span aria-hidden>·</span>

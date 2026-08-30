@@ -11,7 +11,7 @@ export default function ComoSeCalcula() {
   const r = calcularSueldo({ sueldoBruto: 4_500_000, conyuge: false, hijos: 0, hijosDiscapacidad: 0 });
 
   return (
-    <section className="space-y-3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 text-sm leading-relaxed">
+    <section className="space-y-3 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 text-sm leading-relaxed">
       <h2 className="text-lg font-semibold">¿Cómo se calcula el sueldo neto en Argentina?</h2>
       <p>
         En dos pasos. <strong>Primero</strong>, al sueldo bruto se le descuentan los aportes
@@ -28,7 +28,7 @@ export default function ComoSeCalcula() {
         retención de cada mes es la diferencia contra el anterior. Con los valores vigentes, un
         soltero sin hijos empieza a pagarlo cerca de los $3,5 millones brutos.
       </p>
-      <p className="text-sm text-zinc-600 dark:text-zinc-400">
+      <p className="text-sm text-neutral-600 dark:text-neutral-400">
         Ejemplo con bruto {formatARS(r.bruto)} → neto {formatARS(r.neto)}{" "}
         {r.alcanzaGanancias ? "(incluye Ganancias)" : "(sin Ganancias)"}, calculado
         automáticamente con las tablas vigentes. Más detalle en{" "}

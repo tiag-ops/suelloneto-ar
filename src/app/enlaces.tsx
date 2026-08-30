@@ -6,8 +6,8 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
   const items = relacionadas(slug, 4);
   if (items.length === 0) return null;
   return (
-    <nav aria-label="Calculadoras relacionadas" className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-      <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
+    <nav aria-label="Calculadoras relacionadas" className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800">
+      <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mb-3">
         Calculadoras relacionadas
       </h2>
       <ul className="grid sm:grid-cols-2 gap-2">
@@ -15,7 +15,7 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
           <li key={c.slug}>
             <Link
               href={urlDe(c.slug)}
-              className="flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3 py-2 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+              className="flex items-center gap-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-3 py-2 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
             >
               <span aria-hidden>{c.icono}</span>
               <span className="font-medium">{c.titulo}</span>
@@ -30,7 +30,7 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
         if (lista.length === 0) return null;
         return (
           <>
-            <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mt-5 mb-3">
+            <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mt-5 mb-3">
               Guías que te pueden servir
             </h2>
             <ul className="space-y-1.5">
@@ -61,10 +61,10 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
     .filter(Boolean) as CalculadoraMeta[];
 
   return (
-    <nav aria-label="Artículos relacionados" className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800 space-y-5">
+    <nav aria-label="Artículos relacionados" className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800 space-y-5">
       {calculadorasLinked.length > 0 && (
         <div>
-          <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
+          <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mb-3">
             Poné los números en tu caso
           </h2>
           <ul className="grid sm:grid-cols-2 gap-2">
@@ -72,7 +72,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
               <li key={c.slug}>
                 <Link
                   href={urlDe(c.slug)}
-                  className="flex items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-3 py-2 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+                  className="flex items-center gap-2 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-3 py-2 text-sm hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
                 >
                   <span aria-hidden>{c.icono}</span>
                   <span className="font-medium">{c.titulo}</span>
@@ -83,7 +83,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
         </div>
       )}
       <div>
-        <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
+        <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mb-3">
           Seguí leyendo
         </h2>
         <ul className="space-y-1.5">
@@ -95,7 +95,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
               >
                 📖 {g.titulo}
               </Link>
-              <span className="text-sm text-zinc-600 dark:text-zinc-400"> — {g.descripcion}</span>
+              <span className="text-sm text-neutral-600 dark:text-neutral-400"> — {g.descripcion}</span>
             </li>
           ))}
         </ul>

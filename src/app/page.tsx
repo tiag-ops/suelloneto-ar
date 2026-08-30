@@ -28,7 +28,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold tracking-tight">
           Calculadoras de sueldo e impuestos de Argentina
         </h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Gratis, sin registro y con valores oficiales de ARCA con fecha de vigencia. Todas
           calculan en tu navegador: tus datos nunca salen de tu equipo.
         </p>
@@ -43,7 +43,7 @@ export default function Home() {
         <h2 className="text-lg font-semibold">Todas las calculadoras</h2>
         {Object.entries(categorias).map(([cat, items]) => (
           <div key={cat}>
-            <h3 className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+            <h3 className="text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-2">
               {NOMBRES_CATEGORIA[cat] ?? cat}
             </h3>
             <ul className="grid sm:grid-cols-2 gap-2">
@@ -51,12 +51,12 @@ export default function Home() {
                 <li key={c.slug}>
                   <Link
                     href={c.slug ? `/${c.slug}/` : "/"}
-                    className="flex items-center gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+                    className="flex items-center gap-3 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-4 py-3 hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
                   >
                     <span aria-hidden className="text-xl">{c.icono}</span>
                     <span>
                       <span className="block text-sm font-medium">{c.titulo}</span>
-                      <span className="block text-sm text-zinc-600 dark:text-zinc-400 line-clamp-1">
+                      <span className="block text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
                         {c.descripcion}
                       </span>
                     </span>
@@ -76,10 +76,10 @@ export default function Home() {
             <li key={g.slug}>
               <Link
                 href={`/guia/${g.slug}/`}
-                className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 block hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+                className="rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-4 py-3 block hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
               >
                 <span className="block text-sm font-medium">📖 {g.titulo}</span>
-                <span className="block text-sm text-zinc-600 dark:text-zinc-400">{g.descripcion}</span>
+                <span className="block text-sm text-neutral-600 dark:text-neutral-400">{g.descripcion}</span>
               </Link>
             </li>
           ))}

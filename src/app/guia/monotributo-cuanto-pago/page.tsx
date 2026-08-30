@@ -17,7 +17,7 @@ export default function Articulo() {
       <header className="space-y-2">
         <p className="text-sm uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Monotributo</p>
         <h1 className="text-2xl font-bold tracking-tight">🧾 Monotributo 2026: cuánto pagás por mes según tu categoría</h1>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Valores oficiales de ARCA con aplicación desde el 01/08/2026. <Link href="/monotributo/" className="underline hover:text-emerald-700">¿No sabés tu categoría? Calculala acá</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Valores oficiales de ARCA con aplicación desde el 01/08/2026. <Link href="/monotributo/" className="underline hover:text-emerald-700">¿No sabés tu categoría? Calculala acá</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -27,17 +27,17 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Cuotas por categoría (desde 01/08/2026)</h2>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-          <table className="w-full text-sm bg-white dark:bg-zinc-900">
+        <div className="overflow-x-auto rounded-xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full text-sm bg-white dark:bg-neutral-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-[13px] text-neutral-600 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-800">
                 <th className="px-3 py-2">Cat.</th>
                 <th className="px-3 py-2">Tope facturación anual</th>
                 <th className="px-3 py-2">Cuota servicios</th>
                 <th className="px-3 py-2">Cuota bienes</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <tbody className="divide-y divide-neutral-100 dark:divide-neutral-800">
               {cats.map((c) => (
                 <tr key={c.categoria}>
                   <td className="px-3 py-2 font-bold">{c.categoria}</td>
@@ -49,7 +49,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">Desglose completo de cada categoría (SIPA y obra social por separado) en la <Link href="/monotributo/" className="underline hover:text-emerald-700">tabla completa de monotributo</Link>.</p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">Desglose completo de cada categoría (SIPA y obra social por separado) en la <Link href="/monotributo/" className="underline hover:text-emerald-700">tabla completa de monotributo</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -59,7 +59,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿La cuota incluye la jubilación?</h3><p>Sí: el aporte SIPA está incluido en la cuota y te suma años de aportes para la jubilación. La obra social también: elegís una obra social del NUSH y ella recibe ese componente.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
 
