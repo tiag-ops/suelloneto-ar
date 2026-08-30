@@ -15,6 +15,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npx next typegen # genera .next/types (Next 16): sin esto tsc falla en checkout limpio (TS2307 icon.svg)
       - run: npx tsc --noEmit
       - run: npx vitest run
       - run: npx next build
