@@ -5,6 +5,7 @@ import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { themeScript } from "./theme-script";
 import ThemeToggle from "./theme-toggle";
+import MenuMovil from "./menu-movil";
 import icono from "./icon.svg";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -86,6 +87,7 @@ export default function RootLayout({
                 </Link>
               </nav>
               <ThemeToggle />
+              <MenuMovil />
             </div>
           </div>
         </header>
