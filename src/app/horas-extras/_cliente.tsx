@@ -16,7 +16,7 @@ export default function HorasExtrasPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⏰ Calculadora de Horas Extras</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Las horas extras se liquidan sobre el valor hora (sueldo mensual ÷ 200): +50% en días
           hábiles; +100% los sábados desde las 13h, domingos y feriados (art. 201 LCT).
         </p>
@@ -78,7 +78,7 @@ export default function HorasExtrasPage() {
         <div className="flex items-end">
           <button
             type="submit"
-            className="w-full rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+            className="w-full rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
           >
             Calcular
           </button>
@@ -101,7 +101,7 @@ export default function HorasExtrasPage() {
           </div>
           <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
             <span className="font-semibold">Total extras del mes</span>
-            <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+            <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.total)}
             </span>
           </div>

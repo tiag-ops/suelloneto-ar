@@ -109,7 +109,7 @@ export default function PlazoFijoCliente() {
         )}
         <button
           type="submit"
-          className="sm:col-span-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="sm:col-span-2 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular plazo fijo
         </button>
@@ -123,17 +123,17 @@ export default function PlazoFijoCliente() {
           </div>
           <div className="flex justify-between text-sm py-1">
             <span>Interés ganado</span>
-            <span className="font-medium text-emerald-600 dark:text-emerald-400">
+            <span className="font-medium text-emerald-700 dark:text-emerald-400">
               +{formatARS2(res.interes)}
             </span>
           </div>
           <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
             <span className="font-semibold">Recibís al vencimiento</span>
-            <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+            <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.montoFinal)}
             </span>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400">
             TNA {tna}% · TEA equivalente {res.tea.toFixed(2)}%
           </p>
         </section>

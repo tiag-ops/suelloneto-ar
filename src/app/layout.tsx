@@ -50,16 +50,16 @@ export default function RootLayout({
         <header className="border-b border-zinc-200 dark:border-zinc-800">
           <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
             <Link href="/" className="font-bold text-lg tracking-tight">
-              Sueldo<span className="text-emerald-600 dark:text-emerald-400">Neto</span>.ar
+              Sueldo<span className="text-emerald-700 dark:text-emerald-400">Neto</span>.ar
             </Link>
             <div className="flex items-center gap-3">
               <nav className="flex gap-4 text-sm">
-                <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400">
+                <Link href="/" className="hover:text-emerald-700 dark:hover:text-emerald-400">
                   Inicio
                 </Link>
                 <Link
                   href="/monotributo/"
-                  className="hover:text-emerald-600 dark:hover:text-emerald-400"
+                  className="hover:text-emerald-700 dark:hover:text-emerald-400"
                 >
                   Monotributo
                 </Link>
@@ -72,16 +72,16 @@ export default function RootLayout({
         <main className="flex-1 max-w-3xl w-full mx-auto px-4 py-8">{children}</main>
 
         <footer className="border-t border-zinc-200 dark:border-zinc-800">
-          <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+          <div className="max-w-3xl mx-auto px-4 py-6 text-xs text-zinc-600 dark:text-zinc-400 space-y-1">
             <p>{DISCLAIMER}</p>
             <p className="flex flex-wrap gap-x-3 gap-y-1">
-              <Link href="/privacidad/" className="underline hover:text-emerald-600">
+              <Link href="/privacidad/" className="underline hover:text-emerald-700">
                 Privacidad
               </Link>
-              <Link href="/terminos/" className="underline hover:text-emerald-600">
+              <Link href="/terminos/" className="underline hover:text-emerald-700">
                 Términos
               </Link>
-              <Link href="/contacto/" className="underline hover:text-emerald-600">
+              <Link href="/contacto/" className="underline hover:text-emerald-700">
                 Contacto
               </Link>
               <span aria-hidden>·</span>

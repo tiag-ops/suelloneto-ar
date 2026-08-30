@@ -15,7 +15,7 @@ export default function AguinaldoPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🎁 Calculadora de Aguinaldo (SAC) 2026</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           El Sueldo Anual Complementario es el 50% de tu mejor remuneración mensual del semestre,
           proporcional a los meses trabajados (art. 121 LCT). Se cobra en junio y en diciembre.
         </p>
@@ -59,7 +59,7 @@ export default function AguinaldoPage() {
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular aguinaldo
         </button>
@@ -67,11 +67,11 @@ export default function AguinaldoPage() {
 
       {res && res.sac > 0 && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Tu aguinaldo</p>
-          <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">Tu aguinaldo</p>
+          <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.sac)}
           </p>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
             Cálculo: 50% de {formatARS2(res.mejorSueldo)} × {res.mesesTrabajados}/6 del semestre
           </p>
         </section>

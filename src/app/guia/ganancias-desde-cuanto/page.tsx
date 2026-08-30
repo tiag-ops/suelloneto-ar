@@ -17,16 +17,16 @@ export default function ArticuloGanancias() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">
           Guía · Ganancias
         </p>
         <h1 className="text-2xl font-bold tracking-tight">
           ¿Desde cuánto se paga Impuesto a las Ganancias en 2026?
         </h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Actualizado con los valores oficiales de ARCA del segundo semestre 2026 (haberes
           percibidos desde julio). Todos los montos de esta página se calculan con nuestra{" "}
-          <Link href="/" className="underline hover:text-emerald-600">
+          <Link href="/" className="underline hover:text-emerald-700">
             calculadora de sueldo neto
           </Link>
           .
@@ -52,14 +52,14 @@ export default function ArticuloGanancias() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: cuánto se descuenta según tu sueldo</h2>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Calculado con las deducciones y la escala vigentes (julio–diciembre 2026). El impuesto
           mostrado es el promedio mensual del período.
         </p>
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Sueldo bruto</th>
                 <th className="px-3 py-2">Neto sin Ganancias</th>
                 <th className="px-3 py-2">¿Paga Ganancias?</th>
@@ -76,7 +76,7 @@ export default function ArticuloGanancias() {
                     {c.alcanza ? (
                       <span className="text-amber-600 dark:text-amber-400">Sí</span>
                     ) : (
-                      <span className="text-emerald-600 dark:text-emerald-400">No</span>
+                      <span className="text-emerald-700 dark:text-emerald-400">No</span>
                     )}
                   </td>
                   <td className="px-3 py-2">
@@ -88,11 +88,11 @@ export default function ArticuloGanancias() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500 dark:text-zinc-400">
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">
           Casos con cónyuge e hijos usan las deducciones correspondientes. Si tenés hijos con
           discapacidad u otras deducciones (alquiler, empleados domésticos, crédito
           hipotecario), el piso sube: usá la{" "}
-          <Link href="/" className="underline hover:text-emerald-600">
+          <Link href="/" className="underline hover:text-emerald-700">
             calculadora completa
           </Link>
           .
@@ -125,7 +125,7 @@ export default function ArticuloGanancias() {
           <p>
             El monotributo reemplaza a Ganancias por la actividad facturada. Si además sos
             empleado en relación de dependencia, la relación con tu monotributo{" "}
-            <Link href="/monotributo/" className="underline hover:text-emerald-600">
+            <Link href="/monotributo/" className="underline hover:text-emerald-700">
               según tu categoría
             </Link>{" "}
             puede modificar tus deducciones.
@@ -133,7 +133,7 @@ export default function ArticuloGanancias() {
         </div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500 dark:text-zinc-400">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de
         vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>

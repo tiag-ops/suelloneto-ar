@@ -15,9 +15,9 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">Guía · Ganancias</p>
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Ganancias</p>
         <h1 className="text-2xl font-bold tracking-tight">📊 Escala del Impuesto a las Ganancias 2026 (art. 94)</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Tabla vigente para haberes percibidos de julio a diciembre de 2026 (RG 4003). Fuente: ARCA.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Tabla vigente para haberes percibidos de julio a diciembre de 2026 (RG 4003). Fuente: ARCA.</p>
       </header>
 
       <section className="space-y-3">
@@ -26,7 +26,7 @@ export default function Articulo() {
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Ganancia neta acumulada desde</th>
                 <th className="px-3 py-2">Hasta</th>
                 <th className="px-3 py-2">Monto fijo</th>
@@ -49,11 +49,11 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Ejemplos liquidados con esta escala</h2>
-        <p className="text-sm text-zinc-500">Empleados solteros sin hijos, con el método doceava de la RG 4003:</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Empleados solteros sin hijos, con el método doceava de la RG 4003:</p>
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Sueldo bruto</th>
                 <th className="px-3 py-2">GNI proyectada dic.</th>
                 <th className="px-3 py-2">Impuesto del período</th>
@@ -70,7 +70,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500">Calculado con nuestra <Link href="/" className="underline hover:text-emerald-600">calculadora de sueldo neto</Link>. Con cónyuge e hijos las deducciones aumentan y el impuesto baja.</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">Calculado con nuestra <Link href="/" className="underline hover:text-emerald-700">calculadora de sueldo neto</Link>. Con cónyuge e hijos las deducciones aumentan y el impuesto baja.</p>
       </section>
 
       <section className="space-y-3">
@@ -79,7 +79,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Por qué la escala es &laquo;anual&raquo; si me retienen por mes?</h3><p>Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
 

@@ -15,9 +15,9 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">💼 Indemnización por despido 2026: cómo se calcula</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Art. 245 LCT. Con <Link href="/indemnizacion/" className="underline hover:text-emerald-600">nuestra calculadora de indemnización</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 245 LCT. Con <Link href="/indemnizacion/" className="underline hover:text-emerald-700">nuestra calculadora de indemnización</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -33,11 +33,11 @@ export default function Articulo() {
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Tabla: indemnización según antigüedad</h2>
-        <p className="text-sm text-zinc-500">Con una mejor remuneración de $4.000.000, 4 meses del semestre en curso e incluyendo vacaciones no gozadas proporcionales (6 meses):</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Con una mejor remuneración de $4.000.000, 4 meses del semestre en curso e incluyendo vacaciones no gozadas proporcionales (6 meses):</p>
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Antigüedad</th>
                 <th className="px-3 py-2">Por antigüedad</th>
                 <th className="px-3 py-2">SAC prop.</th>
@@ -58,7 +58,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-600">calculadora de indemnización</Link>.</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -68,7 +68,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">Si me despiden por causa justificada, ¿cobro algo?</h3><p>Cobrás el salario adeudado, SAC proporcional y vacaciones no gozadas, pero <strong>no</strong> la indemnización por antigüedad ni el preaviso. El despido discriminatorio o incausado tiene protecciones adicionales.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Estimación informativa. Tu liquidación final puede incluir otros conceptos; consultá con un laboralista.
       </footer>
 

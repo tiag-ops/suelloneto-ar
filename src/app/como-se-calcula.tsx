@@ -28,11 +28,11 @@ export default function ComoSeCalcula() {
         retención de cada mes es la diferencia contra el anterior. Con los valores vigentes, un
         soltero sin hijos empieza a pagarlo cerca de los $3,5 millones brutos.
       </p>
-      <p className="text-xs text-zinc-500 dark:text-zinc-400">
+      <p className="text-xs text-zinc-600 dark:text-zinc-400">
         Ejemplo con bruto {formatARS(r.bruto)} → neto {formatARS(r.neto)}{" "}
         {r.alcanzaGanancias ? "(incluye Ganancias)" : "(sin Ganancias)"}, calculado
         automáticamente con las tablas vigentes. Más detalle en{" "}
-        <Link href="/guia/sueldo-bruto-a-neto/" className="underline hover:text-emerald-600">
+        <Link href="/guia/sueldo-bruto-a-neto/" className="underline hover:text-emerald-700">
           nuestra guía de bruto a neto
         </Link>
         .

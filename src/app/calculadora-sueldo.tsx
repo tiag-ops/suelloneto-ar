@@ -46,7 +46,7 @@ export default function CalculadoraSueldoClient() {
             />
             <button
               type="submit"
-              className="shrink-0 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5"
+              className="shrink-0 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold px-5"
             >
               Calcular
             </button>
@@ -89,7 +89,7 @@ export default function CalculadoraSueldoClient() {
               onChange={(e) => setHijosDisc(e.target.value)}
               className="w-full rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
             />
-            <p className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
               Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
               discapacidad es el doble).
             </p>
@@ -112,7 +112,7 @@ export default function CalculadoraSueldoClient() {
                   label="− Impuesto a las Ganancias (prom. mensual)"
                   value={-resultado.impuestoGananciasMensual}
                 />
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 pt-2">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 pt-2">
                   Ganancia neta imponible anual proyectada:{" "}
                   {formatARS(resultado.gniAcumuladaDiciembre)} · Impuesto del período:{" "}
                   {formatARS(resultado.impuestoGananciasAnual)}
@@ -126,17 +126,17 @@ export default function CalculadoraSueldoClient() {
           </dl>
           <div className="flex items-baseline justify-between border-t border-zinc-200 dark:border-zinc-800 pt-3">
             <span className="font-semibold">Tu sueldo neto</span>
-            <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+            <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS(resultado.neto)}
             </span>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400">
             Valores vigentes desde {resultado.vigenciaDesde} ·{" "}
             <a
               href={resultado.urlFuente}
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-emerald-600"
+              className="underline hover:text-emerald-700"
             >
               Fuente: ARCA
             </a>
@@ -158,8 +158,8 @@ function Row({
 }) {
   return (
     <div className={`flex justify-between py-1.5 ${strong ? "font-semibold" : ""}`}>
-      <dt className={value < 0 ? "text-zinc-500 dark:text-zinc-400" : ""}>{label}</dt>
-      <dd className={value < 0 ? "text-zinc-500 dark:text-zinc-400" : ""}>{formatARS(value)}</dd>
+      <dt className={value < 0 ? "text-zinc-600 dark:text-zinc-400" : ""}>{label}</dt>
+      <dd className={value < 0 ? "text-zinc-600 dark:text-zinc-400" : ""}>{formatARS(value)}</dd>
     </div>
   );
 }

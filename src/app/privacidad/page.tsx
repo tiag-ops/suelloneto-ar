@@ -13,7 +13,7 @@ export default function PrivacidadPage() {
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">Política de Privacidad</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Última actualización: febrero 2026
         </p>
       </header>
@@ -73,7 +73,7 @@ export default function PrivacidadPage() {
           política y cumpliremos con las obligaciones de la ley y del régimen de la dirección
           Nacional de Protección de Datos Personales.
         </p>
-        <p className="text-xs text-zinc-500 dark:text-zinc-400">
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">
           El titular de los datos podrá en todo momento ejercer los derechos de acceso,
           rectificación y supresión de los datos conforme lo establecido en el artículo 14 de la
           Ley N° 25.326.
@@ -100,7 +100,7 @@ export default function PrivacidadPage() {
       <section className="space-y-2 text-sm">
         <h2 className="text-lg font-semibold">7. Contacto</h2>
         <p>
-          Consultas sobre privacidad: <Link href="/contacto/" className="underline hover:text-emerald-600">página de contacto</Link>.
+          Consultas sobre privacidad: <Link href="/contacto/" className="underline hover:text-emerald-700">página de contacto</Link>.
         </p>
       </section>
 

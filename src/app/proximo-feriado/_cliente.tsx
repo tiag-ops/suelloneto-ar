@@ -18,7 +18,7 @@ export default function ProximoFeriadoPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🇦🇷 Próximo feriado en Argentina</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Calendario de feriados nacionales 2026-2027 (Ley 27.399).
         </p>
       </header>
@@ -41,7 +41,7 @@ export default function ProximoFeriadoPage() {
           </p>
         </section>
       ) : (
-        <p className="text-sm text-zinc-500">No quedan feriados este año.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">No quedan feriados este año.</p>
       )}
 
       <section>

@@ -15,9 +15,9 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">Guía · Vacaciones</p>
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Vacaciones</p>
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Vacaciones: días según antigüedad y cuánto cobrás</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Art. 150 de la Ley de Contrato de Trabajo. <Link href="/vacaciones/" className="underline hover:text-emerald-600">Calculá tus vacaciones acá</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 150 de la Ley de Contrato de Trabajo. <Link href="/vacaciones/" className="underline hover:text-emerald-700">Calculá tus vacaciones acá</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -31,7 +31,7 @@ export default function Articulo() {
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Antigüedad</th>
                 <th className="px-3 py-2">Días corridos</th>
                 <th className="px-3 py-2">Pago total</th>
@@ -48,17 +48,17 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-600">calculadora de vacaciones</Link>.</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
       </section>
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
         <div className="space-y-1"><h3 className="font-medium">¿Se cobra la remuneración habitual durante las vacaciones?</h3><p>Sí, más el pago proporcional de los días corridos extra: el sistema remunera las vacaciones con el valor día (mensual/25) por día corrido, lo que compensa los fines de semana incluidos.</p></div>
         <div className="space-y-1"><h3 className="font-medium">¿Puedo fraccionar las vacaciones?</h3><p>Solo por acuerdo entre las partes: una fracción mínima de 14 días y el resto en bloques no menores a 7 días. La época la fija el empleador considerando tu convenio, con una antelación mínima de 45 días.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué pasa si no las tomé?</h3><p>Se convierten en indemnización: <Link href="/vacaciones-no-gozadas/" className="underline hover:text-emerald-600">vacaciones no gozadas</Link>, proporcional por mes trabajado.</p></div>
+        <div className="space-y-1"><h3 className="font-medium">¿Qué pasa si no las tomé?</h3><p>Se convierten en indemnización: <Link href="/vacaciones-no-gozadas/" className="underline hover:text-emerald-700">vacaciones no gozadas</Link>, proporcional por mes trabajado.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Herramienta informativa. No constituye asesoramiento laboral; verificá con un profesional.
       </footer>
 

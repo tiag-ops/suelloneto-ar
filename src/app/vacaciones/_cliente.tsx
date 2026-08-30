@@ -15,7 +15,7 @@ export default function VacacionesPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">🏖️ Calculadora de Vacaciones</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Días de vacaciones corridas según antigüedad (art. 150 LCT) y cuánto cobrás por ellas:
           se pagan a valor día (sueldo mensual ÷ 25) por día corrido.
         </p>
@@ -61,7 +61,7 @@ export default function VacacionesPage() {
         </div>
         <button
           type="submit"
-          className="sm:col-span-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="sm:col-span-2 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular vacaciones
         </button>
@@ -77,7 +77,7 @@ export default function VacacionesPage() {
             key={i}
             className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-3 text-center bg-white dark:bg-zinc-900"
           >
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400">
               {i === 0 ? "Hasta 5 años" : i === 1 ? "6 a 10 años" : "11 a 20 años"}
             </p>
             <p className="text-lg font-bold">{t.dias} días</p>
@@ -91,13 +91,13 @@ export default function VacacionesPage() {
 
       {res && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Con {res.dias} días de vacaciones:
           </p>
-          <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+          <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.pago)}
           </p>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
             {res.dias} días × {formatARS2(res.porDia)}/día (mensual ÷ 25)
           </p>
         </section>

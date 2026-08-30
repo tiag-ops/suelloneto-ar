@@ -14,7 +14,7 @@ export default function SueldoPorDiaPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📅 Sueldo por día y por hora</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           La convención de liquidación argentina: el día se calcula dividiendo el sueldo mensual
           por 25 (días hábiles promedio) y la hora por 200 (8 horas × 25 días).
         </p>
@@ -43,7 +43,7 @@ export default function SueldoPorDiaPage() {
         </div>
         <button
           type="submit"
-          className="w-full rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="w-full rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular
         </button>
@@ -52,14 +52,14 @@ export default function SueldoPorDiaPage() {
       {res && (
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 text-center">
-            <p className="text-sm text-zinc-500">Por día trabajado</p>
-            <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">Por día trabajado</p>
+            <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.porDia)}
             </p>
           </div>
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 text-center">
-            <p className="text-sm text-zinc-500">Por hora trabajada</p>
-            <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">Por hora trabajada</p>
+            <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">
               {formatARS2(res.porHora)}
             </p>
           </div>

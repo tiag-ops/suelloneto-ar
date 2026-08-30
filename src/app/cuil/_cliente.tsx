@@ -14,7 +14,7 @@ export default function CuilCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula el CUIL?</h2>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Prefijo (20 varón / 27 mujer) + DNI con 8 dígitos + dígito verificador módulo 11
           (algoritmo AFIP). Si el cálculo da resto 1, se usa el prefijo especial 23.
         </p>
@@ -58,7 +58,7 @@ export default function CuilCliente() {
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular CUIL
         </button>

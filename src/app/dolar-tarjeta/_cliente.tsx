@@ -16,7 +16,7 @@ export default function DolarTarjetaCliente() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h2 className="text-lg font-semibold">¿Cómo se calcula?</h2>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Al dólar oficial se le suman las percepciones/impostos vigentes sobre gastos en el
           exterior y compras en moneda extranjera. Actualizá los porcentajes según la normativa
           del día.
@@ -77,7 +77,7 @@ export default function DolarTarjetaCliente() {
         </div>
         <button
           type="submit"
-          className="sm:col-span-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="sm:col-span-3 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular dólar tarjeta
         </button>
@@ -85,13 +85,13 @@ export default function DolarTarjetaCliente() {
 
       {res && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Dólar tarjeta (recargo total {res.percepcionesAplicadas}%)
           </p>
-          <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+          <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.dolarTarjeta)}
           </p>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
             Una compra de USD 100 te cuesta {formatARS2(res.dolarTarjeta * 100)}
           </p>
         </section>

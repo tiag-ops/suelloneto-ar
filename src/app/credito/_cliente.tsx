@@ -73,7 +73,7 @@ export default function CreditoCliente() {
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular cuota
         </button>
@@ -81,8 +81,8 @@ export default function CreditoCliente() {
 
       {res && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 space-y-2">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Cuota fija mensual (sistema francés)</p>
-          <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">Cuota fija mensual (sistema francés)</p>
+          <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
             {formatARS2(res.cuotaMensual)}
           </p>
           <div className="flex justify-between text-sm py-1">
@@ -93,7 +93,7 @@ export default function CreditoCliente() {
             <span>Intereses totales</span>
             <span className="font-medium">{formatARS2(res.totalInteres)}</span>
           </div>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400">
             No incluye seguros ni cargos administrativos que el banco pueda agregar.
           </p>
         </section>

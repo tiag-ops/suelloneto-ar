@@ -16,7 +16,7 @@ export default function VacacionesNoGozadasPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">⚖️ Vacaciones no gozadas</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Cuando la relación termina sin que hayas tomado tus vacaciones, te las deben pagar
           proporcionalmente: 1/12 de los días que te corresponden por cada mes trabajado desde
           tus últimas vacaciones (art. 156 LCT).
@@ -80,7 +80,7 @@ export default function VacacionesNoGozadasPage() {
         </div>
         <button
           type="submit"
-          className="sm:col-span-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="sm:col-span-3 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular
         </button>
@@ -88,10 +88,10 @@ export default function VacacionesNoGozadasPage() {
 
       {res && (
         <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
             Te corresponden {Number.isInteger(res.diasProporcionales) ? res.diasProporcionales : res.diasProporcionales.toFixed(1)} días de vacaciones no gozadas:
           </p>
-          <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+          <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400 mt-1">
             {formatARS2(res.pago)}
           </p>
         </section>

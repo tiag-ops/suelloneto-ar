@@ -7,7 +7,7 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
   if (items.length === 0) return null;
   return (
     <nav aria-label="Calculadoras relacionadas" className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-      <h2 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mb-3">
+      <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
         Calculadoras relacionadas
       </h2>
       <ul className="grid sm:grid-cols-2 gap-2">
@@ -30,7 +30,7 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
         if (lista.length === 0) return null;
         return (
           <>
-            <h2 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mt-5 mb-3">
+            <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mt-5 mb-3">
               Guías que te pueden servir
             </h2>
             <ul className="space-y-1.5">
@@ -64,7 +64,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
     <nav aria-label="Artículos relacionados" className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800 space-y-5">
       {calculadorasLinked.length > 0 && (
         <div>
-          <h2 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mb-3">
+          <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
             Poné los números en tu caso
           </h2>
           <ul className="grid sm:grid-cols-2 gap-2">
@@ -83,7 +83,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
         </div>
       )}
       <div>
-        <h2 className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 mb-3">
+        <h2 className="text-sm font-semibold text-zinc-600 dark:text-zinc-400 mb-3">
           Seguí leyendo
         </h2>
         <ul className="space-y-1.5">
@@ -95,7 +95,7 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
               >
                 📖 {g.titulo}
               </Link>
-              <span className="text-xs text-zinc-500 dark:text-zinc-400"> — {g.descripcion}</span>
+              <span className="text-xs text-zinc-600 dark:text-zinc-400"> — {g.descripcion}</span>
             </li>
           ))}
         </ul>

@@ -17,7 +17,7 @@ export default function DiasHabilesPage() {
     <div className="space-y-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">📆 Calculadora de días hábiles</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Días hábiles entre dos fechas en Argentina: descuenta sábados, domingos y feriados
           nacionales 2026.
         </p>
@@ -66,7 +66,7 @@ export default function DiasHabilesPage() {
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5"
+          className="rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5"
         >
           Calcular
         </button>
@@ -75,13 +75,13 @@ export default function DiasHabilesPage() {
       {res && (
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 text-center">
-            <p className="text-sm text-zinc-500">Días hábiles</p>
-            <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">Días hábiles</p>
+            <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
               {res.habiles}
             </p>
           </div>
           <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-5 text-center">
-            <p className="text-sm text-zinc-500">Días corridos</p>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">Días corridos</p>
             <p className="text-3xl font-bold">{res.corridos}</p>
           </div>
         </div>

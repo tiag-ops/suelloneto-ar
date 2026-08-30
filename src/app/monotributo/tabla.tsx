@@ -93,7 +93,7 @@ export default function TablaMonotributo() {
       <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
         <table className="w-full text-sm bg-white dark:bg-zinc-900">
           <thead>
-            <tr className="text-left text-xs text-zinc-500 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
+            <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
               <th className="px-3 py-2">Cat.</th>
               <th className="px-3 py-2">Tope anual</th>
               <th className="px-3 py-2">Cuota servicios</th>
@@ -117,7 +117,7 @@ export default function TablaMonotributo() {
                   <td className="px-3 py-2 font-bold">
                     {c.categoria}
                     {esLaMia && (
-                      <span className="ml-2 text-xs text-emerald-600 dark:text-emerald-400">
+                      <span className="ml-2 text-xs text-emerald-700 dark:text-emerald-400">
                         ← la tuya
                       </span>
                     )}
@@ -125,10 +125,10 @@ export default function TablaMonotributo() {
                   <td className="px-3 py-2">{formatARS(c.topeIngresosAnual)}</td>
                   <td className="px-3 py-2">{formatARS2(c.cuotaServicios)}</td>
                   <td className="px-3 py-2">{formatARS2(c.cuotaBienes)}</td>
-                  <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400">
+                  <td className="px-3 py-2 text-zinc-600 dark:text-zinc-400">
                     {formatARS2(c.aporteSIPA)}
                   </td>
-                  <td className="px-3 py-2 text-zinc-500 dark:text-zinc-400">
+                  <td className="px-3 py-2 text-zinc-600 dark:text-zinc-400">
                     {formatARS2(c.aporteObraSocial)}
                   </td>
                 </tr>
@@ -138,13 +138,13 @@ export default function TablaMonotributo() {
         </table>
       </div>
 
-      <p className="text-xs text-zinc-500 dark:text-zinc-400">
+      <p className="text-xs text-zinc-600 dark:text-zinc-400">
         Valores vigentes desde {datos.vigenciaDesde} · Fuente:{" "}
         <a
           href={datos.urlFuente}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-emerald-600"
+          className="underline hover:text-emerald-700"
         >
           {datos.fuente}
         </a>

@@ -15,9 +15,9 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Laboral</p>
         <h1 className="text-2xl font-bold tracking-tight">⏰ Horas extras: cuánto cobrás según el día</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Art. 201 LCT. Con la <Link href="/horas-extras/" className="underline hover:text-emerald-600">calculadora de horas extras</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Art. 201 LCT. Con la <Link href="/horas-extras/" className="underline hover:text-emerald-700">calculadora de horas extras</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -30,7 +30,7 @@ export default function Articulo() {
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Sueldo mensual</th>
                 <th className="px-3 py-2">Valor hora</th>
                 <th className="px-3 py-2">10 hs extra al 50%</th>
@@ -51,7 +51,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500">Tu caso exacto, con tus horas reales: <Link href="/horas-extras/" className="underline hover:text-emerald-600">calculadora</Link>.</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">Tu caso exacto, con tus horas reales: <Link href="/horas-extras/" className="underline hover:text-emerald-700">calculadora</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -61,7 +61,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Jornada nocturna cambia el recargo?</h3><p>Las horas entre 21h y 6h ya se computan con un factor 1,2 por su duración (art. 200). Si además es una hora extra, se suma el recargo del 50% sobre ese valor.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Estimación informativa; los convenios colectivos pueden mejorar estos mínimos.
       </footer>
 

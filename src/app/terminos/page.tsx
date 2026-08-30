@@ -12,7 +12,7 @@ export default function TerminosPage() {
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">Términos y Condiciones de Uso</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
           Última actualización: febrero 2026
         </p>
       </header>
@@ -127,7 +127,7 @@ export default function TerminosPage() {
         <h2 className="text-lg font-semibold">11. Contacto</h2>
         <p>
           Consultas sobre estos términos: sección{" "}
-          <a href="/contacto/" className="underline hover:text-emerald-600">
+          <a href="/contacto/" className="underline hover:text-emerald-700">
             Contacto
           </a>
           .

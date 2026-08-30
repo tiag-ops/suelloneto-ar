@@ -15,9 +15,9 @@ export default function Articulo() {
   return (
     <article className="space-y-6 text-[15px] leading-relaxed">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-wide text-emerald-600 dark:text-emerald-400 font-semibold">Guía · Sueldos</p>
+        <p className="text-xs uppercase tracking-wide text-emerald-700 dark:text-emerald-400 font-semibold">Guía · Sueldos</p>
         <h1 className="text-2xl font-bold tracking-tight">💵 De sueldo bruto a neto: la conversión exacta</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Lo que figura en tu recibo vs. lo que te depositan. Con la <Link href="/" className="underline hover:text-emerald-600">calculadora completa</Link>.</p>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">Lo que figura en tu recibo vs. lo que te depositan. Con la <Link href="/" className="underline hover:text-emerald-700">calculadora completa</Link>.</p>
       </header>
 
       <section className="space-y-3">
@@ -31,7 +31,7 @@ export default function Articulo() {
         <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
           <table className="w-full text-sm bg-white dark:bg-zinc-900">
             <thead>
-              <tr className="text-left text-xs text-zinc-500 border-b border-zinc-200 dark:border-zinc-800">
+              <tr className="text-left text-xs text-zinc-600 dark:text-zinc-400 border-b border-zinc-200 dark:border-zinc-800">
                 <th className="px-3 py-2">Bruto</th>
                 <th className="px-3 py-2">Neto</th>
                 <th className="px-3 py-2">Ganancias/mes</th>
@@ -48,7 +48,7 @@ export default function Articulo() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-zinc-500">Con cónyuge e hijos el neto es mayor (más deducciones). Tu caso exacto: <Link href="/" className="underline hover:text-emerald-600">calculadora bruto→neto</Link>.</p>
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">Con cónyuge e hijos el neto es mayor (más deducciones). Tu caso exacto: <Link href="/" className="underline hover:text-emerald-700">calculadora bruto→neto</Link>.</p>
       </section>
 
       <section className="space-y-3">
@@ -57,7 +57,7 @@ export default function Articulo() {
         <div className="space-y-1"><h3 className="font-medium">¿Los no remunerativos cuentan?</h3><p>No: conceptos no remunerativos (como algunos presentismos según convenio) no suman al bruto imponible ni generan aportes. Ojo: si superan el 20% del total, se reconvierten en remunerativos.</p></div>
       </section>
 
-      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-xs text-zinc-500">
+      <footer className="rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-4 text-sm text-zinc-600 dark:text-zinc-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
 
