@@ -292,3 +292,20 @@ export function oracionesDePagina(c: ContextoVariante): string[] {
     ...faqItems(c).flatMap((f) => [f.pregunta, f.respuesta]),
   ];
 }
+
+// ── SEO: título, H1 y meta description derivados del cálculo ─────────────
+
+export function tituloDe(monto: number): string {
+  return `Sueldo neto de ${formatARS(monto)} (2026) | SueldoNeto.ar`;
+}
+
+export function h1De(monto: number): string {
+  return `Sueldo neto de ${formatARS(monto)} en Argentina`;
+}
+
+export function descripcionDe(c: ContextoVariante): string {
+  const cola = c.desglose.alcanzaGanancias
+    ? ` y ${formatARS(c.desglose.impuestoGananciasMensual)} de Ganancias`
+    : "";
+  return `Con un bruto de ${formatARS(c.monto)} te quedan ${formatARS(c.desglose.neto)} netos: ${formatARS(c.desglose.totalAportes)} de aportes${cola}. Desglose completo, comparativa con brutos vecinos y FAQ, con la escala vigente.`;
+}

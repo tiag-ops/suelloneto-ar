@@ -98,6 +98,16 @@ export default function RootLayout({
           <div className="caption mx-auto max-w-3xl space-y-1 px-4 py-6">
             <p>{DISCLAIMER}</p>
             <p className="flex flex-wrap gap-x-3 gap-y-1">
+              {process.env.NEXT_PUBLIC_MP_LINK ? (
+                <a
+                  href={process.env.NEXT_PUBLIC_MP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-emerald-700 dark:hover:text-emerald-300"
+                >
+                  ☕ Invitanos un café
+                </a>
+              ) : null}
               <Link href="/privacidad/" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">
                 Privacidad
               </Link>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ResultadoSueldo from "./_resultado";
+import CuentaRecomendada from "@/components/cuenta-recomendada";
 import { calcularSueldo } from "@/lib/ganancias";
 import { formatARS } from "@/lib/format";
 import { PUBLICADAS, esPublicada, montosVecinos, enlacesVecinos } from "@/lib/programatico/montos";
@@ -191,6 +192,8 @@ export default async function PaginaSueldo({
         <p>{parrafoActualizacion(ctx)}</p>
         <p>{parrafoCierre(ctx)}</p>
       </section>
+
+      <CuentaRecomendada />
 
       <nav aria-label="Series vecinas" className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
         {anterior ? (

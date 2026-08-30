@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "iol",
+    "nombre": "IOL (InvertirOnline)",
+    "tipo": "broker",
+    "producto": "cuenta comitente + fondos money market",
+    "urlReferido": "",
+    "comisionConocida": "",
+    "terminosVerificadosEl": null,
+    "activo": false
+  },
+  {
+    "slug": "balanz",
+    "nombre": "Balanz Capital",
+    "tipo": "broker",
+    "producto": "cuenta comitente + fondos money market",
+    "urlReferido": "",
+    "comisionConocida": "",
+    "terminosVerificadosEl": null,
+    "activo": false
+  },
+  {
+    "slug": "ppi",
+    "nombre": "PPI (Portfolio Personal)",
+    "tipo": "broker",
+    "producto": "cuenta comitente + fondos money market",
+    "urlReferido": "",
+    "comisionConocida": "",
+    "terminosVerificadosEl": null,
+    "activo": false
+  },
+  {
+    "slug": "lemon",
+    "nombre": "Lemon Cash",
+    "tipo": "wallet",
+    "producto": "wallet con rendimiento en stablecoins",
+    "urlReferido": "",
+    "comisionConocida": "",
+    "terminosVerificadosEl": null,
+    "activo": false
+  }
+]
