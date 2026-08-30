@@ -21,6 +21,11 @@
   --color-foreground: var(--foreground);
 }
 
+html {
+  /* Tipografía global +12%: escala toda la escala rem de Tailwind */
+  font-size: 112.5%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
