@@ -1,4 +1,4 @@
-import Link from "@/components/link";
+import Link from "next/link";
 import { calcularSueldo } from "@/lib/ganancias";
 import { formatARS } from "@/lib/format";
 

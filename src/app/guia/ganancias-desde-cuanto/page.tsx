@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
-import Link from "@/components/link";
+import Link from "next/link";
 import { datosArticuloGanancias, formatARS } from "@/lib/articulos/ganancias-datos";
 
 export const metadata: Metadata = {

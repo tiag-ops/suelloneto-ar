@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
-import Link from "@/components/link";
+import Link from "next/link";
 import { calcularAguinaldo } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "@/components/link";
+import Link from "next/link";
 import { CALCULADORAS, GUIAS, urlDe } from "@/lib/calculadoras";
 
 /** Menú hamburguesa con sidebar desplegable (solo mobile: sm:hidden).

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
-import Link from "@/components/link";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Dólar tarjeta: cómo se calcula y qué percepciones tiene | SueldoNeto.ar",
