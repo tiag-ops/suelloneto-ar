@@ -62,7 +62,7 @@ export default function Articulo() {
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
         <div className="space-y-1"><h3 className="font-medium">¿Sobre qué sueldo se calcula si tuve horas extras?</h3><p>Por la <strong>mejor</strong> remuneración del semestre: si un mes con horas extras o comisiones superó tu sueldo normal, ese es la base. Incluye todos los conceptos remunerativos habituales.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">Si me despidieron en junio, ¿cobre el SAC?</h3><p>Sí, proporcional: te corresponde el SAC por los meses trabajados del semestre, pagado junto con la liquidación final. <Link href="/aguinaldo-despido/" className="underline hover:text-emerald-700">Ver detalle en la guía de liquidación final</Link>.</p></div>
+        <div className="space-y-1"><h3 className="font-medium">Si me despidieron en junio, ¿cobre el SAC?</h3><p>Sí, proporcional: te corresponde el SAC por los meses trabajados del semestre, pagado junto con la liquidación final. <Link href="/guia/aguinaldo-despido/" className="underline hover:text-emerald-700">Ver detalle en la guía de liquidación final</Link>.</p></div>
         <div className="space-y-1"><h3 className="font-medium">¿El aguinaldo paga Ganancias?</h3><p>Con el método doceava, el SAC queda exento en la mayoría de los casos porque se lo considera comprendido dentro de las deducciones acumuladas. En sueldos muy altos puede haber retención.</p></div>
       </section>
 
