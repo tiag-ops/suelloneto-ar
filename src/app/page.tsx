@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { porCategoria, GUIAS, urlDe } from "@/lib/calculadoras";
+import { formatARS } from "@/lib/format";
 import CalculadoraSueldoClient from "./calculadora-sueldo";
 import ComoSeCalcula from "./como-se-calcula";
 
@@ -37,6 +38,34 @@ export default function Home() {
       <CalculadoraSueldoClient />
 
       <ComoSeCalcula />
+
+      {/* Serie programática: sueldos por monto exacto */}
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold">Sueldos netos por monto exacto</h2>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          Cada bruto tiene su página con el neto, el desglose y la comparativa con montos vecinos.
+        </p>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          {[200_000, 300_000, 400_000, 500_000, 600_000].map((monto) => (
+            <li key={monto}>
+              <Link
+                href={`/sueldo/${monto}/`}
+                className="inline-block rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-3 py-1.5 hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
+              >
+                {formatARS(monto)}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link
+              href="/sueldo/"
+              className="inline-block rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white px-3 py-1.5 font-medium"
+            >
+              Ver todos los montos →
+            </Link>
+          </li>
+        </ul>
+      </section>
 
       {/* Directorio de calculadoras */}
       <section className="space-y-4">

@@ -5,6 +5,9 @@ export const dynamic = "force-static";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://sueldoneto.com.ar/sitemap.xml",
+    sitemap: [
+      "https://sueldoneto.com.ar/sitemap.xml",
+      "https://sueldoneto.com.ar/sitemap-sueldo.xml",
+    ],
   };
 }
