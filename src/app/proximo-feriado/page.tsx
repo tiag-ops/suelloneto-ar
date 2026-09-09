@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Pagina from "./_cliente";
+import { CALCULADORAS } from "@/lib/calculadoras";
+import { JsonLd, webAppLd } from "@/lib/seo";
+
+const META = CALCULADORAS.find((c) => c.slug === "proximo-feriado")!
+const WEB_APP = webAppLd({ name: META.titulo, description: META.descripcion, path: "/proximo-feriado/" });
 
 export const metadata: Metadata = {
   title: "Próximo feriado en Argentina 2026 | SueldoNeto.ar",
@@ -9,5 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function PaginaProximoFeriado() {
-  return <Pagina />;
+  return (
+    <>
+      <Pagina />
+      <JsonLd data={WEB_APP} />
+    </>
+  );
 }

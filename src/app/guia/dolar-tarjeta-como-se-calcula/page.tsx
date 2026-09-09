@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Dólar tarjeta: cómo se calcula y qué percepciones tiene | SueldoNeto.ar",
@@ -46,14 +47,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Verificá las percepciones vigentes en ARCA antes de operar; no constituye asesoramiento fiscal.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Dólar tarjeta: cómo se calcula y qué percepciones tiene",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Dólar tarjeta: cómo se calcula y qué percepciones tiene", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Cómo sale el dólar tarjeta: dólar oficial más percepciones de Bienes Personales e Impuesto a los Gastos. Ejemplo paso a paso con USD 100.", path: "/guia/dolar-tarjeta-como-se-calcula/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Dólar tarjeta paso a paso", ""]]),
+          faqLd([
+          { q: "¿Qué cotización toma el banco?", a: "El dólar oficial vendedor del día en que el banco procesa el consumo, que puede diferir unos días de la fecha de compra. Por eso el importe final a veces no coincide con tu estimación." },
+          { q: "¿Las percepciones se pueden recuperar?", a: "La percepción de Bienes Personales se puede computar como pago a cuenta del impuesto si presentás la DDJJ (o pedir su devolución si no alcanzás el mínimo imponible). La de Ganancias funciona igual para quienes lo liquidan. Requiere trámite en ARCA." },
+          { q: "¿Hay un impuesto específico para streaming?", a: "Los porcentajes cambiaron varias veces en los últimos años. La estructura vigente al día la ves resumida en la calculadora; antes de una compra grande, verificá los porcentajes en la página oficial de ARCA." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="dolar-tarjeta-como-se-calcula" />
     </article>
   );

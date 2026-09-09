@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PUBLICADAS, bandaDe, type Banda } from "@/lib/programatico/montos";
 import { formatARS } from "@/lib/format";
+import { JsonLd, itemListLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Sueldo neto por monto bruto: de $150.000 en adelante | SueldoNeto.ar",
@@ -18,6 +19,12 @@ const BANDAS: { id: Banda; titulo: string }[] = [
 
 export default function HubSueldos() {
   const porBanda = new Map<Banda, number[]>();
+  const netoDe = (m: number) => {
+    const r = 0.83; // netoPreGanancias aprox (17% aportes); Ganancias solo sube el neto real en la página
+    const v = Math.round(m * r / 100) * 100;
+    return formatARS(v);
+  };
+  const itemList = itemListLd(PUBLICADAS, netoDe);
   for (const m of PUBLICADAS) {
     const lista = porBanda.get(m.banda) ?? [];
     lista.push(m.monto);
@@ -64,6 +71,7 @@ export default function HubSueldos() {
         </Link>{" "}
         con cualquier valor.
       </p>
+      <JsonLd data={itemList} />
     </article>
   );
 }

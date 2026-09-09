@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaBrutoNeto, formatARS } from "./_datos";
 
 export const metadata: Metadata = {
@@ -60,14 +61,17 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Sueldo bruto a neto: cómo hacer la conversión",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Sueldo bruto a neto: cómo hacer la conversión", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Cómo pasar de sueldo bruto a neto en Argentina: aportes 17% y Ganancias con método doceava. Tabla de conversión 2026 y calculadora.", path: "/guia/sueldo-bruto-a-neto/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["De bruto a neto", ""]]),
+          faqLd([
+          { q: "¿El convenio modifica la conversión?", a: "Los aportes legales son iguales para todos, pero muchos convenios suman aportes sindicales (1-3%) sobre el bruto. Esos descuentos son adicionales a los que calculamos acá." },
+          { q: "¿Los no remunerativos cuentan?", a: "No: conceptos no remunerativos (como algunos presentismos según convenio) no suman al bruto imponible ni generan aportes. Ojo: si superan el 20% del total, se reconvierten en remunerativos." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="sueldo-bruto-a-neto" />
     </article>
   );

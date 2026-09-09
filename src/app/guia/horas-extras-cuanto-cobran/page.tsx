@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaHoras, formatARS2 } from "./_datos";
 
 export const metadata: Metadata = {
@@ -64,14 +65,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa; los convenios colectivos pueden mejorar estos mínimos.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Horas extras: cuánto se cobra al 50% y 100%",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Horas extras: cuánto se cobra al 50% y 100%", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Cuánto se cobra una hora extra en Argentina: +50% días hábiles, +100% sábados después de 13h, domingos y feriados. Ejemplos calculados 2026.", path: "/guia/horas-extras-cuanto-cobran/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Cuánto se cobra por horas extras", ""]]),
+          faqLd([
+          { q: "¿Son obligatorias las horas extras?", a: "No podés ser forzado a hacerlas de forma permanente; la jornada máxima es de 8 horas diarias y 48 semanales (más 2 extras como máximo por día, solo por casos excepcionales)." },
+          { q: "¿Las extras computan para el SAC y las vacaciones?", a: "Las extras habituales sí integran la remuneración y elevan el mejor sueldo del semestre (base del SAC) y las vacaciones. Las ocasionales, solo influyen si elevaron ese mes." },
+          { q: "¿La jornada nocturna cambia el recargo?", a: "Las horas entre 21h y 6h ya se computan con un factor 1,2 por su duración (art. 200). Si además es una hora extra, se suma el recargo del 50% sobre ese valor." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="horas-extras-cuanto-cobran" />
     </article>
   );

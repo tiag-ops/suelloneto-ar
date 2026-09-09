@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { calcularAguinaldo } from "@/lib/laboral";
 import { formatARS2 } from "@/lib/format";
 
@@ -69,14 +70,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa; consultá con un laboralista tu caso concreto.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Me despidieron: ¿me corresponde aguinaldo y vacaciones?",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Me despidieron: ¿me corresponde aguinaldo y vacaciones?", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Qué te deben pagar en una liquidación final: aguinaldo proporcional, vacaciones no gozadas, preaviso e indemnización. Con ejemplos.", path: "/guia/aguinaldo-despido/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Aguinaldo en la liquidación final", ""]]),
+          faqLd([
+          { q: "¿Las fracciones de mes cuentan para el SAC?", a: "Sí: los días trabajados en el mes del despido cuentan como fracción del doceavo, prorrateados por días." },
+          { q: "¿Y si me despiden en diciembre?", a: "Cobrás el SAC proporcional del segundo semestre junto con la liquidación (más el del primero si correspondiera por pactos). El pago del 18/12 solo aplica si seguís trabajando." },
+          { q: "¿Qué hago si no me pagan en término?", a: "La liquidación final genera intereses desde el despido. Podés enviar un telegrama laboral (Carta Documento) reclamando las sumas y luego hacer el reclamo ante el SECLO o la justicia laboral, con honorarios a cargo del empleador si ganás." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="aguinaldo-despido" />
     </article>
   );

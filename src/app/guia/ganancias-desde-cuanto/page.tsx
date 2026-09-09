@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { datosArticuloGanancias, formatARS } from "@/lib/articulos/ganancias-datos";
 
 export const metadata: Metadata = {
@@ -137,21 +138,18 @@ export default function ArticuloGanancias() {
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de
         vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "¿Desde cuánto se paga Impuesto a las Ganancias en 2026?",
-            inLanguage: "es-AR",
-            author: { "@type": "Organization", name: "SueldoNeto.ar" },
-            about: ["Impuesto a las Ganancias", "Sueldo neto", "Argentina"],
-          }),
-        }}
-      />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "¿Desde cuánto se paga Impuesto a las Ganancias en 2026? (tabla por sueldo)", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Tabla completa: desde qué sueldo bruto se paga Ganancias en 2026 según tu situación familiar, con montos calculados con los valores oficiales de ARCA del segundo semestre.", path: "/guia/ganancias-desde-cuanto/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["¿Desde cuánto se paga Ganancias?", ""]]),
+          faqLd([
+          { q: "¿El aguinaldo paga Ganancias?", a: "El SAC queda exento cuando la remuneración total no supera el tope de deducciones del método doceava. Con sueldos muy altos sí puede retenerse sobre el aguinaldo; tu empleador lo liquida automáticamente con el método del artículo 7 de la RG 4003." },
+          { q: "¿Por qué me descuentan más en diciembre?", a: "Porque la retención se calcula sobre la ganancia neta acumulada del año: a medida que se acumula, caés en tramos más altos de la escala (de 5% hasta 35%). Si te retuvieron de más, la liquidación anual te lo devuelve." },
+          { q: "¿Los monotributistas pagan este impuesto?", a: "El monotributo reemplaza a Ganancias por la actividad facturada. Si además sos empleado en relación de dependencia, la relación con tu monotributo según tu categoría puede modificar tus deducciones." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="ganancias-desde-cuanto" />
     </article>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaIndemnizacion, formatARS2 } from "./_datos";
 
 export const metadata: Metadata = {
@@ -71,14 +72,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa. Tu liquidación final puede incluir otros conceptos; consultá con un laboralista.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Indemnización por despido 2026: cómo se calcula",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Indemnización por despido 2026: cómo se calcula", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Cómo se calcula la indemnización por despido sin causa: un sueldo por año, SAC proporcional, preaviso y vacaciones no gozadas. Ejemplos 2026.", path: "/guia/indemnizacion-despido-2026/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Indemnización por despido 2026", ""]]),
+          faqLd([
+          { q: "¿Sobre qué sueldo se calcula?", a: "Sobre la mejor remuneración mensual, normal y habitual del último año (incluye comisiones, horas extras habituales y premios), no necesariamente el último sueldo." },
+          { q: "¿Qué es el tope CCT?", a: "La mejor remuneración no puede superar el promedio de las 12 mejores del convenio: si ganás más que el tope de tu convenio, la indemnización se calcula con el tope. Es un punto de reclamo frecuente." },
+          { q: "Si me despiden por causa justificada, ¿cobro algo?", a: "Cobrás el salario adeudado, SAC proporcional y vacaciones no gozadas, pero no la indemnización por antigüedad ni el preaviso. El despido discriminatorio o incausado tiene protecciones adicionales." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="indemnizacion-despido-2026" />
     </article>
   );

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Pagina from "./_cliente";
+import { CALCULADORAS } from "@/lib/calculadoras";
+import { JsonLd, webAppLd } from "@/lib/seo";
+
+const META = CALCULADORAS.find((c) => c.slug === "cuil")!
+const WEB_APP = webAppLd({ name: META.titulo, description: META.descripcion, path: "/cuil/" });
 
 export const metadata: Metadata = {
   title: "Calculadora de CUIL: cuál es mi CUIL por DNI | SueldoNeto.ar",
@@ -16,6 +21,7 @@ export default function PaginaCuil() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Conocé el número de CUIL que te corresponde según tu DNI. Es el cálculo matemático oficial: el número real se asigna cuando te inscribes en ARCA/Anses.</p>
       </header>
       <Pagina />
+      <JsonLd data={WEB_APP} />
     </div>
   );
 }

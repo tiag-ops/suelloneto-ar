@@ -1,11 +1,26 @@
 import type { MetadataRoute } from "next";
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import { CALCULADORAS } from "@/lib/calculadoras";
+
+// Guías que existen realmente en el filesystem (build-time, force-static).
+function guiasExistentes(): Set<string> {
+  const dir = join(process.cwd(), "src", "app", "guia");
+  try {
+    return new Set(readdirSync(dir).filter((e) => !e.includes(".")));
+  } catch {
+    return new Set();
+  }
+}
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://sueldoneto.com.ar";
-  const lastModified = new Date();
+  const hoy = new Date();
+  const lastModified = hoy;
+  // Guías futuras aún no creadas: se agregan al sitemap al crearlas (chequeo abajo).
+  const slugsExistentes = guiasExistentes();
 
   const paginas: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified, changeFrequency: "daily", priority: 1 },
@@ -23,10 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "vacaciones-dias-pago",
     "dolar-tarjeta-como-se-calcula",
     "indemnizacion-despido-2026",
-    "aguinaldo-despido",
+    "aguinaldo-despido", "aguinaldo-y-ganancias", "aguinaldo-diciembre-2026", "feriados-2027", "que-es-el-sac",
     "sueldo-bruto-a-neto",
     "horas-extras-cuanto-cobran",
-  ].map((slug) => ({
+  ].filter((slug) => slugsExistentes.has(slug)).map((slug) => ({
     url: `${base}/guia/${slug}/`,
     lastModified,
     changeFrequency: "weekly" as const,

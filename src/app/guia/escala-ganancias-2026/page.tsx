@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { datosEscala } from "./_datos";
 
 export const metadata: Metadata = {
@@ -82,14 +83,17 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Escala del Impuesto a las Ganancias 2026 (art. 94)",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Escala Ganancias 2026: tabla del artículo 94 (S2)", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Escala progresiva del art. 94 vigente julio-diciembre 2026: tramos, montos fijos y alícuotas. Con ejemplos calculados.", path: "/guia/escala-ganancias-2026/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Escala de Ganancias 2026", ""]]),
+          faqLd([
+          { q: "¿Cada cuánto se actualiza la escala?", a: "Por ley, dos veces por año: en enero y en julio, según la inflación (IPC) del semestre previo. ARCA publica las tablas oficiales y los empleadores deben aplicarlas desde el mes de entrada en vigencia." },
+          { q: "¿Por qué la escala es anual si me retienen por mes?", a: "Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="escala-ganancias-2026" />
     </article>
   );

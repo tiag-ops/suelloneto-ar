@@ -7,6 +7,7 @@ import { themeScript } from "./theme-script";
 import ThemeToggle from "./theme-toggle";
 import MenuMovil from "./menu-movil";
 import icono from "./icon.svg";
+import { JsonLd, organizationLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const serifEditorial = Source_Serif_4({
@@ -44,6 +45,11 @@ export const metadata: Metadata = {
     description: "Calculadoras de sueldo neto, monotributo y trabajo. Valores ARCA vigentes.",
     images: ["/og-image.png"],
   },
+  // Token de Search Console (método HTML-tag). Configurar NEXT_PUBLIC_GSC_TOKEN
+  // en CF Pages con el contenido de "google-site-verification=XXX" de GSC.
+  ...(process.env.NEXT_PUBLIC_GSC_TOKEN
+    ? { verification: { google: process.env.NEXT_PUBLIC_GSC_TOKEN } }
+    : {}),
 };
 
 const DISCLAIMER =
@@ -63,6 +69,7 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <JsonLd data={organizationLd()} />
       </head>
       <body className="min-h-full flex flex-col">
         <header className="border-b border-neutral-200 dark:border-neutral-800">

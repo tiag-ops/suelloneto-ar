@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { porCategoria, GUIAS, urlDe } from "@/lib/calculadoras";
+import { JsonLd, webSiteLd } from "@/lib/seo";
 import { formatARS } from "@/lib/format";
 import CalculadoraSueldoClient from "./calculadora-sueldo";
 import ComoSeCalcula from "./como-se-calcula";
@@ -115,22 +116,6 @@ export default function Home() {
         </ul>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "SueldoNeto.ar",
-            inLanguage: "es-AR",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: "https://sueldoneto.com.ar/?q={search_term_string}",
-              "query-input": "required name=search_term_string",
-            },
-          }),
-        }}
-      />
-    </div>
+      <JsonLd data={webSiteLd()} />    </div>
   );
 }

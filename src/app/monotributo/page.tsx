@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueCalculadorasRelacionadas } from "../enlaces";
 import TablaMonotributo from "./tabla";
+import { JsonLd, webAppLd, breadcrumbLd, faqLd, graphLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Monotributo 2026: categorías, cuotas y topes (desde 01/08/2026)",
@@ -57,32 +58,13 @@ export default function MonotributoPage() {
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "¿Qué pasa si supero el tope de mi categoría de monotributo?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Podés recategorizarte (de oficio o voluntariamente) cuando ARCA habilita el período. Si superás el tope de la categoría K ($126.610.839 anuales), pasás al Régimen General como Responsable Inscripto.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "¿Cuánto se paga de monotributo por mes en 2026?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Desde el 01/08/2026 la cuota va de $49.527,18 (categoría A) a $1.614.446,02 (categoría K, servicios). Incluye impuesto integrado, aporte SIPA y obra social.",
-                },
-              },
-            ],
-          }),
-        }}
+      
+      <JsonLd
+        data={graphLd([
+          webAppLd({ name: "Monotributo 2026: categorías y cuotas", description: "Tabla completa de categorías y cuotas del monotributo desde el 01/08/2026, con buscador por facturación.", path: "/monotributo/" }),
+          breadcrumbLd([["Inicio","/"],["Monotributo","/monotributo/"]]),
+          faqLd([{ q: "¿Qué pasa si supero el tope de mi categoría de monotributo?", a: "Podés recategorizarte (de oficio o voluntariamente) cuando ARCA habilita el período. Si superás el tope de la categoría K ($126.610.839 anuales), pasás al Régimen General como Responsable Inscripto." }, { q: "¿Cuánto se paga de monotributo por mes en 2026?", a: "Desde el 01/08/2026 la cuota va de $49.527,18 (categoría A) a $1.614.446,02 (categoría K, servicios). Incluye impuesto integrado, aporte SIPA y obra social." }]),
+        ])}
       />
     </div>
   );

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Pagina from "./_cliente";
+import { CALCULADORAS } from "@/lib/calculadoras";
+import { JsonLd, webAppLd } from "@/lib/seo";
+
+const META = CALCULADORAS.find((c) => c.slug === "horas-extras")!
+const WEB_APP = webAppLd({ name: META.titulo, description: META.descripcion, path: "/horas-extras/" });
 
 export const metadata: Metadata = {
   title: "Calculadora de Horas Extras 50% y 100% | SueldoNeto.ar",
@@ -9,5 +14,10 @@ export const metadata: Metadata = {
 };
 
 export default function PaginaHorasExtras() {
-  return <Pagina />;
+  return (
+    <>
+      <Pagina />
+      <JsonLd data={WEB_APP} />
+    </>
+  );
 }

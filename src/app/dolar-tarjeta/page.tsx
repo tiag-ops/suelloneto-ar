@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import Pagina from "./_cliente";
+import { CALCULADORAS } from "@/lib/calculadoras";
+import { JsonLd, webAppLd } from "@/lib/seo";
+
+const META = CALCULADORAS.find((c) => c.slug === "dolar-tarjeta")!
+const WEB_APP = webAppLd({ name: META.titulo, description: META.descripcion, path: "/dolar-tarjeta/" });
 
 export const metadata: Metadata = {
   title: "Dólar tarjeta hoy: calculadora con percepciones | SueldoNeto.ar",
@@ -16,6 +21,7 @@ export default function PaginaDolarTarjeta() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">El dólar tarjeta aplica sobre el oficial las percepciones a compras en el exterior (Bienes Personales + Impuesto a los Gastos). Configurá los porcentajes vigentes del día.</p>
       </header>
       <Pagina />
+      <JsonLd data={WEB_APP} />
     </div>
   );
 }

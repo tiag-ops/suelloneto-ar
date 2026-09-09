@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaMono } from "./_datos";
 
 export const metadata: Metadata = {
@@ -62,14 +63,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Monotributo 2026: cuánto pago por mes según mi categoría",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Monotributo 2026: cuánto pago por mes según mi categoría", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Cuánto se paga de monotributo en 2026: cuotas de todas las categorías desde el 01/08/2026, desglose de impuesto integrado, SIPA y obra social.", path: "/guia/monotributo-cuanto-pago/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Cuánto se paga de monotributo", ""]]),
+          faqLd([
+          { q: "¿Cuándo se recategoriza el monotributo?", a: "ARCA habilita la recategorización dos veces por año, en enero y julio (y también puede recategorizar de oficio si tu facturación lo justifica). Si superaste el tope de tu categoría, tenés que pasar a la que corresponda; si superás el tope de la K, salís del régimen." },
+          { q: "¿Puedo pagar menos si facturé poco?", a: "No hay proporcionalidad: la cuota de tu categoría se paga completa cada mes, factures o no. Por eso conviene proyectar bien tu categoría al inscribirte." },
+          { q: "¿La cuota incluye la jubilación?", a: "Sí: el aporte SIPA está incluido en la cuota y te suma años de aportes para la jubilación. La obra social también: elegís una obra social del NUSH y ella recibe ese componente." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="monotributo-cuanto-pago" />
     </article>
   );

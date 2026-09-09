@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
+import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaVacas, formatARS2 } from "./_datos";
 
 export const metadata: Metadata = {
@@ -61,14 +62,18 @@ export default function Articulo() {
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. No constituye asesoramiento laboral; verificá con un profesional.
       </footer>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "Article",
-        headline: "Vacaciones: cuántos días te corresponden y cuánto cobrás",
-        inLanguage: "es-AR",
-        author: { "@type": "Organization", name: "SueldoNeto.ar" },
-      }) }} />
     
+      <JsonLd
+        data={graphLd([
+          articleLd({ headline: "Vacaciones: cuántos días te corresponden y cuánto cobrás", datePublished: "2026-08-28", dateModified: "2026-08-30", description: "Días de vacaciones según antigüedad (14, 21, 28 o 30) y cálculo del pago por día corrido. Ejemplos con montos reales 2026.", path: "/guia/vacaciones-dias-pago/" }),
+          breadcrumbLd([["Inicio", "/"], ["Guías", "/guia/"], ["Vacaciones: días y pago", ""]]),
+          faqLd([
+          { q: "¿Se cobra la remuneración habitual durante las vacaciones?", a: "Sí, más el pago proporcional de los días corridos extra: el sistema remunera las vacaciones con el valor día (mensual/25) por día corrido, lo que compensa los fines de semana incluidos." },
+          { q: "¿Puedo fraccionar las vacaciones?", a: "Solo por acuerdo entre las partes: una fracción mínima de 14 días y el resto en bloques no menores a 7 días. La época la fija el empleador considerando tu convenio, con una antelación mínima de 45 días." },
+          { q: "¿Qué pasa si no las tomé?", a: "Se convierten en indemnización: vacaciones no gozadas, proporcional por mes trabajado." },
+          ]),
+        ])}
+      />
       <BloqueArticulos slugActual="vacaciones-dias-pago" />
     </article>
   );
