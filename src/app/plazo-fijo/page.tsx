@@ -24,6 +24,17 @@ export default function PaginaPlazoFijo() {
       <Pagina />
       <JsonLd data={WEB_APP} />
       <CuentaRecomendada titulo="¿Te sobra todos los meses? Hacelo rendir" />
+      <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        ¿Querés ir más a fondo? En{" "}
+        <a href="https://reditos.com.ar" className="underline hover:no-underline">
+          Redito.ar
+        </a>{" "}
+        — red de calculadoras del mismo autor — publicamos el interés exacto por monto,{" "}
+        <a href="https://reditos.com.ar/guia/cuanto-gana-plazo-fijo-1000000/" className="underline hover:no-underline">
+          cuánto gana un plazo fijo de $1.000.000
+        </a>{" "}
+        y tablas a 30/60/90 días con la tasa del BCRA actualizada cada mes.
+      </p>
     </div>
   );
 }
