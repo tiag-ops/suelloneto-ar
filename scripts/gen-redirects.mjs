@@ -6,7 +6,10 @@
 import { readdirSync, statSync, existsSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
 import { join, relative, dirname, sep } from "node:path";
 
-const OUT = new URL("../out", import.meta.url).pathname.replace(/^\/([A-Za-z]):/, "$1:");
+const OUT = decodeURIComponent(new URL("../out", import.meta.url).pathname).replace(
+  /^\/([A-Za-z]):/,
+  "$1:",
+);
 
 const reglas301 = [];
 let copiados = 0;
