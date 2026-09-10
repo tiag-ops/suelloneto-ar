@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaHoras, formatARS2 } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Horas extras: cuánto se cobra al 50% y 100% | SueldoNeto.ar",
@@ -55,12 +56,35 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Tu caso exacto, con tus horas reales: <Link href="/horas-extras/" className="underline hover:text-emerald-700">calculadora</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Son obligatorias las horas extras?</h3><p>No podés ser forzado a hacerlas de forma permanente; la jornada máxima es de 8 horas diarias y 48 semanales (más 2 extras como máximo por día, solo por casos excepcionales).</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Las extras computan para el SAC y las vacaciones?</h3><p>Las extras <strong>habituales</strong> sí integran la remuneración y elevan el mejor sueldo del semestre (base del SAC) y las vacaciones. Las ocasionales, solo influyen si elevaron ese mes.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Jornada nocturna cambia el recargo?</h3><p>Las horas entre 21h y 6h ya se computan con un factor 1,2 por su duración (art. 200). Si además es una hora extra, se suma el recargo del 50% sobre ese valor.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Son obligatorias las horas extras?",
+              a: (
+                <>
+                  No podés ser forzado a hacerlas de forma permanente; la jornada máxima es de 8 horas diarias y 48 semanales (más 2 extras como máximo por día, solo por casos excepcionales).
+                </>
+              ),
+            },
+            {
+              q: "¿Las extras computan para el SAC y las vacaciones?",
+              a: (
+                <>
+                  Las extras <strong>habituales</strong> sí integran la remuneración y elevan el mejor sueldo del semestre (base del SAC) y las vacaciones. Las ocasionales, solo influyen si elevaron ese mes.
+                </>
+              ),
+            },
+            {
+              q: "¿Jornada nocturna cambia el recargo?",
+              a: (
+                <>
+                  Las horas entre 21h y 6h ya se computan con un factor 1,2 por su duración (art. 200). Si además es una hora extra, se suma el recargo del 50% sobre ese valor.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa; los convenios colectivos pueden mejorar estos mínimos.

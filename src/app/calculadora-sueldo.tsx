@@ -61,7 +61,7 @@ export default function CalculadoraSueldoClient() {
           />
           Casado/a (cónyuge a cargo)
         </label>
-        <div className="sm:col-span-2 grid grid-cols-2 gap-3">
+        <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label htmlFor="hijos" className="block text-[13px] font-medium mb-1">
               Hijos (sin discapacidad)
@@ -89,11 +89,11 @@ export default function CalculadoraSueldoClient() {
               onChange={(e) => setHijosDisc(e.target.value)}
               className="w-full rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2"
             />
-            <p className="text-base text-neutral-600 dark:text-neutral-400 mt-1">
-              Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
-              discapacidad es el doble).
-            </p>
           </div>
+          <p className="text-[13px] text-neutral-600 dark:text-neutral-400 sm:col-span-2 mt-1">
+            Se suman aparte: ARCA permite deducir ambos por separado (la deducción por
+            discapacidad es el doble).
+          </p>
         </div>
       </form>
 
@@ -124,13 +124,15 @@ export default function CalculadoraSueldoClient() {
               </p>
             )}
           </dl>
-          <div className="flex items-baseline justify-between border-t border-neutral-200 dark:border-neutral-800 pt-3">
-            <span className="font-semibold">Tu sueldo neto</span>
-            <span className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
+          <div className="border-t border-neutral-200 dark:border-neutral-800 pt-3 text-center">
+            <p className="text-[13px] font-medium uppercase tracking-wide text-neutral-600 dark:text-neutral-400">
+              Tu sueldo neto
+            </p>
+            <p className="text-4xl font-bold text-emerald-700 dark:text-emerald-400 tabular-nums mt-0.5">
               {formatARS(resultado.neto)}
-            </span>
+            </p>
           </div>
-          <p className="text-base text-neutral-600 dark:text-neutral-400">
+          <p className="text-[13px] text-neutral-600 dark:text-neutral-400 text-center">
             Valores vigentes desde {resultado.vigenciaDesde} ·{" "}
             <a
               href={resultado.urlFuente}

@@ -49,12 +49,12 @@ export default function HubSueldos() {
       {BANDAS.filter((b) => (porBanda.get(b.id)?.length ?? 0) > 0).map((b) => (
         <section key={b.id} className="space-y-3">
           <h2 className="text-lg font-semibold">{b.titulo}</h2>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-1.5">
+          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-2">
             {(porBanda.get(b.id) ?? []).map((monto) => (
               <li key={monto}>
                 <Link
                   href={`/sueldo/${monto}/`}
-                  className="underline decoration-neutral-300 hover:decoration-emerald-700 hover:text-emerald-700 dark:hover:text-emerald-300"
+                  className="inline-block py-1 text-[15px] underline decoration-neutral-300 underline-offset-4 hover:decoration-emerald-700 hover:text-emerald-700 dark:hover:text-emerald-300"
                 >
                   {formatARS(monto)}
                 </Link>

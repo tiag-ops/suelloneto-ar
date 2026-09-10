@@ -33,12 +33,12 @@ export function BloqueCalculadorasRelacionadas({ slug }: { slug: string }) {
             <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mt-5 mb-3">
               Guías que te pueden servir
             </h2>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1">
               {lista.map((g) => (
                 <li key={g.slug}>
                   <Link
                     href={`/guia/${g.slug}/`}
-                    className="text-sm text-emerald-700 dark:text-emerald-400 hover:underline"
+                    className="flex min-h-[44px] items-center gap-1 rounded-lg px-2 -mx-2 text-sm text-emerald-700 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 hover:underline"
                   >
                     📖 {g.titulo}
                   </Link>
@@ -86,12 +86,12 @@ export function BloqueArticulos({ slugActual }: { slugActual: string }) {
         <h2 className="text-sm font-semibold text-neutral-600 dark:text-neutral-400 mb-3">
           Seguí leyendo
         </h2>
-        <ul className="space-y-1.5">
+        <ul className="space-y-1">
           {otras.map((g) => (
             <li key={g.slug}>
               <Link
                 href={`/guia/${g.slug}/`}
-                className="text-sm text-emerald-700 dark:text-emerald-400 hover:underline"
+                className="inline-flex min-h-[44px] items-center gap-1 rounded-lg px-2 -mx-2 text-sm text-emerald-700 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 hover:underline"
               >
                 📖 {g.titulo}
               </Link>

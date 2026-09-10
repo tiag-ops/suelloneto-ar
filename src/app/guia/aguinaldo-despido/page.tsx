@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
+import FaqAcordeon from "../../faq-acordeon";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { calcularAguinaldo } from "@/lib/laboral";
@@ -60,12 +61,35 @@ export default function Articulo() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Los fracciones de mes cuentan para el SAC?</h3><p>Sí: los días trabajados en el mes del despido cuentan como fracción del doceavo, prorrateados por días.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Y si me despiden en diciembre?</h3><p>Cobrás el SAC proporcional del segundo semestre junto con la liquidación (más el del primero si correspondiera por pactos). El pago del 18/12 solo aplica si seguís trabajando.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué hago si no me pagan en término?</h3><p>La liquidación final genera intereses desde el despido. Podés enviar un telegrama laboral (Carta Documento) reclamando las sumas y luego hacer el reclamo ante el SECLO o la justicia laboral, con honorarios a cargo del empleador si ganás.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Los fracciones de mes cuentan para el SAC?",
+              a: (
+                <>
+                  Sí: los días trabajados en el mes del despido cuentan como fracción del doceavo, prorrateados por días.
+                </>
+              ),
+            },
+            {
+              q: "¿Y si me despiden en diciembre?",
+              a: (
+                <>
+                  Cobrás el SAC proporcional del segundo semestre junto con la liquidación (más el del primero si correspondiera por pactos). El pago del 18/12 solo aplica si seguís trabajando.
+                </>
+              ),
+            },
+            {
+              q: "¿Qué hago si no me pagan en término?",
+              a: (
+                <>
+                  La liquidación final genera intereses desde el despido. Podés enviar un telegrama laboral (Carta Documento) reclamando las sumas y luego hacer el reclamo ante el SECLO o la justicia laboral, con honorarios a cargo del empleador si ganás.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa; consultá con un laboralista tu caso concreto.

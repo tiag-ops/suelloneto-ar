@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
+import FaqAcordeon from "../../faq-acordeon";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { datosArticuloGanancias, formatARS } from "@/lib/articulos/ganancias-datos";
@@ -100,39 +101,50 @@ export default function ArticuloGanancias() {
         </p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-
-        <div className="space-y-1">
-          <h3 className="font-medium">¿El aguinaldo paga Ganancias?</h3>
-          <p>
-            El SAC queda exento cuando la remuneración total no supera el tope de deducciones
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿El aguinaldo paga Ganancias?",
+              a: (
+                <>
+                  <>
+                              El SAC queda exento cuando la remuneración total no supera el tope de deducciones
             del método doceava. Con sueldos muy altos sí puede retenerse sobre el aguinaldo —
             tu empleador lo liquida automáticamente con el método del artículo 7 de la RG 4003.
-          </p>
-        </div>
-
-        <div className="space-y-1">
-          <h3 className="font-medium">¿Por qué me descuentan más en diciembre?</h3>
-          <p>
-            Porque la retención se calcula sobre la <strong>ganancia neta acumulada del año</strong>:
+                </>
+                </>
+              ),
+            },
+            {
+              q: "¿Por qué me descuentan más en diciembre?",
+              a: (
+                <>
+                  <>
+                              Porque la retención se calcula sobre la <strong>ganancia neta acumulada del año</strong>:
             a medida que se acumula, caés en tramos más altos de la escala (de 5% hasta 35%).
             Si te retuvieron de más, la liquidación anual te lo devuelve.
-          </p>
-        </div>
-
-        <div className="space-y-1">
-          <h3 className="font-medium">¿Los monotributistas pagan este impuesto?</h3>
-          <p>
-            El monotributo reemplaza a Ganancias por la actividad facturada. Si además sos
+                </>
+                </>
+              ),
+            },
+            {
+              q: "¿Los monotributistas pagan este impuesto?",
+              a: (
+                <>
+                  <>
+                              El monotributo reemplaza a Ganancias por la actividad facturada. Si además sos
             empleado en relación de dependencia, la relación con tu monotributo{" "}
             <Link href="/monotributo/" className="underline hover:text-emerald-700">
-              según tu categoría
+            según tu categoría
             </Link>{" "}
             puede modificar tus deducciones.
-          </p>
-        </div>
-      </section>
+                </>
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de

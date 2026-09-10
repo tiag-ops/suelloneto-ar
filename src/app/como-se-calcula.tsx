@@ -22,11 +22,13 @@ export default function ComoSeCalcula() {
       <p>
         <strong>Segundo</strong>, si tu ganancia neta supera las deducciones del Impuesto a las
         Ganancias (ganancia no imponible + deducción especial + cargas de familia), se retiene el
-        impuesto con la <strong>escala del artículo 94</strong>. Con el{" "}
-        <strong>método doceava</strong> de la Resolución General 4003 de ARCA, el empleador
-        proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes; la
-        retención de cada mes es la diferencia contra el anterior. Con los valores vigentes, un
-        soltero sin hijos empieza a pagarlo cerca de los $3,5 millones brutos.
+        impuesto con la <strong>escala del artículo 94</strong>.
+      </p>
+      <p className="text-neutral-600 dark:text-neutral-400">
+        Tu empleador aplica el <strong>método doceava</strong> (Resolución General 4003 de ARCA):
+        proyecta tu ganancia neta acumulada del año y retiene la diferencia contra el mes anterior.
+        Con los valores vigentes, un soltero sin hijos empieza a pagarlo cerca de los $3,5 millones
+        brutos.
       </p>
       <p className="text-base text-neutral-600 dark:text-neutral-400">
         Ejemplo con bruto {formatARS(r.bruto)} → neto {formatARS(r.neto)}{" "}

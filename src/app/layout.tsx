@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { themeScript } from "./theme-script";
 import ThemeToggle from "./theme-toggle";
@@ -10,11 +10,6 @@ import icono from "./icon.svg";
 import { JsonLd, organizationLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const serifEditorial = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-serif-editorial",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sueldoneto.com.ar"),
@@ -64,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-AR"
-      className={`h-full antialiased ${inter.variable} ${serifEditorial.variable}`}
+      className={`h-full antialiased ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -104,7 +99,7 @@ export default function RootLayout({
 
         <main className="flex-1 max-w-4xl w-full mx-auto px-4 py-8">{children}</main>
 
-        <footer className="border-t border-neutral-200 dark:border-neutral-800">
+        <footer className="footer border-t border-neutral-200 dark:border-neutral-800">
           <div className="caption mx-auto max-w-3xl space-y-1 px-4 py-6">
             <p>{DISCLAIMER}</p>
             <p className="flex flex-wrap gap-x-3 gap-y-1">

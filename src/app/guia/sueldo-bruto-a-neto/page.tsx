@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaBrutoNeto, formatARS } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Sueldo bruto a neto: cómo hacer la conversión | SueldoNeto.ar",
@@ -52,11 +53,27 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Con cónyuge e hijos el neto es mayor (más deducciones). Tu caso exacto: <Link href="/" className="underline hover:text-emerald-700">calculadora bruto→neto</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿El convenio modifica la conversión?</h3><p>Los aportes legales son iguales para todos, pero muchos convenios suman aportes sindicales (1-3%) sobre el bruto. Esos descuentos son adicionales a los que calculamos acá.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Los no remunerativos cuentan?</h3><p>No: conceptos no remunerativos (como algunos presentismos según convenio) no suman al bruto imponible ni generan aportes. Ojo: si superan el 20% del total, se reconvierten en remunerativos.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿El convenio modifica la conversión?",
+              a: (
+                <>
+                  Los aportes legales son iguales para todos, pero muchos convenios suman aportes sindicales (1-3%) sobre el bruto. Esos descuentos son adicionales a los que calculamos acá.
+                </>
+              ),
+            },
+            {
+              q: "¿Los no remunerativos cuentan?",
+              a: (
+                <>
+                  No: conceptos no remunerativos (como algunos presentismos según convenio) no suman al bruto imponible ni generan aportes. Ojo: si superan el 20% del total, se reconvierten en remunerativos.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.

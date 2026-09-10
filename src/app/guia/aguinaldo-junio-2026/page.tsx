@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaAguinaldo, formatARS2 } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Aguinaldo 2026: fechas de cobro de junio y diciembre (SAC) | SueldoNeto.ar",
@@ -63,12 +64,35 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Cálculo: 50% del mejor sueldo × meses/6. Para tu caso exacto usá la <Link href="/aguinaldo/" className="underline hover:text-emerald-700">calculadora de aguinaldo</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Sobre qué sueldo se calcula si tuve horas extras?</h3><p>Por la <strong>mejor</strong> remuneración del semestre: si un mes con horas extras o comisiones superó tu sueldo normal, ese es la base. Incluye todos los conceptos remunerativos habituales.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">Si me despidieron en junio, ¿cobre el SAC?</h3><p>Sí, proporcional: te corresponde el SAC por los meses trabajados del semestre, pagado junto con la liquidación final. <Link href="/guia/aguinaldo-despido/" className="underline hover:text-emerald-700">Ver detalle en la guía de liquidación final</Link>.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿El aguinaldo paga Ganancias?</h3><p>Con el método doceava, el SAC queda exento en la mayoría de los casos porque se lo considera comprendido dentro de las deducciones acumuladas. En sueldos muy altos puede haber retención.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Sobre qué sueldo se calcula si tuve horas extras?",
+              a: (
+                <>
+                  Por la <strong>mejor</strong> remuneración del semestre: si un mes con horas extras o comisiones superó tu sueldo normal, ese es la base. Incluye todos los conceptos remunerativos habituales.
+                </>
+              ),
+            },
+            {
+              q: "Si me despidieron en junio, ¿cobre el SAC?",
+              a: (
+                <>
+                  Sí, proporcional: te corresponde el SAC por los meses trabajados del semestre, pagado junto con la liquidación final. <Link href="/guia/aguinaldo-despido/" className="underline hover:text-emerald-700">Ver detalle en la guía de liquidación final</Link>.
+                </>
+              ),
+            },
+            {
+              q: "¿El aguinaldo paga Ganancias?",
+              a: (
+                <>
+                  Con el método doceava, el SAC queda exento en la mayoría de los casos porque se lo considera comprendido dentro de las deducciones acumuladas. En sueldos muy altos puede haber retención.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal ni laboral; verificá con un contador.

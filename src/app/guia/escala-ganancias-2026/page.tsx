@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { datosEscala } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Escala Ganancias 2026: tabla del artículo 94 (S2) | SueldoNeto.ar",
@@ -74,11 +75,27 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Calculado con nuestra <Link href="/" className="underline hover:text-emerald-700">calculadora de sueldo neto</Link>. Con cónyuge e hijos las deducciones aumentan y el impuesto baja.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Cada cuánto se actualiza la escala?</h3><p>Por ley, dos veces por año: en enero y en julio, según la inflación (IPC) del semestre previo. ARCA publica las tablas oficiales y los empleadores deben aplicarlas desde el mes de entrada en vigencia.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Por qué la escala es &laquo;anual&raquo; si me retienen por mes?</h3><p>Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Cada cuánto se actualiza la escala?",
+              a: (
+                <>
+                  Por ley, dos veces por año: en enero y en julio, según la inflación (IPC) del semestre previo. ARCA publica las tablas oficiales y los empleadores deben aplicarlas desde el mes de entrada en vigencia.
+                </>
+              ),
+            },
+            {
+              q: "¿Por qué la escala es «anual» si me retienen por mes?",
+              a: (
+                <>
+                  Porque el método de retención (doceava) proyecta tu ganancia neta acumulada del año y consulta la escala acumulada del mes. La retención de cada mes es la diferencia contra el mes anterior. En diciembre, la escala acumulada coincide con la anual.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.

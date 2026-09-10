@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaMono } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Monotributo 2026: cuánto pago por mes según mi categoría | SueldoNeto.ar",
@@ -53,12 +54,35 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Desglose completo de cada categoría (SIPA y obra social por separado) en la <Link href="/monotributo/" className="underline hover:text-emerald-700">tabla completa de monotributo</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Cuándo se recategoriza el monotributo?</h3><p>ARCA habilita la recategorización dos veces por año, en enero y julio (y también puede recategorizar de oficio si tu facturación lo justifica). Si superaste el tope de tu categoría, tenés que pasar a la que corresponda; si superás el tope de la K, salís del régimen.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Puedo pagar menos si facturé poco?</h3><p>No hay proporcionalidad: la cuota de tu categoría se paga completa cada mes, factures o no. Por eso conviene proyectar bien tu categoría al inscribirte.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿La cuota incluye la jubilación?</h3><p>Sí: el aporte SIPA está incluido en la cuota y te suma años de aportes para la jubilación. La obra social también: elegís una obra social del NUSH y ella recibe ese componente.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Cuándo se recategoriza el monotributo?",
+              a: (
+                <>
+                  ARCA habilita la recategorización dos veces por año, en enero y julio (y también puede recategorizar de oficio si tu facturación lo justifica). Si superaste el tope de tu categoría, tenés que pasar a la que corresponda; si superás el tope de la K, salís del régimen.
+                </>
+              ),
+            },
+            {
+              q: "¿Puedo pagar menos si facturé poco?",
+              a: (
+                <>
+                  No hay proporcionalidad: la cuota de tu categoría se paga completa cada mes, factures o no. Por eso conviene proyectar bien tu categoría al inscribirte.
+                </>
+              ),
+            },
+            {
+              q: "¿La cuota incluye la jubilación?",
+              a: (
+                <>
+                  Sí: el aporte SIPA está incluido en la cuota y te suma años de aportes para la jubilación. La obra social también: elegís una obra social del NUSH y ella recibe ese componente.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los valores provienen de ARCA y se muestran con fecha de vigencia. No constituye asesoramiento fiscal; verificá con un contador.

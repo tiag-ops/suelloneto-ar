@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BloqueArticulos } from "../../enlaces";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { calendario2027 } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Feriados 2027 en Argentina: calendario completo y fechas | SueldoNeto.ar",
@@ -90,9 +91,11 @@ export default function Articulo() {
         <p>
           La Ley 27.399 (art. 6) manda: los feriados que caen <strong>martes o miércoles</strong>{" "}
           se pasan al lunes anterior; los que caen <strong>jueves o viernes</strong>, al lunes
-          siguiente; los que caen sábado o domingo se observan ese mismo día. En 2027, Güemes
-          (jueves 17 de junio) se corre al <strong>lunes 21 de junio</strong>; San Martín
-          (lunes 16 de agosto) y Diversidad Cultural (lunes 11 de octubre) ya caen lunes, y
+          siguiente; los que caen sábado o domingo se observan ese mismo día.
+        </p>
+        <p className="text-neutral-600 dark:text-neutral-400">
+          En 2027, Güemes (jueves 17 de junio) se corre al <strong>lunes 21 de junio</strong>; San
+          Martín (lunes 16 de agosto) y Diversidad Cultural (lunes 11 de octubre) ya caen lunes, y
           Soberanía Nacional cae sábado (20 de noviembre), así que no se mueve.
         </p>
         <p>
@@ -114,15 +117,7 @@ export default function Articulo() {
         </p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        {FAQs.map((f, i) => (
-          <div className="space-y-1" key={i}>
-            <h3 className="font-medium">{f.q}</h3>
-            <p>{f.a}</p>
-          </div>
-        ))}
-      </section>
+      <FaqAcordeon items={FAQs} primeraAbierta />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Los feriados provienen de la Ley 27.399 y disposiciones

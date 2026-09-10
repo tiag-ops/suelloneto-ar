@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaVacas, formatARS2 } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Vacaciones: cuántos días te corresponden y cuánto cobrás | SueldoNeto.ar",
@@ -52,12 +53,35 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">Valor día de $4.000.000 = $160.000. Con tu sueldo real: <Link href="/vacaciones/" className="underline hover:text-emerald-700">calculadora de vacaciones</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Se cobra la remuneración habitual durante las vacaciones?</h3><p>Sí, más el pago proporcional de los días corridos extra: el sistema remunera las vacaciones con el valor día (mensual/25) por día corrido, lo que compensa los fines de semana incluidos.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Puedo fraccionar las vacaciones?</h3><p>Solo por acuerdo entre las partes: una fracción mínima de 14 días y el resto en bloques no menores a 7 días. La época la fija el empleador considerando tu convenio, con una antelación mínima de 45 días.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué pasa si no las tomé?</h3><p>Se convierten en indemnización: <Link href="/vacaciones-no-gozadas/" className="underline hover:text-emerald-700">vacaciones no gozadas</Link>, proporcional por mes trabajado.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Se cobra la remuneración habitual durante las vacaciones?",
+              a: (
+                <>
+                  Sí, más el pago proporcional de los días corridos extra: el sistema remunera las vacaciones con el valor día (mensual/25) por día corrido, lo que compensa los fines de semana incluidos.
+                </>
+              ),
+            },
+            {
+              q: "¿Puedo fraccionar las vacaciones?",
+              a: (
+                <>
+                  Solo por acuerdo entre las partes: una fracción mínima de 14 días y el resto en bloques no menores a 7 días. La época la fija el empleador considerando tu convenio, con una antelación mínima de 45 días.
+                </>
+              ),
+            },
+            {
+              q: "¿Qué pasa si no las tomé?",
+              a: (
+                <>
+                  Se convierten en indemnización: <Link href="/vacaciones-no-gozadas/" className="underline hover:text-emerald-700">vacaciones no gozadas</Link>, proporcional por mes trabajado.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. No constituye asesoramiento laboral; verificá con un profesional.

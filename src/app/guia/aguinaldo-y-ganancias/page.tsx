@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BloqueArticulos } from "../../enlaces";
+import FaqAcordeon from "../../faq-acordeon";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { FERIADOS_2027 } from "@/lib/feriados";
 
@@ -45,13 +46,12 @@ export default function Articulo() {
         </h1>
         <p className="text-base text-neutral-600 dark:text-neutral-400">
           Respuesta corta: <strong>en la mayoría de los casos, no</strong>. El método del doceavo
-          de la RG 4003 absorbe el SAC con las deducciones acumuladas del año. Recién con sueldos
-          brutos altos aparece retención. Te explico cuándo y por qué, con las fechas de cobro
-          del{" "}
+          de la RG 4003 absorbe el SAC con las deducciones acumuladas del año; recién con sueldos
+          brutos altos aparece retención. Cuándo y por qué, con las fechas del{" "}
           <Link href="/guia/aguinaldo-junio-2026/" className="underline hover:text-emerald-700">
             aguinaldo 2026
-          </Link>{" "}
-          (segundo semestre: hasta el 18 de diciembre).
+          </Link>
+          .
         </p>
       </header>
 
@@ -120,15 +120,7 @@ export default function Articulo() {
         </p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        {FAQs.map((f, i) => (
-          <div className="space-y-1" key={i}>
-            <h3 className="font-medium">{f.q}</h3>
-            <p>{f.a}</p>
-          </div>
-        ))}
-      </section>
+      <FaqAcordeon items={FAQs} primeraAbierta />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa con datos de ARCA (RG 4003 vigente). No constituye asesoramiento

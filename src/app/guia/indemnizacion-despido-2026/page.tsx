@@ -3,6 +3,7 @@ import { BloqueArticulos } from "../../enlaces";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { tablaIndemnizacion, formatARS2 } from "./_datos";
+import FaqAcordeon from "../../faq-acordeon";
 
 export const metadata: Metadata = {
   title: "Indemnización por despido 2026: cómo se calcula | SueldoNeto.ar",
@@ -62,12 +63,35 @@ export default function Articulo() {
         <p className="text-base text-neutral-600 dark:text-neutral-400">No incluye preaviso ni integración del mes. Calculá tu caso con tu sueldo real en la <Link href="/indemnizacion/" className="underline hover:text-emerald-700">calculadora de indemnización</Link>.</p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Sobre qué sueldo se calcula?</h3><p>Sobre la <strong>mejor remuneración mensual, normal y habitual</strong> del último año (incluye comisiones, horas extras habituales y premios), no necesariamente el último sueldo.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué es el &laquo;tope CCT&raquo;?</h3><p>La mejor remuneración no puede superar el promedio de las 12 mejores del convenio: si ganás más que el tope de tu convenio, la indemnización se calcula con el tope. Es un punto de reclamo frecuente.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">Si me despiden por causa justificada, ¿cobro algo?</h3><p>Cobrás el salario adeudado, SAC proporcional y vacaciones no gozadas, pero <strong>no</strong> la indemnización por antigüedad ni el preaviso. El despido discriminatorio o incausado tiene protecciones adicionales.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Sobre qué sueldo se calcula?",
+              a: (
+                <>
+                  Sobre la <strong>mejor remuneración mensual, normal y habitual</strong> del último año (incluye comisiones, horas extras habituales y premios), no necesariamente el último sueldo.
+                </>
+              ),
+            },
+            {
+              q: "¿Qué es el «tope CCT»?",
+              a: (
+                <>
+                  La mejor remuneración no puede superar el promedio de las 12 mejores del convenio: si ganás más que el tope de tu convenio, la indemnización se calcula con el tope. Es un punto de reclamo frecuente.
+                </>
+              ),
+            },
+            {
+              q: "Si me despiden por causa justificada, ¿cobro algo?",
+              a: (
+                <>
+                  Cobrás el salario adeudado, SAC proporcional y vacaciones no gozadas, pero <strong>no</strong> la indemnización por antigüedad ni el preaviso. El despido discriminatorio o incausado tiene protecciones adicionales.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Estimación informativa. Tu liquidación final puede incluir otros conceptos; consultá con un laboralista.

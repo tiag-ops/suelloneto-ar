@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueArticulos } from "../../enlaces";
+import FaqAcordeon from "../../faq-acordeon";
 import Link from "next/link";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 
@@ -37,12 +38,35 @@ export default function Articulo() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        <div className="space-y-1"><h3 className="font-medium">¿Qué cotización toma el banco?</h3><p>El dólar oficial vendedor del día en que el banco procesa el consumo, que puede diferir unos días de la fecha de compra. Por eso el importe final a veces no coincide con tu estimación.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Las percepciones se pueden recuperar?</h3><p>La percepción de Bienes Personales se puede computar como pago a cuenta del impuesto si presentás la DDJJ (o pedir su devolución si no alcanzás el mínimo imponible). La de Ganancias funciona igual para quienes lo liquidan. Requiere trámite en ARCA.</p></div>
-        <div className="space-y-1"><h3 className="font-medium">¿Hay un impuesto específico para streaming?</h3><p>Los porcentajes cambiaron varias veces en los últimos años. La estructura vigente al día la ves resumida en la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora</Link>; antes de una compra grande, verificá los porcentajes en la página oficial de ARCA.</p></div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Qué cotización toma el banco?",
+              a: (
+                <>
+                  El dólar oficial vendedor del día en que el banco procesa el consumo, que puede diferir unos días de la fecha de compra. Por eso el importe final a veces no coincide con tu estimación.
+                </>
+              ),
+            },
+            {
+              q: "¿Las percepciones se pueden recuperar?",
+              a: (
+                <>
+                  La percepción de Bienes Personales se puede computar como pago a cuenta del impuesto si presentás la DDJJ (o pedir su devolución si no alcanzás el mínimo imponible). La de Ganancias funciona igual para quienes lo liquidan. Requiere trámite en ARCA.
+                </>
+              ),
+            },
+            {
+              q: "¿Hay un impuesto específico para streaming?",
+              a: (
+                <>
+                  Los porcentajes cambiaron varias veces en los últimos años. La estructura vigente al día la ves resumida en la <Link href="/dolar-tarjeta/" className="underline hover:text-emerald-700">calculadora</Link>; antes de una compra grande, verificá los porcentajes en la página oficial de ARCA.
+                </>
+              ),
+            },
+        ]}
+        primeraAbierta
+      />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Verificá las percepciones vigentes en ARCA antes de operar; no constituye asesoramiento fiscal.

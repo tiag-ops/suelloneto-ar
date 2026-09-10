@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ResultadoSueldo from "./_resultado";
+import FaqAcordeon from "../../faq-acordeon";
 import CuentaRecomendada from "@/components/cuenta-recomendada";
 import { calcularSueldo } from "@/lib/ganancias";
 import { formatARS } from "@/lib/format";
@@ -177,15 +178,7 @@ export default async function PaginaSueldo({
         </div>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        {faq.map((f, i) => (
-          <div className="space-y-1" key={i}>
-            <h3 className="font-medium">{f.pregunta}</h3>
-            <p>{f.respuesta}</p>
-          </div>
-        ))}
-      </section>
+      <FaqAcordeon items={faq} primeraAbierta />
 
       <section className="space-y-3">
         <h2 className="text-lg font-semibold">Datos actualizados</h2>

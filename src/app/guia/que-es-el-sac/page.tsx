@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BloqueArticulos } from "../../enlaces";
+import FaqAcordeon from "../../faq-acordeon";
 import { JsonLd, graphLd, articleLd, breadcrumbLd, faqLd } from "@/lib/seo";
 import { formatARS } from "@/lib/format";
 
@@ -132,15 +133,7 @@ export default function Articulo() {
         </p>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-lg font-semibold">Preguntas frecuentes</h2>
-        {FAQs.map((f, i) => (
-          <div className="space-y-1" key={i}>
-            <h3 className="font-medium">{f.q}</h3>
-            <p>{f.a}</p>
-          </div>
-        ))}
-      </section>
+      <FaqAcordeon items={FAQs} primeraAbierta />
 
       <footer className="rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-4 text-sm text-neutral-600 dark:text-neutral-400">
         Herramienta informativa. Cálculos según la Ley de Contrato de Trabajo (arts. 121-123).

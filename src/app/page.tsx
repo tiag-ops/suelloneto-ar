@@ -84,12 +84,7 @@ export default function Home() {
                     className="flex items-center gap-3 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-4 py-3 hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
                   >
                     <span aria-hidden className="text-xl">{c.icono}</span>
-                    <span>
-                      <span className="block text-sm font-medium">{c.titulo}</span>
-                      <span className="block text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
-                        {c.descripcion}
-                      </span>
-                    </span>
+                    <span className="text-sm font-semibold leading-snug">{c.titulo}</span>
                   </Link>
                 </li>
               ))}
@@ -108,8 +103,7 @@ export default function Home() {
                 href={`/guia/${g.slug}/`}
                 className="rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-4 py-3 block hover:border-emerald-500 dark:hover:border-emerald-700 transition-colors"
               >
-                <span className="block text-sm font-medium">📖 {g.titulo}</span>
-                <span className="block text-sm text-neutral-600 dark:text-neutral-400">{g.descripcion}</span>
+                <span className="text-sm font-semibold leading-snug block">📖 {g.titulo}</span>
               </Link>
             </li>
           ))}

@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-/* Tokens de fuente: font-sans (UI) y font-editorial (headings) via next/font.
-   Sistema porteado de Maternidad.ar (a11y AA) con identidad emerald de SueldoNeto. */
+/* Token de fuente: font-sans (Inter via next/font). Sistema porteado de Maternidad.ar
+   (a11y AA) con identidad emerald de SueldoNeto. Sin serif: una sola fuente en todo el
+   sitio (directiva de Redito.ar). */
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-editorial: var(--font-serif-editorial), Georgia, "Times New Roman", serif;
 }
 
 /* Modo claro/oscuro por clase en <html> (toggle + script anti-flash) */
@@ -39,11 +39,33 @@ body {
   @apply bg-neutral-50 font-sans text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100;
 }
 
-/* Serif editorial para headings — números y títulos grandes */
-h1,
-h2,
+/* Jerarquía fintech estilo Redito.ar: peso alto + tracking apretado en headings.
+   Escala agresiva: h1 protagonista (título de página, presente en las 30+ rutas con
+   text-2xl en la clase), h2/h3 suben para marcar secciones sin tocar el TSX. */
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 h3 {
-  @apply font-editorial;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.55rem;
+  }
 }
 
 .card {
@@ -66,6 +88,13 @@ label {
 /* Acento/link: emerald-700 claro (5.13:1), emerald-300 en oscuro (sobre 950 ≈ 12:1) */
 .acento {
   @apply text-emerald-700 dark:text-emerald-300;
+}
+
+/* Enlaces Legs: en mobile son chicos (text-[13px]) — área de tap ampliada al
+   mínimo WCAG 2.5.8 (24x24) con padding+margin negativo, sin cambios visuales. */
+.footer a,
+.footer button {
+  @apply relative py-2 my-[-8px];
 }
 
 /* Caption: NUNCA neutral-500 (falla AA en oscuro). 13px mínimo. */
@@ -96,7 +125,16 @@ input:focus-visible {
   @apply outline-none ring-2 ring-emerald-600/60 ring-offset-2 ring-offset-neutral-50 dark:ring-offset-neutral-950;
 }
 
-/* Números de resultado: tabulares y grandes */
+/* Números de resultado: tabulares y grandes, en Inter (sans) */
 .numero-resultado {
-  @apply font-editorial text-5xl font-semibold tabular-nums sm:text-6xl;
+  @apply text-5xl font-semibold tabular-nums tracking-tight sm:text-6xl;
+}
+
+/* Item de FAQ (acordeón): borde emerald cuando está abierto */
+.faq-item[open] {
+  @apply border-emerald-300 dark:border-emerald-800;
+}
+
+.faq-item[open] > summary {
+  @apply text-emerald-800 dark:text-emerald-200;
 }

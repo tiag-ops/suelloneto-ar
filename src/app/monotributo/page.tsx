@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BloqueCalculadorasRelacionadas } from "../enlaces";
+import FaqAcordeon from "../faq-acordeon";
 import TablaMonotributo from "./tabla";
 import { JsonLd, webAppLd, breadcrumbLd, faqLd, graphLd } from "@/lib/seo";
 
@@ -27,36 +28,22 @@ export default function MonotributoPage() {
 
       <BloqueCalculadorasRelacionadas slug="monotributo" />
 
-      <section className="text-sm text-neutral-600 dark:text-neutral-300 space-y-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-xl p-5">
-        <h2 className="font-semibold text-neutral-900 dark:text-neutral-100">
-          Preguntas frecuentes
-        </h2>
-        <div>
-          <p className="font-medium">¿Qué pasa si supero el tope de mi categoría?</p>
-          <p>
-            Podés recategorizarte de oficio o por tu cuenta (ARCA habilita el período de
-            recategorización dos veces al año). Si superás el tope de la categoría K
-            ($126.610.839 anuales) salís del monotributo y pasás al Régimen General
-            (Responsable Inscripto).
-          </p>
-        </div>
-        <div>
-          <p className="font-medium">¿La cuota es igual para servicios y venta de cosas?</p>
-          <p>
-            En las categorías A y B sí. Desde la C, el impuesto integrado cambia: la venta de
-            cosas muebles paga menos que los servicios. El aporte previsional y la obra social
-            son los mismos.
-          </p>
-        </div>
-        <div>
-          <p className="font-medium">¿Qué incluye la cuota mensual?</p>
-          <p>
-            Impuesto integrado, aporte al SIPA (jubilación) y obra social. Todos los montos de
-            esta página salen de la tabla oficial vigente y se actualizan cuando ARCA publica
-            los nuevos valores.
-          </p>
-        </div>
-      </section>
+      <FaqAcordeon
+        items={[
+            {
+              q: "¿Qué pasa si supero el tope de mi categoría?",
+              a: "Podés recategorizarte de oficio o por tu cuenta (ARCA habilita el período de recategorización dos veces al año). Si superás el tope de la categoría K ($126.610.839 anuales) salís del monotributo y pasás al Régimen General (Responsable Inscripto).",
+            },
+            {
+              q: "¿La cuota es igual para servicios y venta de cosas?",
+              a: "En las categorías A y B sí. Desde la C, el impuesto integrado cambia: la venta de cosas muebles paga menos que los servicios. El aporte previsional y la obra social son los mismos.",
+            },
+            {
+              q: "¿Qué incluye la cuota mensual?",
+              a: "Impuesto integrado, aporte al SIPA (jubilación) y obra social. Todos los montos de esta página salen de la tabla oficial vigente y se actualizan cuando ARCA publica los nuevos valores.",
+            },
+        ]}
+      />
 
       
       <JsonLd
