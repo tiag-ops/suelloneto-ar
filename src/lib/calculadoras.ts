@@ -40,6 +40,8 @@ export interface GuiaMeta {
 export const GUIAS: GuiaMeta[] = [
   { slug: "ganancias-desde-cuanto", titulo: "¿Desde cuánto se paga Ganancias?", descripcion: "Piso por situación familiar y tabla calculada con valores vigentes.", calculadoras: ["", "monotributo"] },
   { slug: "aguinaldo-junio-2026", titulo: "Aguinaldo junio 2026: fechas", descripcion: "Cuándo cobran y cómo se calcula el SAC, con tabla.", calculadoras: ["aguinaldo"] },
+  { slug: "que-es-el-sac", titulo: "¿Qué es el SAC?", descripcion: "El Sueldo Anual Complementario: cómo se calcula, quién lo cobra y ejemplos.", calculadoras: ["aguinaldo", ""] },
+  { slug: "aguinaldo-y-ganancias", titulo: "Aguinaldo y Ganancias", descripcion: "Si el SAC paga impuesto, cómo se retiene y cuándo queda exento.", calculadoras: ["", "aguinaldo"] },
   { slug: "monotributo-cuanto-pago", titulo: "¿Cuánto se paga de monotributo?", descripcion: "Cuota de cada categoría, desglosada en impuesto, SIPA y obra social.", calculadoras: ["monotributo"] },
   { slug: "escala-ganancias-2026", titulo: "Escala del art. 94 (2026)", descripcion: "Tabla completa de tramos con ejemplos liquidados.", calculadoras: ["", "monotributo"] },
   { slug: "vacaciones-dias-pago", titulo: "Vacaciones: días y pago", descripcion: "Cuántos días según antigüedad y cuánto se cobra por día corrido.", calculadoras: ["vacaciones", "vacaciones-no-gozadas"] },
@@ -48,6 +50,7 @@ export const GUIAS: GuiaMeta[] = [
   { slug: "aguinaldo-despido", titulo: "Liquidación final: qué te deben", descripcion: "Aguinaldo proporcional, vacaciones y checklist completo.", calculadoras: ["indemnizacion", "aguinaldo", "vacaciones-no-gozadas"] },
   { slug: "sueldo-bruto-a-neto", titulo: "De bruto a neto", descripcion: "La conversión exacta en dos pasos, con tabla por sueldo.", calculadoras: ["", "sueldo-por-dia"] },
   { slug: "horas-extras-cuanto-cobran", titulo: "Horas extras: cuánto se cobra", descripcion: "Recargos del 50% y 100% con ejemplos calculados.", calculadoras: ["horas-extras", "sueldo-por-dia"] },
+  { slug: "feriados-2027", titulo: "Feriados 2027", descripcion: "Calendario completo: fechas, días de la semana, trasladables y puentes.", calculadoras: ["proximo-feriado", "dias-habiles"] },
 ];
 
 export function porCategoria(): Record<string, CalculadoraMeta[]> {

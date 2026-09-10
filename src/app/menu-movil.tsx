@@ -77,7 +77,7 @@ export default function MenuMovil() {
                   {[
                     { href: "/", titulo: "Inicio" },
                     { href: "/monotributo/", titulo: "Monotributo 2026" },
-                    { href: "/guia/sueldo-bruto-a-neto/", titulo: "Guías" },
+                    { href: "/guia/", titulo: "Guías" },
                   ].map((l) => (
                     <li key={l.href}>
                       <Link

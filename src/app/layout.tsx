@@ -85,7 +85,7 @@ export default function RootLayout({
                   Monotributo
                 </Link>
                 <Link
-                  href="/guia/sueldo-bruto-a-neto/"
+                  href="/guia/"
                   className="hover:text-emerald-700 dark:hover:text-emerald-300"
                 >
                   Guías
